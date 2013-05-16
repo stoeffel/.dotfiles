@@ -41,6 +41,9 @@ set gdefault
 set incsearch
 set showmatch
 set hlsearch
+set mouse=a
+
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 
 colorscheme molokai
