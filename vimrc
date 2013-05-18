@@ -42,6 +42,7 @@ set scrolloff=3
 set autoindent
 set showmode
 set showcmd
+" hide buffers instead of closing
 set hidden
 set wildmenu
 set wildmode=list:longest
@@ -52,13 +53,14 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set relativenumber
-set ignorecase
 set smartcase
-set gdefault
+"set gdefault
 set incsearch
 set showmatch
 set hlsearch
 set mouse=a
+"switch to “paste mode”
+set pastetoggle=<F4>
 " powerline
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set guifont=Droid\ Sans\ Mono\ for\ Powerline
@@ -76,6 +78,9 @@ let mapleader = ","
 " AUTOCMS
 " =======
 "
+
+" format file
+map <c-f> =G<CR>
 
 " jsbeautify
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
