@@ -19,6 +19,18 @@ if has("gui_running") && system('ps xw | grep "Vim -psn" | grep -vc grep') > 0
     let s:path = system("echo echo VIMPATH'${PATH}' | $SHELL -l")
     let $PATH = matchstr(s:path, 'VIMPATH\zs.\{-}\ze\n')
   endif
+  " SCHEME
+  " ======
+  "
+  " Set colorscheme to solarized
+  colorscheme solarized
+  set background=dark
+else
+    " SCHEME
+    " ======
+    "
+    " Set colorscheme to solarized
+    colorscheme molokai
 endif
 
 "enable loading plugin
@@ -98,8 +110,3 @@ nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 
-" SCHEME
-" ======
-"
-" Set colorscheme to solarized
-colorscheme molokai
