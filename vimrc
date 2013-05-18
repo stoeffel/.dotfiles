@@ -33,6 +33,8 @@ else
     colorscheme molokai
 endif
 
+
+
 "enable loading plugin
 filetype plugin indent on
 
@@ -42,6 +44,8 @@ filetype plugin indent on
 
 " yes it's 2013
 set nocompatible
+" Use the OS clipboard by default (on versions compiled with `+clipboard`)
+set clipboard=unnamed
 " number of lines checked for set cmds
 set modelines=0
 " tab
