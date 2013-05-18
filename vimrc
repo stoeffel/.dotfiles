@@ -91,6 +91,13 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <C-o> :NERDTreeToggle<CR>
 
+
+" win navigation
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
+
 " SCHEME
 " ======
 "
