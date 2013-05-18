@@ -89,5 +89,5 @@ map <C-o> :NERDTreeToggle<CR>
 " SCHEME
 " ======
 "
-
+" Set colorscheme to solarized
 colorscheme molokai
