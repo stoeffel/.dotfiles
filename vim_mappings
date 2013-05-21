@@ -1,14 +1,6 @@
-  " LETS
-  " ====
-  "
-
   " <leader>
   let mapleader = ","
 
-
-  " KEY MAP
-  " =======
-  "
 
   " format file
   map <c-f> =G<CR>

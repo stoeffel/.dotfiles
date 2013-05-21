@@ -33,10 +33,6 @@ endif
   "enable loading plugin
   filetype plugin indent on
 
-  " SETS
-  " ====
-  "
-
   " yes it's 2013
   set nocompatible
   " Use the OS clipboard by default (on versions compiled with `+clipboard`)
