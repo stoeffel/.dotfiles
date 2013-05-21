@@ -79,28 +79,5 @@ endif
   " startify
   set shortmess=I
 
-  " LETS
-  " ====
-  "
-
-  " <leader>
-  let mapleader = ","
-
-
-  " AUTOCMS
-  " =======
-  "
-
-  " format file
-  map <c-f> =G<CR>
-
-  " jsbeautify
-  autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-  autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
-  autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
-
-  " nerdtree
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-  map <C-o> :NERDTreeToggle<CR>
-
+  source .dotfiles/vim_mappings
 
