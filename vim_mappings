@@ -5,10 +5,12 @@
   " format file
   map <c-f> =G<CR>
 
-  " jsbeautify
-  autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-  autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
-  autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+  " switch tab 
+  map <C-TAB> :tabn<cr>
+  map <C-S-TAB> :tabp<cr>
+  " switch buffer
+  map <A-TAB> :b#<cr>
+
 
   " nerdtree
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -18,5 +20,12 @@
   nnoremap / /\v
   cnoremap %s/ %s/\v
 
-  vmap > > gv
-  vmap < < gv
+  vnoremap <TAB> > gv
+  vnoremap <S-TAB> < gv
+
+  nnoremap <TAB> V>><Esc>
+  nnoremap <S-TAB> V<<<Esc>
+
+  ino <c-space> <c-r>=TriggerSnippet()<cr>
+  snor <c-space> <esc>i<right><c-r>=TriggerSnippet()<cr>
+

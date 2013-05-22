@@ -39,6 +39,8 @@ endif
   " number of lines checked for set cmds
   set modelines=0
   " tab
+  set foldlevelstart=20
+  set fdm=indent
   set tabstop=4
   set shiftwidth=4
   set softtabstop=4
@@ -73,10 +75,15 @@ endif
   set fillchars+=stl:\ ,stlnc:\
   let g:Powerline_theme='short'
   let g:Powerline_colorscheme='solarized256_dark'
-
-
   " startify
   set shortmess=I
+  " command-t
+  let g:CommandTMaxHeight=20
+  let g:CommandTMatchWindowAtTop=1
+
+  set wildignore+=node_moduls/*,components/*
 
   source ~/.dotfiles/vim_mappings
+  source ~/.dotfiles/vim_commands
+
 
