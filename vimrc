@@ -28,7 +28,6 @@ endif
   colorscheme solarized
   set background=dark
   let g:solarized_termcolors=256
-  
 
   "enable loading plugin
   filetype plugin indent on
@@ -72,8 +71,12 @@ endif
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
   set guifont=Droid\ Sans\ Mono\ for\ Powerline
   set fillchars+=stl:\ ,stlnc:\
+  let g:Powerline_theme='short'
+  let g:Powerline_colorscheme='solarized256_dark'
+
+
   " startify
   set shortmess=I
 
-  source .dotfiles/vim_mappings
+  source ~/.dotfiles/vim_mappings
 
