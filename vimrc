@@ -79,7 +79,10 @@ endif
   set shortmess=I
   " command-t
   let g:CommandTMaxHeight=20
-  let g:CommandTMatchWindowAtTop=1
+  " snipmate
+  " default directories containing snippets:
+  set rtp+=~/.dotfiles/vim/snippets
+
 
   set wildignore+=node_moduls/*,components/*
 

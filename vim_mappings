@@ -26,6 +26,8 @@
   nnoremap <TAB> V>><Esc>
   nnoremap <S-TAB> V<<<Esc>
 
-  ino <c-space> <c-r>=TriggerSnippet()<cr>
-  snor <c-space> <esc>i<right><c-r>=TriggerSnippet()<cr>
-
+  let g:snips_trigger_key='<a-s>'
+  map <Left> <Nop>
+  map <Right> <Nop>
+  map <Up> <Nop>
+  map <Down> <Nop>
