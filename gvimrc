@@ -29,3 +29,4 @@ endif
 
 set title
 set titlestring=%{getcwd()}\ -\ \(\ %t\ \)\ %a%r%m titlelen=70
+set antialias

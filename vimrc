@@ -62,6 +62,10 @@ endif
   set backspace=indent,eol,start
   set laststatus=2
   set relativenumber
+  au FocusLost * :set number
+  au FocusGained * :set relativenumber
+  autocmd InsertEnter * :set number
+  autocmd InsertLeave * :set relativenumber
   set smartcase
   "set gdefault
   set incsearch
