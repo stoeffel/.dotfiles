@@ -16,13 +16,16 @@ else
   let s:did_mac_gvimrc = 1
 endif
 
-" TODO:  Decide whether to leave it in non-compatible mode.
-" For now, save and restore.
-let s:save_cpo = &cpo
-set cpo&vim
 
-" Define mac-standard menu items.
-" The keyboard shortcuts have been defined in $VIMRUNTIME/macmap.vim .
+if ! has('gui_running')
+    set ttimeoutlen=10
+    augroup FastEscape
+        autocmd!
+        au InsertEnter * set timeoutlen=0
+        au InsertLeave * set timeoutlen=1000
+    augroup END
+endif
 
 
-let &cpo = s:save_cpo
+set title
+set titlestring=%{getcwd()}\ -\ \(\ %t\ \)\ %a%r%m titlelen=70

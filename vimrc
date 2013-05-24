@@ -2,11 +2,14 @@
 " autor: C.Hermann
 " my vimrc
 """"""""""""""""""""""""""""
+  " yes it's 2013
+  set nocompatible
 
 
 " PATHOGEN
 set runtimepath+=~/.vim/autoload 
 execute pathogen#infect()
+call pathogen#helptags()
 syntax on
 
 " check if gui or in shell
@@ -32,8 +35,6 @@ endif
   "enable loading plugin
   filetype plugin indent on
 
-  " yes it's 2013
-  set nocompatible
   " Use the OS clipboard by default (on versions compiled with `+clipboard`)
   set clipboard=unnamed
   " number of lines checked for set cmds
@@ -75,8 +76,6 @@ endif
   set fillchars+=stl:\ ,stlnc:\
   let g:Powerline_theme='short'
   let g:Powerline_colorscheme='solarized256_dark'
-  " startify
-  set shortmess=I
   " command-t
   let g:CommandTMaxHeight=20
 
