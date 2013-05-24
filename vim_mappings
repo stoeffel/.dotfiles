@@ -26,7 +26,6 @@
   nnoremap <TAB> V>><Esc>
   nnoremap <S-TAB> V<<<Esc>
 
-  let g:snips_trigger_key='<a-s>'
   map <Left> <Nop>
   map <Right> <Nop>
   map <Up> <Nop>
