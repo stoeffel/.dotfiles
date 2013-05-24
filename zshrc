@@ -7,7 +7,6 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster"
 
-zstyle ':completion:*' special-dirs true
 
 # rupa's z-script
 . ~/z/z.sh
@@ -28,3 +27,20 @@ export PATH=$PATH:bin:/opt/boxen/rbenv/shims:/opt/boxen/rbenv/bin:/opt/boxen/rbe
 # ==========================================
 
 alias gall="g add ."
+
+# FUNCTIONS
+# ==========================================
+
+rvim () { # connects to a remote server and opens vim
+    if (( $# <= 1 ))
+        then echo usage: rvim server folder; 
+        return 1
+    fi
+    mvim scp://root@$1/$2/
+}
+
+# ZSTYLES
+# ==========================================
+
+zstyle ':completion:*' special-dirs true
+
