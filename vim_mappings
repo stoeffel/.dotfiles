@@ -11,15 +11,15 @@
   autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
   " switch tab 
-  map <C-TAB> :tabn<cr>
-  map <C-S-TAB> :tabp<cr>
+  map <C-TAB> :bnext<cr>
+  map <C-S-TAB> :bprev<cr>
 
 
   " nerdtree
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
   map <C-o> :NERDTreeToggle<CR>
 
-" standard regex
+  " standard regex
   nnoremap / /\v
   cnoremap %s/ %s/\v
 
@@ -29,10 +29,17 @@
   nnoremap <TAB> V>><Esc>
   nnoremap <S-TAB> V<<<Esc>
 
+  " there should be a better use for the arrow keys
   map <Left> <Nop>
   map <Right> <Nop>
   map <Up> <Nop>
   map <Down> <Nop>
+
+  " Bubble single&multiple lines
+  nmap <Up> ddkP
+  nmap <Down> ddp
+  vmap <Up> xkP`[V`]
+  vmap <Down> xp`[V`]
 
   " snipmate
   ino <a-tab> <c-r>=TriggerSnippet()<cr>
