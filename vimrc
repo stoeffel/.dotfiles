@@ -90,20 +90,44 @@ set mouse=a
 set pastetoggle=<F4>
 " Number of screen lines to use for the command-line
 set cmdheight=2
-" powerline
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" POWERLINE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set guifont=Droid\ Sans\ Mono\ for\ Powerline
 set fillchars+=stl:\ ,stlnc:\
-" command-t
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" COMMAND-T
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowReverse = 1 " shows results in reverse order
-" syntastic
-let g:syntastic_enable_signs=0
-
 set wildignore+=node_modules/**,webroot/components/**
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SYNTASTIC
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:syntastic_enable_signs=0
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PROJECT
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:project_use_nerdtree = 1
+call project#rc('~/src)
 
+Project  'scratch'
+Project  '~/.dotfiles'
+File     '~/.dotfiles/vimrc'                       , 'vimrc'
+File     '~/.dotfiles/gvimrc'                      , 'gvimrc'
+File     '~/.dotfiles/zshrc'                       , 'zshrc'
+Project  '/opt/boxen/repo'                         , 'boxen'
+Project  '~/src'                                   , 'CODE'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PROJECT
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SOURCE MAPPINGS & CMDS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 source ~/.dotfiles/vim_mappings
 source ~/.dotfiles/vim_commands
 
-autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
 
