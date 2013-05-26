@@ -8,6 +8,9 @@
 set nocompatible
 
 
+" automatically reload vimrc when it's saved
+au BufWritePost .vimrc so ~/.vimrc
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PATHOGEN
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -104,6 +107,3 @@ source ~/.dotfiles/vim_commands
 
 autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
 
-
-" automatically reload vimrc when it's saved
-au BufWritePost .vimrc so ~/.vimrc
