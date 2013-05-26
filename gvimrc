@@ -30,3 +30,12 @@ endif
 set title
 set titlestring=%{getcwd()}\ -\ \(\ %t\ \)\ %a%r%m titlelen=70
 set antialias
+" With this, the gui (gvim and macvim) now doesn't have the toolbar, the left
+" and right scrollbars and the menu.
+set guioptions-=T
+set guioptions-=l
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
+set guioptions-=m
+set guioptions-=M

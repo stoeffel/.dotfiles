@@ -8,8 +8,6 @@
   " switch tab 
   map <C-TAB> :tabn<cr>
   map <C-S-TAB> :tabp<cr>
-  " switch buffer
-  map <A-TAB> :b#<cr>
 
 
   " nerdtree
@@ -30,3 +28,7 @@
   map <Right> <Nop>
   map <Up> <Nop>
   map <Down> <Nop>
+
+  " snipmate
+  ino <a-tab> <c-r>=TriggerSnippet()<cr>
+  snor <a-tab> <esc>i<right><c-r>=TriggerSnippet()<cr>
