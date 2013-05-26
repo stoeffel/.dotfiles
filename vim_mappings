@@ -36,10 +36,10 @@
   map <Down> <Nop>
 
   " Bubble single&multiple lines
-  nmap <Up> ddkP
-  nmap <Down> ddp
-  vmap <Up> xkP`[V`]
-  vmap <Down> xp`[V`]
+  nmap <S-Up> ddkP
+  nmap <S-Down> ddp
+  vmap <S-Up> xkP`[V`]
+  vmap <S-Down> xp`[V`]
 
   " snipmate
   ino <a-tab> <c-r>=TriggerSnippet()<cr>
