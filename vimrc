@@ -94,6 +94,8 @@ set fillchars+=stl:\ ,stlnc:\
 " command-t
 let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowReverse = 1 " shows results in reverse order
+" syntastic
+let g:syntastic_enable_signs=0
 
 set wildignore+=node_modules/**,webroot/components/**
 
