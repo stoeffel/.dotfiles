@@ -4,6 +4,11 @@
 
   " format file
   map <c-f> =G<CR>
+  autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+  " for html
+  autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+  " for css or scss
+  autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
   " switch tab 
   map <C-TAB> :tabn<cr>
@@ -32,3 +37,4 @@
   " snipmate
   ino <a-tab> <c-r>=TriggerSnippet()<cr>
   snor <a-tab> <esc>i<right><c-r>=TriggerSnippet()<cr>
+
