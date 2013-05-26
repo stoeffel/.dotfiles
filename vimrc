@@ -35,15 +35,11 @@ if has("gui_running") && system('ps xw | grep "Vim -psn" | grep -vc grep') > 0
 endif
 
 " ------------------------------------------------------------------
-" Solarized Colorscheme Config
+" Colorscheme Config
 " ------------------------------------------------------------------
-let g:solarized_termcolors=256    "default value is 16
-let g:solarized_contrast="high"    "default value is normal
-let g:solarized_visibility="high"    "default value is normal
-let g:solarized_diffmode="low"    "default value is normal
 syntax enable
-set background=light
-colorscheme solarized
+set background=dark
+colorscheme molokai
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SETTINGS
