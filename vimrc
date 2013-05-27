@@ -113,6 +113,7 @@ let g:syntastic_enable_signs=0
 " PROJECT
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:project_use_nerdtree = 0
+let g:project_set_title = 0
 call project#rc('~/src')
 
 Project  'scratch'
