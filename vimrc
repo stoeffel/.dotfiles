@@ -42,14 +42,13 @@ endif
 " ------------------------------------------------------------------
 " Colorscheme Config
 " ------------------------------------------------------------------
-"let g:solarized_termcolors=256    "default value is 16
-"let g:solarized_contrast="high"    "default value is normal
-"let g:solarized_visibility="high"    "default value is normal
-"let g:solarized_diffmode="low"    "default value is normal
-"syntax enable
-"set background=light
-"colorscheme solarized
-colorscheme molokai
+let g:solarized_termcolors=256    "default value is 16
+let g:solarized_contrast="high"    "default value is normal
+let g:solarized_visibility="high"    "default value is normal
+let g:solarized_diffmode="low"    "default value is normal
+syntax enable
+set background=dark
+colorscheme solarized
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SETTINGS
