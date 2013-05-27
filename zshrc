@@ -26,7 +26,7 @@ export PATH=$PATH:bin:/opt/boxen/rbenv/shims:/opt/boxen/rbenv/bin:/opt/boxen/rbe
 # ALIASES
 # ==========================================
 
-alias gall="g add ."
+alias gall="g add -u ."
 
 # FUNCTIONS
 # ==========================================

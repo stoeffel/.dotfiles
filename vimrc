@@ -14,10 +14,12 @@ au BufWritePost .vimrc so ~/.vimrc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PATHOGEN
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set runtimepath+=~/.vim/autoload 
-execute pathogen#infect()
-call pathogen#helptags()
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 syntax on
+source ~/.dotfiles/vim_bundles
 "enable loading plugin
 filetype plugin indent on
 
@@ -38,15 +40,16 @@ if has("gui_running") && system('ps xw | grep "Vim -psn" | grep -vc grep') > 0
 endif
 
 " ------------------------------------------------------------------
-" Solarized Colorscheme Config
+" Colorscheme Config
 " ------------------------------------------------------------------
-let g:solarized_termcolors=256    "default value is 16
-let g:solarized_contrast="high"    "default value is normal
-let g:solarized_visibility="high"    "default value is normal
-let g:solarized_diffmode="low"    "default value is normal
-syntax enable
-set background=light
-colorscheme solarized
+"let g:solarized_termcolors=256    "default value is 16
+"let g:solarized_contrast="high"    "default value is normal
+"let g:solarized_visibility="high"    "default value is normal
+"let g:solarized_diffmode="low"    "default value is normal
+"syntax enable
+"set background=light
+"colorscheme solarized
+colorscheme molokai
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SETTINGS
@@ -109,18 +112,20 @@ let g:syntastic_enable_signs=0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PROJECT
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:project_use_nerdtree = 1
-call project#rc('~/src)
+let g:project_use_nerdtree = 0
+call project#rc('~/src')
 
 Project  'scratch'
 Project  '~/.dotfiles'
 File     '~/.dotfiles/vimrc'                       , 'vimrc'
 File     '~/.dotfiles/gvimrc'                      , 'gvimrc'
 File     '~/.dotfiles/zshrc'                       , 'zshrc'
+File     '~/.dotfiles/vim_bundles'                 , 'bundles'
 Project  '/opt/boxen/repo'                         , 'boxen'
 Project  '~/src'                                   , 'CODE'
+source ~/.vim_projects
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" PROJECT
+" SNIPMATE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
 
