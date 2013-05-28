@@ -115,6 +115,7 @@ File     '~/.dotfiles/vimrc'                       , 'vimrc'
 File     '~/.dotfiles/gvimrc'                      , 'gvimrc'
 File     '~/.dotfiles/zshrc'                       , 'zshrc'
 File     '~/.dotfiles/vim_bundles'                 , 'bundles'
+File     '~/.vim/bundle/vim-neatstatus/plugin/neatstatus.vim'                 , 'neatstatus'
 Project  '/opt/boxen/repo'                         , 'boxen'
 Project  '~/src'                                   , 'CODE'
 source ~/.vim_projects
