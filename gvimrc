@@ -39,4 +39,3 @@ set guioptions-=r
 set guioptions-=R
 set guioptions-=m
 set guioptions-=M
-

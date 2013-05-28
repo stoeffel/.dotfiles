@@ -42,7 +42,7 @@ endif
 " ------------------------------------------------------------------
 " Colorscheme Config
 " ------------------------------------------------------------------
-let g:solarized_termcolors=256    "default value is 16
+let g:solarized_termcolors=16    "default value is 16
 let g:solarized_contrast="high"    "default value is normal
 let g:solarized_visibility="high"    "default value is normal
 let g:solarized_diffmode="low"    "default value is normal
@@ -92,12 +92,6 @@ set mouse=a
 set pastetoggle=<F4>
 " Number of screen lines to use for the command-line
 set cmdheight=2
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" POWERLINE
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-set guifont=Droid\ Sans\ Mono\ for\ Powerline
-set fillchars+=stl:\ ,stlnc:\
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COMMAND-T
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
