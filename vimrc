@@ -2,7 +2,7 @@
 " VIMRC
 """""""""""
 " autor: Stoffel
-" 
+"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " yes it's 2013
 set nocompatible
@@ -65,6 +65,10 @@ set scrolloff=3
 set autoindent
 set showmode
 set showcmd
+set list
+set listchars=trail:.
+hi NonText guifg=#93a1a1
+hi SpecialKey guifg=#dc322f
 " hide buffers instead of closing
 set hidden
 set wildmenu
@@ -91,7 +95,16 @@ set mouse=a
 "switch to “paste mode”
 set pastetoggle=<F4>
 " Number of screen lines to use for the command-line
-set cmdheight=2
+set cmdheight=1
+" Enable persistent undo {{{2
+set undofile
+set undodir=~/tmp/vim/undo
+if !isdirectory(expand(&undodir))
+    call mkdir(expand(&undodir), "p")
+endif
+" Disable swapfile and backup {{{2
+set nobackup
+set noswapfile
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COMMAND-T
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

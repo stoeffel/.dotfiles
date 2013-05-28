@@ -17,7 +17,7 @@
 
   " nerdtree
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-  map <C-o> :NERDTreeToggle<CR>
+  map <leader-o> :NERDTreeToggle<CR>
 
   " standard regex
   nnoremap / /\v
