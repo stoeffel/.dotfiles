@@ -65,8 +65,8 @@ set scrolloff=3
 set autoindent
 set showmode
 set showcmd
-set list
-set listchars=trail:.
+set nolist
+set listchars=tab:~\ ,trail:.
 hi NonText guifg=#93a1a1
 hi SpecialKey guifg=#dc322f
 " hide buffers instead of closing
