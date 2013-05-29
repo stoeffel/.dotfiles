@@ -47,7 +47,7 @@ let g:solarized_contrast="high"    "default value is normal
 let g:solarized_visibility="high"    "default value is normal
 let g:solarized_diffmode="low"    "default value is normal
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -79,11 +79,7 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
-set relativenumber
-au FocusLost * :set number
-au FocusGained * :set relativenumber
-autocmd InsertEnter * :set number
-autocmd InsertLeave * :set relativenumber
+set number
 set ignorecase          " case insensitive searching
 set smartcase           " but become case sensitive if you type uppercase characters
 "set gdefault
