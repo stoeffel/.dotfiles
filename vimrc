@@ -27,7 +27,6 @@ filetype plugin indent on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GUI ?
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set background=dark
 " check if gui or in shell
 if has("gui_running") && system('ps xw | grep "Vim -psn" | grep -vc grep') > 0
     " Get the value of $PATH from a login shell.
@@ -38,18 +37,17 @@ if has("gui_running") && system('ps xw | grep "Vim -psn" | grep -vc grep') > 0
         let s:path = system("echo echo VIMPATH'${PATH}' | $SHELL -l")
         let $PATH = matchstr(s:path, 'VIMPATH\zs.\{-}\ze\n')
     endif
-    set background=light
 endif
 
 " ------------------------------------------------------------------
 " Colorscheme Config
 " ------------------------------------------------------------------
-let g:solarized_termcolors=16    "default value is 16
-let g:solarized_contrast="high"    "default value is normal
-let g:solarized_visibility="high"    "default value is normal
-let g:solarized_diffmode="low"    "default value is normal
+" let g:solarized_termcolors=16    "default value is 16
+" let g:solarized_contrast="high"    "default value is normal
+" let g:solarized_visibility="high"    "default value is normal
+" let g:solarized_diffmode="low"    "default value is normal
 syntax enable
-colorscheme solarized
+colorscheme molokai
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SETTINGS
@@ -68,8 +66,6 @@ set showmode
 set showcmd
 set nolist
 set listchars=tab:~\ ,trail:.
-hi NonText guifg=#93a1a1
-hi SpecialKey guifg=#dc322f
 " hide buffers instead of closing
 set hidden
 set wildmenu
@@ -110,12 +106,27 @@ set noswapfile
 let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowReverse = 1 " shows results in reverse order
 set wildignore+=**/node_modules/**,**/components/**
-hi PmenuSel guifg=#6c71c4 guibg=#eee8d5
 autocmd FocusGained * CommandTFlush
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SYNTASTIC
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:syntastic_enable_signs=1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" POWERLINE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+" set guifont=Droid\ Sans\ Mono\ for\ Powerline
+" set fillchars+=stl:\ ,stlnc:\
+" if ! has('gui_running')
+"     set ttimeoutlen=10
+"     augroup FastEscape
+"         autocmd!
+"         au InsertEnter * set timeoutlen=0
+"         au InsertLeave * set timeoutlen=1000
+"     augroup END
+" endif
+" set laststatus=2 " Always display the statusline in all windows
+" set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PROJECT
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -129,7 +140,6 @@ File     '~/.dotfiles/vimrc'                       , 'vimrc'
 File     '~/.dotfiles/gvimrc'                      , 'gvimrc'
 File     '~/.dotfiles/zshrc'                       , 'zshrc'
 File     '~/.dotfiles/vim_bundles'                 , 'bundles'
-File     '~/.vim/bundle/vim-neatstatus/plugin/neatstatus.vim'                 , 'neatstatus'
 Project  '/opt/boxen/repo'                         , 'boxen'
 Project  '~/src'                                   , 'CODE'
 source ~/.vim_projects
@@ -143,6 +153,5 @@ autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 source ~/.dotfiles/vim_mappings
 source ~/.dotfiles/vim_commands
-
 
 
