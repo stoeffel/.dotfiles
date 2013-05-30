@@ -47,7 +47,7 @@ let g:solarized_contrast="high"    "default value is normal
 let g:solarized_visibility="high"    "default value is normal
 let g:solarized_diffmode="low"    "default value is normal
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -110,6 +110,7 @@ let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowReverse = 1 " shows results in reverse order
 set wildignore+=**/node_modules/**,**/components/**
 hi PmenuSel guifg=#6c71c4 guibg=#eee8d5
+autocmd FocusGained * CommandTFlush
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SYNTASTIC
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
