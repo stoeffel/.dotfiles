@@ -109,6 +109,7 @@ set noswapfile
 let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowReverse = 1 " shows results in reverse order
 set wildignore+=node_modules/**,webroot/components/**
+autocmd FocusGained * CommandTFlush
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SYNTASTIC
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
