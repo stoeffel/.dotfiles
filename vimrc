@@ -72,7 +72,9 @@ hi SpecialKey guifg=#dc322f
 " hide buffers instead of closing
 set hidden
 set wildmenu
-set wildmode=list:longest
+set wildmode=full
+set path=**
+hi WildMenu guibg=#2aa198
 set visualbell
 set cursorline
 set ttyfast
@@ -138,5 +140,3 @@ autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 source ~/.dotfiles/vim_mappings
 source ~/.dotfiles/vim_commands
-
-
