@@ -32,8 +32,8 @@
   " there should be a better use for the arrow keys
   map <Left> <C-O>
   map <Right> <C-I>
-  map <Up> <Nop>
-  map <Down> <Nop>
+  map <Up> :CommandT<CR>
+  map <Down> :NERDTreeToggle<CR>
 
   " Bubble single&multiple lines
   nmap <S-Up> ddkP
