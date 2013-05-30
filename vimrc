@@ -27,6 +27,7 @@ filetype plugin indent on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GUI ?
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set background=dark
 " check if gui or in shell
 if has("gui_running") && system('ps xw | grep "Vim -psn" | grep -vc grep') > 0
     " Get the value of $PATH from a login shell.
@@ -37,6 +38,7 @@ if has("gui_running") && system('ps xw | grep "Vim -psn" | grep -vc grep') > 0
         let s:path = system("echo echo VIMPATH'${PATH}' | $SHELL -l")
         let $PATH = matchstr(s:path, 'VIMPATH\zs.\{-}\ze\n')
     endif
+    set background=light
 endif
 
 " ------------------------------------------------------------------
@@ -47,7 +49,6 @@ let g:solarized_contrast="high"    "default value is normal
 let g:solarized_visibility="high"    "default value is normal
 let g:solarized_diffmode="low"    "default value is normal
 syntax enable
-set background=dark
 colorscheme solarized
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -142,3 +143,6 @@ autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 source ~/.dotfiles/vim_mappings
 source ~/.dotfiles/vim_commands
+
+
+
