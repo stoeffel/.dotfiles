@@ -90,7 +90,7 @@ set showmatch
 set hlsearch
 set autoread            " auto read when a file is changed from the outside
 set mouse=a
-"switch to “paste mode”
+"switchi to “paste mode”
 set pastetoggle=<F4>
 " Number of screen lines to use for the command-line
 set cmdheight=1
