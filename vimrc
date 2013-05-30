@@ -114,8 +114,10 @@ let g:syntastic_enable_signs=1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " POWERLINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:Powerline_symbols = 'fancy'
 " set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-" set guifont=Droid\ Sans\ Mono\ for\ Powerline
+set guifont=Droid\ Sans\ Mono\ for\ Powerline
+set fillchars+=stl:\ ,stlnc:\
 " set fillchars+=stl:\ ,stlnc:\
 " if ! has('gui_running')
 "     set ttimeoutlen=10
