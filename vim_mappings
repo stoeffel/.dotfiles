@@ -23,15 +23,15 @@
   nnoremap / /\v
   cnoremap %s/ %s/\v
 
-  vnoremap <TAB> > gv
-  vnoremap <S-TAB> < gv
+  vnoremap > > gv
+  vnoremap < < gv
 
-  nnoremap <TAB> V>><Esc>
-  nnoremap <S-TAB> V<<<Esc>
+  nnoremap > V>><Esc>
+  nnoremap < V<<<Esc>
 
   " there should be a better use for the arrow keys
-  map <Left> <Nop>
-  map <Right> <Nop>
+  map <Left> <C-O>
+  map <Right> <C-I>
   map <Up> <Nop>
   map <Down> <Nop>
 
