@@ -74,7 +74,7 @@ set hidden
 set wildmenu
 set wildmode=full
 set path=**
-hi WildMenu guibg=#2aa198
+hi WildMenu guifg=#2aa198
 set visualbell
 set cursorline
 set ttyfast
@@ -109,6 +109,7 @@ set noswapfile
 let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowReverse = 1 " shows results in reverse order
 set wildignore+=node_modules/**,webroot/components/**
+hi PmenuSel guifg=#6c71c4 guibg=#eee8d5
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SYNTASTIC
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
