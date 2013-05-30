@@ -12,7 +12,7 @@ set nocompatible
 au BufWritePost .vimrc so ~/.vimrc
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" PATHOGEN
+" VUNDLE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype off                   " required!
 
@@ -74,7 +74,7 @@ set hidden
 set wildmenu
 set wildmode=full
 set path=**
-hi WildMenu guibg=#2aa198
+hi WildMenu guifg=#2aa198
 set visualbell
 set cursorline
 set ttyfast
@@ -90,7 +90,7 @@ set showmatch
 set hlsearch
 set autoread            " auto read when a file is changed from the outside
 set mouse=a
-"switch to “paste mode”
+"switchi to “paste mode”
 set pastetoggle=<F4>
 " Number of screen lines to use for the command-line
 set cmdheight=1
@@ -108,8 +108,8 @@ set noswapfile
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowReverse = 1 " shows results in reverse order
-set wildignore+=node_modules/**,webroot/components/**
-autocmd FocusGained * CommandTFlush
+set wildignore+=**/node_modules/**,**/components/**
+hi PmenuSel guifg=#6c71c4 guibg=#eee8d5
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SYNTASTIC
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
