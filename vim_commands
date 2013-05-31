@@ -1,3 +1,0 @@
-command! ReloadVIMRC execute "source ~/.vimrc"
-command! SudoWrite execute "w !sudo tee %"
-

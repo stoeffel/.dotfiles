@@ -1,3 +1,4 @@
+" vim:fdm=marker
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIMRC
 """""""""""
@@ -6,27 +7,49 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " yes it's 2013
 set nocompatible
-
-
 " automatically reload vimrc when it's saved
-au BufWritePost .vimrc so ~/.vimrc
+autocmd BufWritePost vimrc source ~/.vimrc
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" VUNDLE
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VUNDLE {{{
 filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 syntax on
-source ~/.dotfiles/vim_bundles
-"enable loading plugin
-filetype plugin indent on
 
+Bundle 'vundle'
+Bundle 'hallison/vim-markdown'
+Bundle 'sjl/gundo.vim'
+Bundle 'maksimr/vim-jsbeautify'
+Bundle 'scrooloose/nerdtree'
+Bundle 'editorconfig/editorconfig-vim' 
+Bundle 'wincent/Command-T' 
+Bundle 'vim-scripts/jshint.vim' 
+Bundle 'Valloric/YouCompleteMe' 
+Bundle 'tpope/vim-surround' 
+Bundle 'terryma/vim-multiple-cursors' 
+Bundle 'mileszs/ack.vim' 
+Bundle 'tpope/vim-fugitive' 
+Bundle 'msanders/snipmate.vim' 
+Bundle 'scrooloose/syntastic' 
+Bundle 'stoeffel/vim-project' 
+Bundle 'tComment'
+Bundle 'repeat.vim'
+Bundle 'unimpaired.vim'
+Bundle 'molokai'
+Bundle 'vividchalk.vim'
+Bundle 'vim-colors-solarized'
+Bundle 'textobj-function'
+Bundle 'textobj-indent'
+Bundle 'textobj-user'
+"Bundle 'stoeffel/vim-neatstatus'
+Bundle 'Raimondi/delimitMate'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'Floobits/floobits-vim'
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" GUI ?
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+filetype plugin indent on "enable loading plugin 
+" }}}
+" GUI ? {{{
 " check if gui or in shell
 if has("gui_running") && system('ps xw | grep "Vim -psn" | grep -vc grep') > 0
     " Get the value of $PATH from a login shell.
@@ -38,23 +61,14 @@ if has("gui_running") && system('ps xw | grep "Vim -psn" | grep -vc grep') > 0
         let $PATH = matchstr(s:path, 'VIMPATH\zs.\{-}\ze\n')
     endif
 endif
-
-" ------------------------------------------------------------------
-" Colorscheme Config
-" ------------------------------------------------------------------
-" let g:solarized_termcolors=16    "default value is 16
-" let g:solarized_contrast="high"    "default value is normal
-" let g:solarized_visibility="high"    "default value is normal
-" let g:solarized_diffmode="low"    "default value is normal
+" }}}
+" Colorscheme {{{
 syntax enable
-colorscheme molokai
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" SETTINGS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+colorscheme solarized
+set bg=light
+"}}}
+" Config {{{
 set clipboard=unnamed       " Use the OS clipboard by default (on versions compiled with `+clipboard`)
-set foldlevelstart=20
-set fdm=indent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -71,7 +85,6 @@ set hidden
 set wildmenu
 set wildmode=full
 set path=**
-hi WildMenu guifg=#2aa198
 set visualbell
 set cursorline
 set ttyfast
@@ -81,15 +94,12 @@ set laststatus=2
 set number
 set ignorecase          " case insensitive searching
 set smartcase           " but become case sensitive if you type uppercase characters
-"set gdefault
 set incsearch
 set showmatch
 set hlsearch
 set autoread            " auto read when a file is changed from the outside
 set mouse=a
-"switchi to “paste mode”
 set pastetoggle=<F4>
-" Number of screen lines to use for the command-line
 set cmdheight=1
 " Enable persistent undo {{{2
 set undofile
@@ -100,38 +110,35 @@ endif
 " Disable swapfile and backup {{{2
 set nobackup
 set noswapfile
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" COMMAND-T
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 2}}}
+" }}}
+" Plugins {{{1
+" COMMAND-T {{{2
 let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowReverse = 1 " shows results in reverse order
 set wildignore+=**/node_modules/**,**/components/**
 autocmd FocusGained * CommandTFlush
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" SYNTASTIC
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 2}}}
+" SYNTASTIC {{{2
 let g:syntastic_enable_signs=1
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" POWERLINE
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 2}}}
+" POWERLINE {{{2
 let g:Powerline_symbols = 'fancy'
 " set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set guifont=Droid\ Sans\ Mono\ for\ Powerline
 set fillchars+=stl:\ ,stlnc:\
-" set fillchars+=stl:\ ,stlnc:\
-" if ! has('gui_running')
-"     set ttimeoutlen=10
-"     augroup FastEscape
-"         autocmd!
-"         au InsertEnter * set timeoutlen=0
-"         au InsertLeave * set timeoutlen=1000
-"     augroup END
-" endif
-" set laststatus=2 " Always display the statusline in all windows
-" set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" PROJECT
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if ! has('gui_running')
+    set ttimeoutlen=10
+    augroup FastEscape
+        autocmd!
+        au InsertEnter * set timeoutlen=0
+        au InsertLeave * set timeoutlen=1000
+    augroup END
+endif
+set laststatus=2 " Always display the statusline in all windows
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+" 2}}}
+" PROJECT {{{2
 let g:project_use_nerdtree = 0
 let g:project_set_title = 0
 call project#rc('~/src')
@@ -145,15 +152,62 @@ File     '~/.dotfiles/vim_bundles'                 , 'bundles'
 Project  '/opt/boxen/repo'                         , 'boxen'
 Project  '~/src'                                   , 'CODE'
 source ~/.vim_projects
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" SNIPMATE
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 2}}}
+" SNIPMATE {{{2
 autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
+" 2}}}
+" }}}
+" MAPPINGS {{{
+  " <leader>
+  let mapleader = ","
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" SOURCE MAPPINGS & CMDS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-source ~/.dotfiles/vim_mappings
-source ~/.dotfiles/vim_commands
+
+  " format file
+  map <c-f> =G<CR>
+  autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+  " for html
+  autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+  " for css or scss
+  autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+  " switch tab 
+  map <C-TAB> :bnext<cr>
+  map <C-S-TAB> :bprev<cr>
 
 
+  " nerdtree
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+  map ,o :NERDTreeToggle<CR>
+
+  " standard regex
+  nnoremap / /\v
+  cnoremap %s/ %s/\v
+
+  vnoremap > > gv
+  vnoremap < < gv
+
+  nnoremap > V>><Esc>
+  nnoremap < V<<<Esc>
+
+  " there should be a better use for the arrow keys
+  map <Left> <C-O>
+  map <Right> <C-I>
+  map <Up> <NOP>
+  map <Down> :NERDTreeToggle<CR>
+
+  " Bubble single&multiple lines
+  nmap <S-Up> ddkP
+  nmap <S-Down> ddp
+  vmap <S-Up> xkP`[V`]
+  vmap <S-Down> xp`[V`]
+
+  " snipmate
+  ino <a-tab> <c-r>=TriggerSnippet()<cr>
+  snor <a-tab> <esc>i<right><c-r>=TriggerSnippet()<cr>
+" }}}
+" COMMANDS {{{
+command! ReloadVIMRC execute "source ~/.vimrc"
+command! SudoWrite execute "w !sudo tee %"
+" }}}
+
+echo 'up and ready!'
