@@ -1,4 +1,3 @@
-" vim:fdm=marker
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIMRC
 """""""""""
@@ -69,6 +68,8 @@ set bg=light
 "}}}
 " Config {{{
 set clipboard=unnamed       " Use the OS clipboard by default (on versions compiled with `+clipboard`)
+set fdm=indent
+au BufReadPre vimrc setlocal foldmethod=marker
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
