@@ -7,8 +7,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " yes it's 2013
 set nocompatible
-" automatically reload vimrc when it's saved
-autocmd BufWritePost vimrc source ~/.vimrc
 " VUNDLE {{{
 filetype off                   " required!
 
@@ -35,13 +33,13 @@ Bundle 'stoeffel/vim-project'
 Bundle 'tComment'
 Bundle 'repeat.vim'
 Bundle 'unimpaired.vim'
+Bundle 'Raimondi/delimitMate'
+Bundle 'Lokaltog/vim-powerline'
 " textobj {{{2
 Bundle 'textobj-function'
 Bundle 'textobj-indent'
 Bundle 'textobj-user'
 " 2}}}
-Bundle 'Raimondi/delimitMate'
-Bundle 'Lokaltog/vim-powerline'
 " Colorschemes {{{2
 Bundle 'vim-colors-solarized'
 Bundle 'molokai'
@@ -210,5 +208,3 @@ autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
 command! ReloadVIMRC execute "source ~/.vimrc"
 command! SudoWrite execute "w !sudo tee %"
 " }}}
-
-echo 'up and ready!'
