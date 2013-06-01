@@ -9,7 +9,6 @@
 set nocompatible
 " automatically reload vimrc when it's saved
 autocmd BufWritePost vimrc source ~/.vimrc
-
 " VUNDLE {{{
 filetype off                   " required!
 
@@ -36,16 +35,19 @@ Bundle 'stoeffel/vim-project'
 Bundle 'tComment'
 Bundle 'repeat.vim'
 Bundle 'unimpaired.vim'
-Bundle 'molokai'
-Bundle 'vividchalk.vim'
-Bundle 'vim-colors-solarized'
+" textobj {{{2
 Bundle 'textobj-function'
 Bundle 'textobj-indent'
 Bundle 'textobj-user'
-"Bundle 'stoeffel/vim-neatstatus'
+" 2}}}
 Bundle 'Raimondi/delimitMate'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'Floobits/floobits-vim'
+" Colorschemes {{{2
+Bundle 'vim-colors-solarized'
+Bundle 'molokai'
+Bundle 'vividchalk.vim'
+Bundle 'twilight'
+" 2}}}
 
 filetype plugin indent on "enable loading plugin 
 " }}}
@@ -64,8 +66,7 @@ endif
 " }}}
 " Colorscheme {{{
 syntax enable
-colorscheme solarized
-set bg=light
+colorscheme twilight
 "}}}
 " Config {{{
 set clipboard=unnamed       " Use the OS clipboard by default (on versions compiled with `+clipboard`)
