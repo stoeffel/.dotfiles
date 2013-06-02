@@ -157,55 +157,47 @@ autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
 " MAPPINGS {{{
   " <leader>
   let mapleader = ","
-
-
-  " format file
-  map <c-f> =G<CR>
-  autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+  " format file {{{2
+  map ,f =G<CR>
+  autocmd FileType javascript noremap <buffer>  ,f :call JsBeautify()<cr>
   " for html
-  autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+  autocmd FileType html noremap <buffer> ,f :call HtmlBeautify()<cr>
   " for css or scss
-  autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
-
-  " switch tab 
-  map <C-TAB> :bnext<cr>
-  map <C-S-TAB> :bprev<cr>
-
-
+  autocmd FileType css noremap <buffer> ,f :call CSSBeautify()<cr>
+  " 2}}}
+  " indentation {{{2
   vnoremap > > gv
   vnoremap < < gv
-
   nnoremap > V>><Esc>
   nnoremap < V<<<Esc>
-
-  " there should be a better use for the arrow keys
+  " 2}}}
+  " there should be a better use for the arrow keys {{{{2
   map <Left> <NOP>
   map <Right> <NOP>
   map <Up> <NOP>
   map <Down> <NOP>
-
-  " Bubble single&multiple lines
+  " 2}}}
+  " Bubble single&multiple lines {{{2
   nmap <S-Up> ddkP
   nmap <S-Down> ddp
   vmap <S-Up> xkP`[V`]
   vmap <S-Down> xp`[V`]
-
-  " snipmate
+  " 2}}}
+  " snipmate {{{2
   ino <a-tab> <c-r>=TriggerSnippet()<cr>
   snor <a-tab> <esc>i<right><c-r>=TriggerSnippet()<cr>
-
-
-  nmap ,k "_ddkP
-  nmap ,j "_ddkP
-  
-
+  " 2}}}
   " Git {{{2
   nmap ,gs :Gstatus<cr>
   nmap ,ga :Git add --all<cr>
   nmap ,gc :Gcommit<cr>
   nmap ,gp :Git push<cr>
+  " 2}}}
+  " Buffer navigation {{{2
+  " switch tab 
+  nmap ,b :b#<cr>
+  " 2}}}
   " }}}
-  "
   " COMMANDS {{{
   command! ReloadVIMRC execute "source ~/.vimrc"
   command! SudoWrite execute "w !sudo tee %"
