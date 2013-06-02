@@ -18,7 +18,6 @@ Bundle 'vundle'
 Bundle 'hallison/vim-markdown'
 Bundle 'sjl/gundo.vim'
 Bundle 'maksimr/vim-jsbeautify'
-Bundle 'scrooloose/nerdtree'
 Bundle 'editorconfig/editorconfig-vim' 
 Bundle 'wincent/Command-T' 
 Bundle 'vim-scripts/jshint.vim' 
@@ -34,7 +33,7 @@ Bundle 'tComment'
 Bundle 'repeat.vim'
 Bundle 'unimpaired.vim'
 Bundle 'Raimondi/delimitMate'
-Bundle 'Lokaltog/vim-powerline'
+" Bundle 'Lokaltog/vim-powerline'
 " textobj {{{2
 Bundle 'textobj-function'
 Bundle 'textobj-indent'
@@ -64,7 +63,7 @@ endif
 " }}}
 " Colorscheme {{{
 syntax enable
-colorscheme twilight
+colorscheme molokai
 "}}}
 " Config {{{
 set clipboard=unnamed       " Use the OS clipboard by default (on versions compiled with `+clipboard`)
@@ -174,14 +173,6 @@ autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
   map <C-S-TAB> :bprev<cr>
 
 
-  " nerdtree
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-  map ,o :NERDTreeToggle<CR>
-
-  " standard regex
-  nnoremap / /\v
-  cnoremap %s/ %s/\v
-
   vnoremap > > gv
   vnoremap < < gv
 
@@ -189,10 +180,10 @@ autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
   nnoremap < V<<<Esc>
 
   " there should be a better use for the arrow keys
-  map <Left> <C-O>
-  map <Right> <C-I>
+  map <Left> <NOP>
+  map <Right> <NOP>
   map <Up> <NOP>
-  map <Down> :NERDTreeToggle<CR>
+  map <Down> <NOP>
 
   " Bubble single&multiple lines
   nmap <S-Up> ddkP
@@ -203,8 +194,20 @@ autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
   " snipmate
   ino <a-tab> <c-r>=TriggerSnippet()<cr>
   snor <a-tab> <esc>i<right><c-r>=TriggerSnippet()<cr>
-" }}}
-" COMMANDS {{{
-command! ReloadVIMRC execute "source ~/.vimrc"
-command! SudoWrite execute "w !sudo tee %"
-" }}}
+
+
+  nmap ,k "_ddkP
+  nmap ,j "_ddkP
+  
+
+  " Git {{{2
+  nmap ,gs :Gstatus<cr>
+  nmap ,ga :Git add --all<cr>
+  nmap ,gc :Gcommit<cr>
+  nmap ,gp :Git push<cr>
+  " }}}
+  "
+  " COMMANDS {{{
+  command! ReloadVIMRC execute "source ~/.vimrc"
+  command! SudoWrite execute "w !sudo tee %"
+  " }}}

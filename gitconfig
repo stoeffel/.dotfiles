@@ -1,0 +1,30 @@
+[user]
+	name = Christoph Hermann
+	email = schtoeffel@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+
+[color "diff"]
+        meta = yellow 
+
+[apply]
+	whitespace = nowarn
+
+[help]
+	autocorrect = 1
+[push]
+	default = current
+[rerere]
+	enabled = 1
+[github]
+	user = stoeffel
+[hub]
+protocol = https
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential
+[core]
+excludesfile = /opt/boxen/config/git/gitignore
+excludesfile = ~/.gitignore
+editor = vim --noplugin
