@@ -134,7 +134,6 @@ if ! has('gui_running')
     augroup END
 endif
 set laststatus=2 " Always display the statusline in all windows
-set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 " 2}}}
 " PROJECT {{{2
 let g:project_use_nerdtree = 0
