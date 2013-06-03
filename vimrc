@@ -26,7 +26,6 @@ Bundle 'tpope/vim-surround'
 Bundle 'terryma/vim-multiple-cursors' 
 Bundle 'mileszs/ack.vim' 
 Bundle 'tpope/vim-fugitive' 
-Bundle 'msanders/snipmate.vim' 
 Bundle 'scrooloose/syntastic' 
 Bundle 'stoeffel/vim-project' 
 Bundle 'tComment'
@@ -59,14 +58,14 @@ if has("gui_running") && system('ps xw | grep "Vim -psn" | grep -vc grep') > 0
         let s:path = system("echo echo VIMPATH'${PATH}' | $SHELL -l")
         let $PATH = matchstr(s:path, 'VIMPATH\zs.\{-}\ze\n')
     endif
-    colorscheme molokai
+    colorscheme solarized
+    set bg=light
 endif
 " }}}
 " Colorscheme {{{
 syntax enable
 "}}}
 " Config {{{
-set clipboard=unnamed       " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -114,6 +113,7 @@ set noswapfile
 " COMMAND-T {{{2
 let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowReverse = 1 " shows results in reverse order
+hi PmenuSel ctermbg=59 ctermfg=256
 set wildignore+=**/node_modules/**,**/components/**
 autocmd FocusGained * CommandTFlush
 " 2}}}
@@ -157,13 +157,16 @@ autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
 " MAPPINGS {{{
   " <leader>
   let mapleader = ","
+  " general {{{2
+  nnoremap <leader>vr :vsplit $MYVIMRC<cr>
+  " 2}}}
   " format file {{{2
-  map ,f =G<CR>
-  autocmd FileType javascript noremap <buffer>  ,f :call JsBeautify()<cr>
+  map <Leader>f =G<CR>
+  autocmd FileType javascript noremap <buffer>  <Leader>f :call JsBeautify()<cr>
   " for html
-  autocmd FileType html noremap <buffer> ,f :call HtmlBeautify()<cr>
+  autocmd FileType html noremap <buffer> <Leader>f :call HtmlBeautify()<cr>
   " for css or scss
-  autocmd FileType css noremap <buffer> ,f :call CSSBeautify()<cr>
+  autocmd FileType css noremap <buffer> <Leader>f :call CSSBeautify()<cr>
   " 2}}}
   " indentation {{{2
   vnoremap > > gv
@@ -183,22 +186,23 @@ autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
   vmap <S-Up> xkP`[V`]
   vmap <S-Down> xp`[V`]
   " 2}}}
-  " snipmate {{{2
-  ino <a-tab> <c-r>=TriggerSnippet()<cr>
-  snor <a-tab> <esc>i<right><c-r>=TriggerSnippet()<cr>
-  " 2}}}
   " Git {{{2
-  nmap ,gs :Gstatus<cr>
-  nmap ,ga :Git add --all<cr>
-  nmap ,gc :Gcommit<cr>
-  nmap ,gp :Git push<cr>
+  nmap <Leader>gs :Gstatus<cr>
+  nmap <Leader>ga :Git add --all<cr>
+  nmap <Leader>gc :Gcommit<cr>
+  nmap <Leader>gp :Git push<cr>
+  nmap <Leader>gl :Git pull<cr>
+  nmap <Leader>gd :Gdiff<cr>
   " 2}}}
   " Buffer navigation {{{2
   " switch tab 
-  nmap ,b :b#<cr>
+  nmap <Leader>b :b#<cr>
   " 2}}}
   " }}}
   " COMMANDS {{{
   command! ReloadVIMRC execute "source ~/.vimrc"
   command! SudoWrite execute "w !sudo tee %"
+  " }}}
+  " Abbreviations {{{
+  iabbrev @@    schtoeffel@gmail.com
   " }}}
