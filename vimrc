@@ -15,7 +15,6 @@ call vundle#rc()
 syntax on
 
 Bundle 'vundle'
-Bundle 'hallison/vim-markdown'
 Bundle 'sjl/gundo.vim'
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'editorconfig/editorconfig-vim' 
@@ -27,7 +26,6 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'mileszs/ack.vim' 
 Bundle 'tpope/vim-fugitive' 
 Bundle 'scrooloose/syntastic' 
-Bundle 'stoeffel/vim-project' 
 Bundle 'tComment'
 Bundle 'repeat.vim'
 Bundle 'unimpaired.vim'
@@ -42,6 +40,7 @@ Bundle 'vim-colors-solarized'
 Bundle 'molokai'
 Bundle 'vividchalk.vim'
 Bundle 'twilight'
+Bundle 'github-theme'
 " 2}}}
 
 filetype plugin indent on "enable loading plugin 
@@ -57,7 +56,14 @@ if has("gui_running") && system('ps xw | grep "Vim -psn" | grep -vc grep') > 0
         let s:path = system("echo echo VIMPATH'${PATH}' | $SHELL -l")
         let $PATH = matchstr(s:path, 'VIMPATH\zs.\{-}\ze\n')
     endif
-    colorscheme molokai
+    " ------------------------------------------------------------------
+    " Solarized Colorscheme Config
+    " ------------------------------------------------------------------
+    let g:solarized_contrast="high"    "default value is normal
+    let g:solarized_visibility="high"    "default value is normal
+    syntax enable
+    set background=light
+    colorscheme solarized
 endif
 " }}}
 " Colorscheme {{{
@@ -118,74 +124,60 @@ autocmd FocusGained * CommandTFlush
 " SYNTASTIC {{{2
 let g:syntastic_enable_signs=1
 " 2}}}
-" PROJECT {{{2
-let g:project_use_nerdtree = 0
-let g:project_set_title = 0
-call project#rc('~/src')
-
-Project  'scratch'
-Project  '~/.dotfiles'
-File     '~/.dotfiles/vimrc'                       , 'vimrc'
-File     '~/.dotfiles/gvimrc'                      , 'gvimrc'
-File     '~/.dotfiles/zshrc'                       , 'zshrc'
-File     '~/.dotfiles/vim_bundles'                 , 'bundles'
-Project  '/opt/boxen/repo'                         , 'boxen'
-Project  '~/src'                                   , 'CODE'
-source ~/.vim_projects
-" 2}}}
 " SNIPMATE {{{2
 autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
 " 2}}}
 " }}}
 " MAPPINGS {{{
-  " <leader>
-  let mapleader = ","
-  " general {{{2
-  nnoremap <leader>vr :vsplit $MYVIMRC<cr>
-  " 2}}}
-  " format file {{{2
-  map <Leader>f =G<CR>
-  autocmd FileType javascript noremap <buffer>  <Leader>f :call JsBeautify()<cr>
-  " for html
-  autocmd FileType html noremap <buffer> <Leader>f :call HtmlBeautify()<cr>
-  " for css or scss
-  autocmd FileType css noremap <buffer> <Leader>f :call CSSBeautify()<cr>
-  " 2}}}
-  " indentation {{{2
-  vnoremap > > gv
-  vnoremap < < gv
-  nnoremap > V>><Esc>
-  nnoremap < V<<<Esc>
-  " 2}}}
-  " there should be a better use for the arrow keys {{{{2
-  map <Left> <NOP>
-  map <Right> <NOP>
-  map <Up> <NOP>
-  map <Down> <NOP>
-  " 2}}}
-  " Bubble single&multiple lines {{{2
-  nmap <S-Up> ddkP
-  nmap <S-Down> ddp
-  vmap <S-Up> xkP`[V`]
-  vmap <S-Down> xp`[V`]
-  " 2}}}
-  " Git {{{2
-  nmap <Leader>gs :Gstatus<cr>
-  nmap <Leader>ga :Git add --all<cr>
-  nmap <Leader>gc :Gcommit<cr>
-  nmap <Leader>gp :Git push<cr>
-  nmap <Leader>gl :Git pull<cr>
-  nmap <Leader>gd :Gdiff<cr>
-  " 2}}}
-  " Buffer navigation {{{2
-  " switch tab 
-  nmap <Leader>b :b#<cr>
-  " 2}}}
-  " }}}
-  " COMMANDS {{{
-  command! ReloadVIMRC execute "source ~/.vimrc"
-  command! SudoWrite execute "w !sudo tee %"
-  " }}}
-  " Abbreviations {{{
-  iabbrev @@    schtoeffel@gmail.com
-  " }}}
+" <leader>
+let mapleader = ","
+" general {{{2
+nnoremap <leader>vr :vsplit $MYVIMRC<cr>
+" 2}}}
+" format file {{{2
+map <Leader>f =G<CR>
+autocmd FileType javascript noremap <buffer>  <Leader>f :call JsBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <Leader>f :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <Leader>f :call CSSBeautify()<cr>
+" 2}}}
+" indentation {{{2
+vnoremap > > gv
+vnoremap < < gv
+nnoremap > V>><Esc>
+nnoremap < V<<<Esc>
+" 2}}}
+" there should be a better use for the arrow keys {{{{2
+map <Left> <NOP>
+map <Right> <NOP>
+map <Up> <NOP>
+map <Down> <NOP>
+" 2}}}
+" Bubble single&multiple lines {{{2
+nmap <S-Up> ddkP
+nmap <S-Down> ddp
+vmap <S-Up> xkP`[V`]
+vmap <S-Down> xp`[V`]
+" 2}}}
+" Git {{{2
+nmap <Leader>gs :Gstatus<cr>
+nmap <Leader>ga :Git add --all<cr>
+nmap <Leader>gc :Gcommit<cr>
+nmap <Leader>gp :Git push<cr>
+nmap <Leader>gl :Git pull<cr>
+nmap <Leader>gd :Gdiff<cr>
+" 2}}}
+" Buffer navigation {{{2
+" switch tab 
+nmap <Leader>b :b#<cr>
+" 2}}}
+" }}}
+" COMMANDS {{{
+command! ReloadVIMRC execute "source ~/.vimrc"
+command! SudoWrite execute "w !sudo tee %"
+
+" }}}
+" Abbreviations {{{
+iabbrev @@    schtoeffel@gmail.com
+" }}}
