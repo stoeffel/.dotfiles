@@ -59,11 +59,11 @@ if has("gui_running") && system('ps xw | grep "Vim -psn" | grep -vc grep') > 0
         let s:path = system("echo echo VIMPATH'${PATH}' | $SHELL -l")
         let $PATH = matchstr(s:path, 'VIMPATH\zs.\{-}\ze\n')
     endif
+    colorscheme molokai
 endif
 " }}}
 " Colorscheme {{{
 syntax enable
-colorscheme molokai
 "}}}
 " Config {{{
 set clipboard=unnamed       " Use the OS clipboard by default (on versions compiled with `+clipboard`)
