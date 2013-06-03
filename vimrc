@@ -29,7 +29,6 @@ Bundle 'scrooloose/syntastic'
 Bundle 'tComment'
 Bundle 'repeat.vim'
 Bundle 'unimpaired.vim'
-Bundle 'Raimondi/delimitMate'
 " textobj {{{2
 Bundle 'textobj-function'
 Bundle 'textobj-indent'
@@ -133,6 +132,7 @@ autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
 let mapleader = ","
 " general {{{2
 nnoremap <leader>vr :vsplit $MYVIMRC<cr>
+nnoremap <leader>vl :ReloadVIMRC<cr>
 " 2}}}
 " format file {{{2
 map <Leader>f =G<CR>
