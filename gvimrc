@@ -21,4 +21,3 @@ set guioptions-=R
 set guioptions-=m
 set guioptions-=M
 set guioptions+=c
-set fu

@@ -32,7 +32,6 @@ Bundle 'tComment'
 Bundle 'repeat.vim'
 Bundle 'unimpaired.vim'
 Bundle 'Raimondi/delimitMate'
-" Bundle 'Lokaltog/vim-powerline'
 " textobj {{{2
 Bundle 'textobj-function'
 Bundle 'textobj-indent'
@@ -58,8 +57,7 @@ if has("gui_running") && system('ps xw | grep "Vim -psn" | grep -vc grep') > 0
         let s:path = system("echo echo VIMPATH'${PATH}' | $SHELL -l")
         let $PATH = matchstr(s:path, 'VIMPATH\zs.\{-}\ze\n')
     endif
-    colorscheme solarized
-    set bg=light
+    colorscheme molokai
 endif
 " }}}
 " Colorscheme {{{
@@ -119,21 +117,6 @@ autocmd FocusGained * CommandTFlush
 " 2}}}
 " SYNTASTIC {{{2
 let g:syntastic_enable_signs=1
-" 2}}}
-" POWERLINE {{{2
-let g:Powerline_symbols = 'fancy'
-" set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-set guifont=Droid\ Sans\ Mono\ for\ Powerline
-set fillchars+=stl:\ ,stlnc:\
-if ! has('gui_running')
-    set ttimeoutlen=10
-    augroup FastEscape
-        autocmd!
-        au InsertEnter * set timeoutlen=0
-        au InsertLeave * set timeoutlen=1000
-    augroup END
-endif
-set laststatus=2 " Always display the statusline in all windows
 " 2}}}
 " PROJECT {{{2
 let g:project_use_nerdtree = 0
