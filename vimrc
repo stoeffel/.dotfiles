@@ -131,6 +131,7 @@ autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
 " <leader>
 let mapleader = ","
 " general {{{2
+inoremap jj <esc>
 nnoremap <leader>vr :vsplit $MYVIMRC<cr>
 nnoremap <leader>vl :ReloadVIMRC<cr>
 " 2}}}
