@@ -69,7 +69,7 @@ set scrolloff=3
 set autoindent
 set showmode
 set showcmd
-set nolist
+set list
 set listchars=tab:~\ ,trail:.
 " hide buffers instead of closing
 set hidden
@@ -91,6 +91,8 @@ set autoread            " auto read when a file is changed from the outside
 set mouse=a
 set pastetoggle=<F4>
 set cmdheight=1
+set wildignore+=**/node_modules/**,**/components/**,**/.bundle/**,**/.sass-cache/**,**/lib/**,**/extjs/**
+set wildignore+=**/Library,**/Movies,**/Google\ Drive,**/Downloads,**/Documents,**/Desktop,**/archive,**/Pictures,**/Public,**/3rd,**/vm
 " statusline {{{2
 if has("statusline") && !&cp
   set laststatus=2  " always show the status bar
@@ -116,7 +118,6 @@ set noswapfile
 " }}}
 " Plugins {{{1
 " ctrlP {{{2
-set wildignore+=**/node_modules/**,**/components/**
 autocmd FocusGained * ClearCtrlPCache
 " 2}}}
 " SYNTASTIC {{{2
