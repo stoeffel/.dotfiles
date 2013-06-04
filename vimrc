@@ -38,6 +38,7 @@ Bundle 'textobj-user'
 Bundle 'vim-colors-solarized'
 Bundle 'molokai'
 Bundle 'github-theme'
+Bundle 'JacksonGariety/Toy-Chest-Theme'
 " 2}}}
 
 filetype plugin indent on "enable loading plugin 
@@ -57,7 +58,7 @@ endif
 " }}}
 " Colorscheme {{{
 syntax enable
-colorscheme molokai
+colorscheme toychest
 "}}}
 " Config {{{
 set tabstop=4
