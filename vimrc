@@ -18,7 +18,7 @@ Bundle 'vundle'
 Bundle 'sjl/gundo.vim'
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'editorconfig/editorconfig-vim' 
-Bundle 'wincent/Command-T' 
+Bundle 'ctrlp.vim'
 Bundle 'vim-scripts/jshint.vim' 
 Bundle 'Valloric/YouCompleteMe' 
 Bundle 'tpope/vim-surround' 
@@ -36,10 +36,7 @@ Bundle 'textobj-user'
 " 2}}}
 " Colorschemes {{{2
 Bundle 'vim-colors-solarized'
-Bundle 'Railscasts-Theme-GUIand256color'
 Bundle 'molokai'
-Bundle 'vividchalk.vim'
-Bundle 'twilight'
 Bundle 'github-theme'
 " 2}}}
 
@@ -60,10 +57,7 @@ endif
 " }}}
 " Colorscheme {{{
 syntax enable
-if has("gui_running") 
-    syntax enable
-    colorscheme molokai
-endif
+colorscheme molokai
 "}}}
 " Config {{{
 set tabstop=4
@@ -87,7 +81,6 @@ set cursorline
 set ttyfast
 set ruler
 set backspace=indent,eol,start
-set laststatus=2
 set number
 set ignorecase          " case insensitive searching
 set smartcase           " but become case sensitive if you type uppercase characters
@@ -98,6 +91,18 @@ set autoread            " auto read when a file is changed from the outside
 set mouse=a
 set pastetoggle=<F4>
 set cmdheight=1
+" statusline {{{2
+if has("statusline") && !&cp
+  set laststatus=2  " always show the status bar
+
+  " Start the status line
+  set statusline=%<%f\ %h%m%r%=[\ %{&ff}\ ]\ %-14.(%l,%c%V%)\ %n#
+  au InsertEnter * hi StatusLine cterm=NONE  gui=NONE
+  au InsertLeave * hi StatusLine cterm=reverse gui=reverse
+" set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+  
+endif
+" }}}
 " Enable persistent undo {{{2
 set undofile
 set undodir=~/tmp/vim/undo
@@ -110,12 +115,9 @@ set noswapfile
 " 2}}}
 " }}}
 " Plugins {{{1
-" COMMAND-T {{{2
-let g:CommandTMaxHeight=20
-let g:CommandTMatchWindowReverse = 1 " shows results in reverse order
-hi PmenuSel ctermbg=59 ctermfg=256
+" ctrlP {{{2
 set wildignore+=**/node_modules/**,**/components/**
-autocmd FocusGained * CommandTFlush
+autocmd FocusGained * ClearCtrlPCache
 " 2}}}
 " SYNTASTIC {{{2
 let g:syntastic_enable_signs=1
@@ -170,6 +172,9 @@ nmap <Leader>gd :Gdiff<cr>
 " Buffer navigation {{{2
 " switch tab 
 nmap <Leader>b :b#<cr>
+" 2}}}
+" ctrlP {{{2
+map <Leader>t :CtrlP<cr>
 " 2}}}
 " }}}
 " COMMANDS {{{
