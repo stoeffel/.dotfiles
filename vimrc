@@ -40,6 +40,7 @@ Bundle 'molokai'
 Bundle 'vividchalk.vim'
 Bundle 'twilight'
 Bundle 'github-theme'
+Bundle 'kbarrette/mediummode'
 " 2}}}
 
 filetype plugin indent on "enable loading plugin 
@@ -55,6 +56,11 @@ if has("gui_running") && system('ps xw | grep "Vim -psn" | grep -vc grep') > 0
         let s:path = system("echo echo VIMPATH'${PATH}' | $SHELL -l")
         let $PATH = matchstr(s:path, 'VIMPATH\zs.\{-}\ze\n')
     endif
+endif
+" }}}
+" Colorscheme {{{
+syntax enable
+if has("gui_running") 
     " ------------------------------------------------------------------
     " Solarized Colorscheme Config
     " ------------------------------------------------------------------
@@ -64,9 +70,6 @@ if has("gui_running") && system('ps xw | grep "Vim -psn" | grep -vc grep') > 0
     set background=light
     colorscheme solarized
 endif
-" }}}
-" Colorscheme {{{
-syntax enable
 "}}}
 " Config {{{
 set tabstop=4
@@ -142,6 +145,7 @@ autocmd FileType javascript noremap <buffer>  <Leader>f :call JsBeautify()<cr>
 autocmd FileType html noremap <buffer> <Leader>f :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <Leader>f :call CSSBeautify()<cr>
+autocmd FileType scss noremap <buffer> <Leader>f :call CSSBeautify()<cr>
 " 2}}}
 " indentation {{{2
 vnoremap > > gv
