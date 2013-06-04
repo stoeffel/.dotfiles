@@ -36,11 +36,11 @@ Bundle 'textobj-user'
 " 2}}}
 " Colorschemes {{{2
 Bundle 'vim-colors-solarized'
+Bundle 'Railscasts-Theme-GUIand256color'
 Bundle 'molokai'
 Bundle 'vividchalk.vim'
 Bundle 'twilight'
 Bundle 'github-theme'
-Bundle 'kbarrette/mediummode'
 " 2}}}
 
 filetype plugin indent on "enable loading plugin 
@@ -61,14 +61,8 @@ endif
 " Colorscheme {{{
 syntax enable
 if has("gui_running") 
-    " ------------------------------------------------------------------
-    " Solarized Colorscheme Config
-    " ------------------------------------------------------------------
-    let g:solarized_contrast="high"    "default value is normal
-    let g:solarized_visibility="high"    "default value is normal
     syntax enable
-    set background=light
-    colorscheme solarized
+    colorscheme molokai
 endif
 "}}}
 " Config {{{
