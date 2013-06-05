@@ -26,7 +26,18 @@ export PATH=$PATH:bin:/opt/boxen/rbenv/shims:/opt/boxen/rbenv/bin:/opt/boxen/rbe
 # ALIASES
 # ==========================================
 
-alias gall="g add -u ."
+# Git
+alias ga="git add --all ."
+alias gs="git status"
+alias gp="git push"
+alias gl="git pull"
+
+# Vim
+alias v="vim"
+alias m="mvim"
+
+# List
+alias l="ls -la"
 
 # FUNCTIONS
 # ==========================================
