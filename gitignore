@@ -8,3 +8,15 @@
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# VIM #
+#######
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# SASS #
+########
+*.sass-cache

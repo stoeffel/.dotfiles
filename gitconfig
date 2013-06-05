@@ -25,5 +25,5 @@ protocol = https
 [credential]
 helper = /opt/boxen/bin/boxen-git-credential
 [core]
-excludesfile = ~/.gitignore
+excludesfile = /opt/boxen/config/git/gitignore
 editor = vim --noplugin
