@@ -48,6 +48,8 @@ Bundle 'unimpaired.vim'
 Bundle 'loremipsum'
 " ternjs.net (javascript code analysis)
 Bundle 'marijnh/tern_for_vim'
+" keep focus
+Bundle 'NrrwRgn'
 " textobj {{{2
 Bundle 'textobj-function'
 Bundle 'textobj-indent'
