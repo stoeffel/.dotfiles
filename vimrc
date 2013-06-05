@@ -133,6 +133,8 @@ set noswapfile
 " Plugins {{{1
 " ctrlP {{{2
 autocmd FocusGained * ClearCtrlPCache
+" TODO test with geofy: 
+let g:ctrlp_working_path_mode = 0
 " 2}}}
 " SYNTASTIC {{{2
 let g:syntastic_enable_signs=1
