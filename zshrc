@@ -39,6 +39,12 @@ alias m="mvim"
 # List
 alias l="ls -la"
 
+
+# DEPRECATED
+alias ll="echo use l"
+alias gall="echo use ga"
+alias gst="echo use gs"
+
 # FUNCTIONS
 # ==========================================
 
