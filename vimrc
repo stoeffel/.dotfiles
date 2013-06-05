@@ -39,9 +39,11 @@ Bundle 'vim-colors-solarized'
 Bundle 'molokai'
 Bundle 'github-theme'
 Bundle 'JacksonGariety/Toy-Chest-Theme'
+Bundle 'thinkpixellab/flatland'
 " 2}}}
 
 filetype plugin indent on "enable loading plugin 
+syntax enable
 " }}}
 " GUI ? {{{
 " check if gui or in shell
@@ -56,24 +58,26 @@ if has("gui_running") && system('ps xw | grep "Vim -psn" | grep -vc grep') > 0
     endif
 endif
 " }}}
-" Colorscheme {{{
-syntax enable
-colorscheme toychest
-"}}}
 " Config {{{
+" tabs are 4 spaces {{{2
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-set encoding=utf-8
-set scrolloff=3
 set autoindent
+" 2}}}
+" title {{{2
+set title
+set titlestring=%{getcwd()}\ -\ \(\ %t\ \)\ %a%r%m titlelen=70
+" 2}}}
+set antialias
+set encoding=utf-8  " what else
+set scrolloff=3
 set showmode
 set showcmd
 set list
 set listchars=tab:~\ ,trail:.
-" hide buffers instead of closing
-set hidden
+set hidden  " hide buffers instead of closing
 set wildmenu
 set wildmode=full
 set path=**
@@ -83,27 +87,37 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set number
+" search {{{2
 set ignorecase          " case insensitive searching
 set smartcase           " but become case sensitive if you type uppercase characters
 set incsearch
 set showmatch
 set hlsearch
+" 2}}}
 set autoread            " auto read when a file is changed from the outside
 set mouse=a
 set pastetoggle=<F4>
 set cmdheight=1
+" add register for os clipboard {{{2
+set clipboard+=unnamed
+set clipboard+=unnamedplus
+" 2}}}
+" wildignores {{{2
 set wildignore+=**/node_modules/**,**/components/**,**/.bundle/**,**/.sass-cache/**,**/lib/**,**/extjs/**
 set wildignore+=**/Library,**/Movies,**/Google\ Drive,**/Downloads,**/Documents,**/Desktop,**/archive,**/Pictures,**/Public,**/3rd,**/vm
+" 2}}}
 " statusline {{{2
 if has("statusline") && !&cp
-  set laststatus=2  " always show the status bar
+    set laststatus=2  " always show the status bar
 
-  " Start the status line
-  set statusline=%<%f\ %h%m%r%=[\ %{&ff}\ ]\ %-14.(%l,%c%V%)\ %n#
-  au InsertEnter * hi StatusLine cterm=NONE  gui=NONE
-  au InsertLeave * hi StatusLine cterm=reverse gui=reverse
-" set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
-  
+    " Start the status line
+    set statusline=%<%f\ %h%m%r%=[\ %{&ff}\ ]\ %-14.(%l,%c%V%)\ %n#
+
+    hi StatusLine cterm=NONE gui=NONE
+    au InsertLeave * hi StatusLine cterm=NONE  gui=NONE
+    au InsertEnter * hi StatusLine cterm=reverse gui=reverse
+    " set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+
 endif
 " }}}
 " Enable persistent undo {{{2
@@ -133,8 +147,13 @@ autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
 let mapleader = ","
 " general {{{2
 inoremap jj <esc>
+cnoremap jj <esc><cr>
 nnoremap <leader>vr :vsplit $MYVIMRC<cr>
 nnoremap <leader>vl :ReloadVIMRC<cr>
+" copy stuff to os clipboard {{{3
+vmap <D-c> "*Y
+vmap <Leader>c "*Y
+" 3}}}
 " 2}}}
 " format file {{{2
 map <Leader>f =G<CR>
