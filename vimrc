@@ -21,7 +21,7 @@ Bundle 'sjl/gundo.vim'
 " nice js files
 Bundle 'maksimr/vim-jsbeautify'
 " .editorconfig
-Bundle 'editorconfig/editorconfig-vim'
+"Bundle 'editorconfig-vim'
 " fuzzy finder
 Bundle 'ctrlp.vim'
 " jshint
@@ -63,7 +63,7 @@ Bundle 'JacksonGariety/Toy-Chest-Theme'
 Bundle 'thinkpixellab/flatland'
 " 2}}}
 
-filetype plugin indent on "enable loading plugin 
+filetype plugin indent on "enable loading plugin
 syntax enable
 " }}}
 " GUI ? {{{
@@ -132,7 +132,7 @@ set cmdheight=1
      set laststatus=2  " always show the status bar
 
      " Start the status line
-     set statusline=%<%f\ %h%m%r%=[\ %{&ff}\ ]\ %-14.(%l,%c%V%)\ %n#
+     set statusline=%<%f\ %h%m%r%=[\ %{&ft}\ ]\ %-14.(%l,%c%V%)\ %n#
 
      hi StatusLine cterm=reverse gui=reverse
      au InsertEnter * hi StatusLine cterm=bold,underline  gui=bold,underline
@@ -154,7 +154,7 @@ set cmdheight=1
  " Plugins {{{1
  " ctrlP {{{2
  autocmd FocusGained * ClearCtrlPCache
- " TODO test with geofy: 
+ " TODO test with geofy:
  let g:ctrlp_working_path_mode = 0
  " 2}}}
  " SYNTASTIC {{{2
@@ -213,7 +213,7 @@ set cmdheight=1
  nmap <Leader>gd :Gdiff<cr>
  " 2}}}
  " Buffer navigation {{{2
- " switch tab 
+ " switch tab
  nmap <Leader>b :b#<cr>
  " 2}}}
  " ctrlP {{{2
