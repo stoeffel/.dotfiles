@@ -14,21 +14,40 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 syntax on
 
+" Bundles for vim
 Bundle 'vundle'
+" treeview of undo history
 Bundle 'sjl/gundo.vim'
+" nice js files
 Bundle 'maksimr/vim-jsbeautify'
-Bundle 'editorconfig/editorconfig-vim' 
+" .editorconfig
+Bundle 'editorconfig/editorconfig-vim'
+" fuzzy finder
 Bundle 'ctrlp.vim'
-Bundle 'vim-scripts/jshint.vim' 
-Bundle 'Valloric/YouCompleteMe' 
-Bundle 'tpope/vim-surround' 
-Bundle 'terryma/vim-multiple-cursors' 
-Bundle 'mileszs/ack.vim' 
-Bundle 'tpope/vim-fugitive' 
-Bundle 'scrooloose/syntastic' 
-Bundle 'tComment'
+" jshint
+Bundle 'vim-scripts/jshint.vim'
+" fuzzy code completion
+Bundle 'Valloric/YouCompleteMe'
+" { surround stuff }
+Bundle 'tpope/vim-surround'
+" multiple cursors
+Bundle 'terryma/vim-multiple-cursors'
+" ack finds your stuff
+Bundle 'mileszs/ack.vim'
+" git for vim
+Bundle 'tpope/vim-fugitive'
+" will find your syntax errors
+Bundle 'scrooloose/syntastic'
+" you should write some comments
+Bundle 'The-NERD-Commenter'
+" repeat your actions .
 Bundle 'repeat.vim'
+" the missing pairs
 Bundle 'unimpaired.vim'
+" lorem ipsum dolor.
+Bundle 'loremipsum'
+" ternjs.net (javascript code analysis)
+Bundle 'marijnh/tern_for_vim'
 " textobj {{{2
 Bundle 'textobj-function'
 Bundle 'textobj-indent'
@@ -103,7 +122,7 @@ set cmdheight=1
  set clipboard+=unnamedplus
  " 2}}}
  " wildignores {{{2
- set wildignore+=**/node_modules/**,**/components/**,**/.bundle/**,**/.sass-cache/**,**/lib/**,**/extjs/**
+ set wildignore+=**/node_modules/**,**/components/**,**/.bundle/**,**/.sass-cache/**,,**/extjs/**
  set wildignore+=**/Library,**/Movies,**/Google\ Drive,**/Downloads,**/Documents,**/Desktop,**/archive,**/Pictures,**/Public,**/3rd,**/vm
  " 2}}}
  " statusline {{{2
