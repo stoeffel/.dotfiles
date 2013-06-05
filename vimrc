@@ -18,10 +18,8 @@ syntax on
 Bundle 'vundle'
 " treeview of undo history
 Bundle 'sjl/gundo.vim'
-" nice js files
-Bundle 'maksimr/vim-jsbeautify'
 " .editorconfig
-"Bundle 'editorconfig-vim'
+Bundle 'editorconfig-vim'
 " fuzzy finder
 Bundle 'ctrlp.vim'
 " jshint
@@ -46,8 +44,6 @@ Bundle 'repeat.vim'
 Bundle 'unimpaired.vim'
 " lorem ipsum dolor.
 Bundle 'loremipsum'
-" ternjs.net (javascript code analysis)
-Bundle 'marijnh/tern_for_vim'
 " keep focus
 Bundle 'NrrwRgn'
 " textobj {{{2
@@ -179,12 +175,6 @@ set cmdheight=1
  " 2}}}
  " format file {{{2
  map <Leader>f =G<CR>
- autocmd FileType javascript noremap <buffer>  <Leader>f :call JsBeautify()<cr>
- " for html
- autocmd FileType html noremap <buffer> <Leader>f :call HtmlBeautify()<cr>
- " for css or scss
- autocmd FileType css noremap <buffer> <Leader>f :call CSSBeautify()<cr>
- autocmd FileType scss noremap <buffer> <Leader>f :call CSSBeautify()<cr>
  " 2}}}
  " indentation {{{2
  vnoremap > > gv
