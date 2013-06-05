@@ -113,10 +113,9 @@ if has("statusline") && !&cp
     " Start the status line
     set statusline=%<%f\ %h%m%r%=[\ %{&ff}\ ]\ %-14.(%l,%c%V%)\ %n#
 
-    hi StatusLine cterm=NONE gui=NONE
-    au InsertLeave * hi StatusLine cterm=NONE  gui=NONE
-    au InsertEnter * hi StatusLine cterm=reverse gui=reverse
-    " set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+    hi StatusLine cterm=reverse gui=reverse
+    au InsertEnter * hi StatusLine cterm=bold,underline  gui=bold,underline
+    au InsertLeave * hi StatusLine cterm=reverse gui=reverse
 
 endif
 " }}}
