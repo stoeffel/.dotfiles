@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="terminalparty"
+ZSH_THEME="robbyrussell"
 
 
 # rupa's z-script
@@ -14,7 +14,7 @@ ZSH_THEME="terminalparty"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git node npm nyan bower gem gitfast last-working-dir )
+plugins=(git node npm nyan bower gem gitfast last-working-dir vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
@@ -38,6 +38,10 @@ alias m="mvim"
 
 # List
 alias l="ls -la"
+
+# VID (very important directories)
+alias .="cd ~/.dotfiles"
+alias s="cd ~/src"
 
 
 # DEPRECATED
