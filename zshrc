@@ -50,9 +50,6 @@ alias cw="compass watch"
 # Grunt
 alias gr="grunt"
 
-# boxen
-alias box="cd /opt/boxen/repo"
-
 # Applications
 alias c="open -a Google\ Chrome"
 alias st="open -a SourceTree"
@@ -61,9 +58,9 @@ alias st="open -a SourceTree"
 alias l="ls -la"
 
 # VID (very important directories)
+alias b="cd /opt/boxen/repo"
 alias d="cd ~/.dotfiles"
 alias s="cd ~/src"
-
 
 # DEPRECATED
 alias ll="echo use l"
