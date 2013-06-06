@@ -113,6 +113,7 @@ set ruler
 set backspace=indent,eol,start
 set number
 set colorcolumn=80
+highlight ColorColumn ctermbg=236 guibg=#303030
 " search {{{2
 set ignorecase          " case insensitive searching
 set smartcase           " but become case sensitive if you type uppercase
