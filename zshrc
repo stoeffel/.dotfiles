@@ -48,6 +48,7 @@ alias m="mvim"
 
 # Applications
 alias c="open -a Google\ Chrome"
+alias st="open -a SourceTree"
 
 # List
 alias l="ls -la"
