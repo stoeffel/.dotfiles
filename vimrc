@@ -36,6 +36,8 @@ Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-fugitive'
 " will find your syntax errors
 Bundle 'scrooloose/syntastic'
+" Fileexplorer
+Bundle 'The-NERD-tree'
 " you should write some comments
 Bundle 'The-NERD-Commenter'
 " repeat your actions .
@@ -55,8 +57,12 @@ Bundle 'textobj-user'
 Bundle 'vim-colors-solarized'
 Bundle 'molokai'
 Bundle 'github-theme'
-Bundle 'JacksonGariety/Toy-Chest-Theme'
-Bundle 'thinkpixellab/flatland'
+" 2}}}
+" Languages {{{2
+Bundle "pangloss/vim-javascript"
+Bundle "ajf/puppet-vim"
+Bundle "vim-ruby/vim-ruby"
+Bundle "cakebaker/scss-syntax.vim"
 " 2}}}
 
 filetype plugin indent on "enable loading plugin
@@ -175,6 +181,10 @@ set cmdheight=1
  " 2}}}
  " format file {{{2
  map <Leader>f =G<CR>
+ autocmd FileType html noremap <buffer> <Leader>f :call HtmlBeautify()<cr>
+ " for css or scss
+ autocmd FileType css noremap <buffer> <Leader>f :call CSSBeautify()<cr>
+ autocmd FileType scss noremap <buffer> <Leader>f :call CSSBeautify()<cr>
  " 2}}}
  " indentation {{{2
  vnoremap > > gv
@@ -208,6 +218,10 @@ set cmdheight=1
  " 2}}}
  " ctrlP {{{2
  map <Leader>t :CtrlP<cr>
+ " 2}}}
+ " NERDTree {{{2
+ map <leader>o :NERDTreeToggle %<cr>
+Bundle 'The-NERD-tree'
  " 2}}}
  " }}}
  " COMMANDS {{{
