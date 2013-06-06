@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="norm"
 
 
 # rupa's z-script
@@ -45,6 +45,13 @@ alias gl="git pull"
 # Vim
 alias v="vim"
 alias m="mvim"
+
+# Compass
+alias cc="compass compile"
+alias cw="compass watch"
+
+# Grunt
+alias gr="grunt"
 
 # Applications
 alias c="open -a Google\ Chrome"
