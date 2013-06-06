@@ -1,10 +1,10 @@
 " vim:fdm=marker
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIMRC
 """""""""""
 " autor: Stoffel
 "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " yes it's 2013
 set nocompatible
 " VUNDLE {{{
@@ -112,9 +112,10 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set number
+set colorcolumn=80
 " search {{{2
 set ignorecase          " case insensitive searching
-set smartcase           " but become case sensitive if you type uppercase characters
+set smartcase           " but become case sensitive if you type uppercase
 set incsearch
 set showmatch
 set hlsearch
@@ -128,8 +129,22 @@ set cmdheight=1
  set clipboard+=unnamedplus
  " 2}}}
  " wildignores {{{2
- set wildignore+=**/node_modules/**,**/components/**,**/.bundle/**,**/.sass-cache/**,,**/extjs/**
- set wildignore+=**/Library,**/Movies,**/Google\ Drive,**/Downloads,**/Documents,**/Desktop,**/archive,**/Pictures,**/Public,**/3rd,**/vm
+ set wildignore+=**/node_modules/**
+ set wildignore+=**/components/**
+ set wildignore+=**/.bundle/**
+ set wildignore+=**/.sass-cache/**
+ set wildignore+=**/extjs/**
+ set wildignore+=**/Library
+ set wildignore+=**/Movies
+ set wildignore+=**/Google\ Drive
+ set wildignore+=**/Downloads
+ set wildignore+=**/Documents
+ set wildignore+=**/Desktop
+ set wildignore+=**/archive
+ set wildignore+=**/Pictures
+ set wildignore+=**/Public
+ set wildignore+=**/3rd
+ set wildignore+=**/vm
  " 2}}}
  " statusline {{{2
  if has("statusline") && !&cp
@@ -223,7 +238,6 @@ set cmdheight=1
  " 2}}}
  " NERDTree {{{2
  map <leader>o :NERDTreeToggle %<cr>
-Bundle 'The-NERD-tree'
  " 2}}}
  " }}}
  " COMMANDS {{{

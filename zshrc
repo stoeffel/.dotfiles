@@ -27,7 +27,7 @@ export PATH=$PATH:bin:/opt/boxen/rbenv/shims:/opt/boxen/rbenv/bin:/opt/boxen/rbe
 export EDITOR='vim'
 
 # ALIASES
-############################################
+#########
 
 # Source files
 alias soz="source ~/.zshrc"
@@ -71,7 +71,7 @@ alias gall="echo use ga"
 alias gst="echo use gs"
 
 # FUNCTIONS
-# ==========================================
+###########
 
 rvim () { # connects to a remote server and opens vim
     if (( $# <= 1 ))
