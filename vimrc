@@ -40,6 +40,8 @@ Bundle 'scrooloose/syntastic'
 Bundle 'The-NERD-tree'
 " you should write some comments
 Bundle 'The-NERD-Commenter'
+" Bufferexplorer
+Bundle 'Buffergator'
 " repeat your actions .
 Bundle 'repeat.vim'
 " the missing pairs

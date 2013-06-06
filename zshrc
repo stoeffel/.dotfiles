@@ -22,9 +22,19 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:bin:/opt/boxen/rbenv/shims:/opt/boxen/rbenv/bin:/opt/boxen/rbenv/plugins/ruby-build/bin:/opt/boxen/phpenv/shims:/opt/boxen/phpenv/bin:/opt/boxen/phpenv/plugins/php-build/bin:/opt/boxen/nodenv/shims:/opt/boxen/nodenv/bin:/opt/boxen/bin:/opt/boxen/homebrew/bin:/opt/boxen/homebrew/sbin:./node_modules/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/$USER/.gem/ruby/1.8/bin:/opt/nginx/sbin:/Users/$USER/3rd/adt-bundle-mac-x86_64-20130219/sdk/tools:/Users/$USER/3rd/adt-bundle-mac-x86_64-20130219/sdk/platform-tools:/Users/$USER/bin:/Users/$USER/.bash_it/plugins/available/todo
 
+# EDITOR
+########
+export EDITOR='vim'
 
 # ALIASES
-# ==========================================
+############################################
+
+# Source files
+alias soz="source ~/.zshrc"
+alias sov="source ~/.vimrc"
+
+# Edit dotfiles
+alias v.="vim ~/.dotfiles"
 
 # Git
 alias ga="git add --all ."
@@ -35,6 +45,9 @@ alias gl="git pull"
 # Vim
 alias v="vim"
 alias m="mvim"
+
+# Applications
+alias c="open -a Google\ Chrome"
 
 # List
 alias l="ls -la"
@@ -54,10 +67,17 @@ alias gst="echo use gs"
 
 rvim () { # connects to a remote server and opens vim
     if (( $# <= 1 ))
-        then echo usage: rvim server folder; 
+        then echo usage: rvim server folder;
         return 1
     fi
     mvim scp://root@$1/$2/
+}
+
+topCmds () { # most used cmds
+    history |
+        awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' |
+        sort -rn |
+        head
 }
 
 # ZSTYLES
