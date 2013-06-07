@@ -180,6 +180,8 @@ let g:ctrlp_working_path_mode = 0
 " SYNTASTIC {{{2
 highlight SyntasticErrorSign cterm=none gui=none ctermfg=88 guifg=#870000
 highlight SyntasticWarningSign cterm=none gui=none ctermfg=130 guifg=#af5f00
+highlight SyntasticErrorLine gui=none cterm=none
+highlight SyntasticWarningLine gui=none cterm=none
 let g:syntastic_enable_signs=1
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_highlighting = 0
