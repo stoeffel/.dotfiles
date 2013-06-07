@@ -69,7 +69,7 @@ Bundle "vim-ruby/vim-ruby"
 
 filetype plugin indent on "enable loading plugin
 syntax enable
-colorscheme molokai
+colorscheme solarized
 set bg=dark
 " }}}
 " GUI ? {{{
