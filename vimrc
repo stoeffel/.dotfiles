@@ -48,10 +48,10 @@ Bundle 'repeat.vim'
 Bundle 'unimpaired.vim'
 " lorem ipsum dolor.
 Bundle 'loremipsum'
-" keep focus
-Bundle 'NrrwRgn'
 " what a beauty
 Bundle 'maksimr/vim-jsbeautify'
+" substitute
+Bundle 'abolish.vim'
 " textobj {{{2
 Bundle 'textobj-function'
 Bundle 'textobj-indent'
@@ -59,6 +59,7 @@ Bundle 'textobj-user'
 " 2}}}
 " Colorschemes {{{2
 Bundle 'vim-colors-solarized'
+Bundle 'molokai'
 " 2}}}
 " Languages {{{2
 Bundle "pangloss/vim-javascript"
@@ -68,7 +69,7 @@ Bundle "vim-ruby/vim-ruby"
 
 filetype plugin indent on "enable loading plugin
 syntax enable
-colorscheme solarized
+colorscheme molokai
 set bg=dark
 " }}}
 " GUI ? {{{
@@ -113,8 +114,6 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set number
-set colorcolumn=80
-highlight ColorColumn cterm=inverse gui=inverse
 " search {{{2
 set ignorecase          " case insensitive searching
 set smartcase           " but become case sensitive if you type uppercase
@@ -179,7 +178,12 @@ autocmd FocusGained * ClearCtrlPCache
 let g:ctrlp_working_path_mode = 0
 " 2}}}
 " SYNTASTIC {{{2
+highlight SyntasticErrorSign cterm=none gui=none ctermfg=88 guifg=#870000
+highlight SyntasticWarningSign cterm=none gui=none ctermfg=130 guifg=#af5f00
 let g:syntastic_enable_signs=1
+let g:syntastic_enable_highlighting = 0
+let g:syntastic_error_symbol='✘'
+let g:syntastic_warning_symbol='✗'
 " 2}}}
 " SNIPMATE {{{2
 autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7

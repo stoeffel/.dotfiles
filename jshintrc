@@ -11,7 +11,9 @@
         "OpenLayers",
         "SESSION",
         "KP",
-        "GFY"
+        "GFY",
+        "_KP",
+        "_GFY"
     ],
 
 
@@ -31,7 +33,7 @@
     "laxbreak"      : true,
     "bitwise"       : true,
     "boss"          : false,
-    "curly"         : true,
+    "curly"         : false,
     "eqeqeq"        : true,
     "eqnull"        : false,
     "evil"          : false,
@@ -58,5 +60,5 @@
     "plusplus"      : false,
     "sub"           : false,
     "trailing"      : true,
-    "white"         : true
+    "white"         : false
 }
