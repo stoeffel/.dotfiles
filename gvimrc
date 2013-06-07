@@ -18,4 +18,3 @@ set guioptions-=m
 set guioptions-=M
 set guioptions+=c
 " }}}
-colorscheme molokai

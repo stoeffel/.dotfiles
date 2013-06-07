@@ -59,8 +59,6 @@ Bundle 'textobj-user'
 " 2}}}
 " Colorschemes {{{2
 Bundle 'vim-colors-solarized'
-Bundle 'molokai'
-Bundle 'github-theme'
 " 2}}}
 " Languages {{{2
 Bundle "pangloss/vim-javascript"
@@ -70,6 +68,8 @@ Bundle "vim-ruby/vim-ruby"
 
 filetype plugin indent on "enable loading plugin
 syntax enable
+colorscheme solarized
+set bg=dark
 " }}}
 " GUI ? {{{
 " check if gui or in shell
@@ -247,9 +247,8 @@ command! SudoWrite execute "w !sudo tee %"
 " Abbreviations {{{
 iabbrev @@    schtoeffel@gmail.com
 " }}}
-" local vimrc {{{
-" Do we have local vimrc?
-if filereadable('.vimrc.local')
+" localvimrc {{{
+if filereadable('.vimrc.local') " Do we have local vimrc?
     " If so, go ahead and load it.
     source .vimrc.local
 endif
