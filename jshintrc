@@ -5,7 +5,13 @@
 
 
     "predef"        : [
-        "Ext"
+        "Ext",
+        "window",
+        "GLOBALS",
+        "OpenLayers",
+        "SESSION",
+        "KP",
+        "GFY"
     ],
 
 

@@ -50,6 +50,8 @@ Bundle 'unimpaired.vim'
 Bundle 'loremipsum'
 " keep focus
 Bundle 'NrrwRgn'
+" what a beauty
+Bundle 'maksimr/vim-jsbeautify'
 " textobj {{{2
 Bundle 'textobj-function'
 Bundle 'textobj-indent'
@@ -64,7 +66,6 @@ Bundle 'github-theme'
 Bundle "pangloss/vim-javascript"
 Bundle "ajf/puppet-vim"
 Bundle "vim-ruby/vim-ruby"
-Bundle "cakebaker/scss-syntax.vim"
 " 2}}}
 
 filetype plugin indent on "enable loading plugin
@@ -113,7 +114,7 @@ set ruler
 set backspace=indent,eol,start
 set number
 set colorcolumn=80
-highlight ColorColumn ctermbg=236 guibg=#303030
+highlight ColorColumn cterm=inverse gui=inverse
 " search {{{2
 set ignorecase          " case insensitive searching
 set smartcase           " but become case sensitive if you type uppercase
@@ -125,134 +126,131 @@ set autoread            " auto read when a file is changed from the outside
 set mouse=a
 set pastetoggle=<F4>
 set cmdheight=1
- " add register for os clipboard {{{2
- set clipboard+=unnamed
- set clipboard+=unnamedplus
- " 2}}}
- " wildignores {{{2
- set wildignore+=**/node_modules/**
- set wildignore+=**/components/**
- set wildignore+=**/.bundle/**
- set wildignore+=**/.sass-cache/**
- set wildignore+=**/extjs/**
- set wildignore+=**/Library
- set wildignore+=**/Movies
- set wildignore+=**/Google\ Drive
- set wildignore+=**/Downloads
- set wildignore+=**/Documents
- set wildignore+=**/Desktop
- set wildignore+=**/archive
- set wildignore+=**/Pictures
- set wildignore+=**/Public
- set wildignore+=**/3rd
- set wildignore+=**/vm
- " 2}}}
- " statusline {{{2
- if has("statusline") && !&cp
-     set laststatus=2  " always show the status bar
+" add register for os clipboard {{{2
+set clipboard+=unnamed
+set clipboard+=unnamedplus
+" 2}}}
+" wildignores {{{2
+set wildignore+=**/node_modules/**
+set wildignore+=**/components/**
+set wildignore+=**/.bundle/**
+set wildignore+=**/.sass-cache/**
+set wildignore+=**/extjs/**
+set wildignore+=**/Library
+set wildignore+=**/Movies
+set wildignore+=**/Google\ Drive
+set wildignore+=**/Downloads
+set wildignore+=**/Documents
+set wildignore+=**/Desktop
+set wildignore+=**/archive
+set wildignore+=**/Pictures
+set wildignore+=**/Public
+set wildignore+=**/3rd
+set wildignore+=**/vm
+" 2}}}
+" statusline {{{2
+if has("statusline") && !&cp
+    set laststatus=2  " always show the status bar
 
-     " Start the status line
-     set statusline=%<%f\ %h%m%r%=[\ %{&ft}\ ]\ %-14.(%l,%c%V%)\ %n#
+    " Start the status line
+    set statusline=%<%f\ %h%m%r%=[\ %{&ft}\ ]\ %-14.(%l,%c%V%)\ %n#
 
-     hi StatusLine cterm=reverse gui=reverse
-     au InsertEnter * hi StatusLine cterm=bold,underline  gui=bold,underline
-     au InsertLeave * hi StatusLine cterm=reverse gui=reverse
+    hi StatusLine cterm=reverse gui=reverse
+    au InsertEnter * hi StatusLine cterm=bold,underline  gui=bold,underline
+    au InsertLeave * hi StatusLine cterm=reverse gui=reverse
 
- endif
- " }}}
- " Enable persistent undo {{{2
- set undofile
- set undodir=~/tmp/vim/undo
- if !isdirectory(expand(&undodir))
-     call mkdir(expand(&undodir), "p")
- endif
- " Disable swapfile and backup {{{2
- set nobackup
- set noswapfile
- " 2}}}
- " }}}
- " Plugins {{{1
- " ctrlP {{{2
- autocmd FocusGained * ClearCtrlPCache
- " TODO test with geofy:
- let g:ctrlp_working_path_mode = 0
- " 2}}}
- " SYNTASTIC {{{2
- let g:syntastic_enable_signs=1
- " 2}}}
- " SNIPMATE {{{2
- autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
- " 2}}}
- " }}}
- " MAPPINGS {{{
- " <leader>
- let mapleader = ","
- " general {{{2
- inoremap jj <esc>
- cnoremap jj <esc><cr>
- nnoremap <leader>vr :vsplit $MYVIMRC<cr>
- nnoremap <leader>vl :ReloadVIMRC<cr>
- " copy stuff to os clipboard {{{3
- vmap <D-c> "*Y
- vmap <Leader>c "*Y
- " 3}}}
- " 2}}}
- " format file {{{2
- map <Leader>f =G<CR>
- autocmd FileType html noremap <buffer> <Leader>f :call HtmlBeautify()<cr>
- " for css or scss
- autocmd FileType css noremap <buffer> <Leader>f :call CSSBeautify()<cr>
- autocmd FileType scss noremap <buffer> <Leader>f :call CSSBeautify()<cr>
- " 2}}}
- " indentation {{{2
- vnoremap > > gv
- vnoremap < < gv
- nnoremap > V>><Esc>
- nnoremap < V<<<Esc>
- " 2}}}
- " there should be a better use for the arrow keys {{{{2
- map <Left> <NOP>
- map <Right> <NOP>
- map <Up> <NOP>
- map <Down> <NOP>
- " 2}}}
- " Bubble single&multiple lines {{{2
- nmap <S-Up> ddkP
- nmap <S-Down> ddp
- vmap <S-Up> xkP`[V`]
- vmap <S-Down> xp`[V`]
- " 2}}}
- " Git {{{2
- nmap <Leader>gs :Gstatus<cr>
- nmap <Leader>ga :Git add --all<cr>
- nmap <Leader>gc :Gcommit<cr>
- nmap <Leader>gp :Git push<cr>
- nmap <Leader>gl :Git pull<cr>
- nmap <Leader>gd :Gdiff<cr>
- " 2}}}
- " Buffer navigation {{{2
- " switch tab
- nmap <Leader>b :b#<cr>
- " 2}}}
- " ctrlP {{{2
- map <Leader>t :CtrlP<cr>
- " 2}}}
- " NERDTree {{{2
- map <leader>o :NERDTreeToggle %<cr>
- " 2}}}
- " }}}
- " COMMANDS {{{
- command! ReloadVIMRC execute "source ~/.vimrc"
- command! SudoWrite execute "w !sudo tee %"
+endif
+" }}}
+" Enable persistent undo {{{2
+set undofile
+set undodir=~/tmp/vim/undo
+if !isdirectory(expand(&undodir))
+    call mkdir(expand(&undodir), "p")
+endif
+" Disable swapfile and backup {{{2
+set nobackup
+set noswapfile
+" 2}}}
+" }}}
+" Plugins {{{1
+" ctrlP {{{2
+autocmd FocusGained * ClearCtrlPCache
+" TODO test with geofy:
+let g:ctrlp_working_path_mode = 0
+" 2}}}
+" SYNTASTIC {{{2
+let g:syntastic_enable_signs=1
+" 2}}}
+" SNIPMATE {{{2
+autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
+" 2}}}
+" }}}
+" MAPPINGS {{{
+" <leader>
+let mapleader = ","
+" general {{{2
+inoremap jj <esc>
+cnoremap jj <esc><cr>
+nnoremap <leader>vr :vsplit $MYVIMRC<cr>
+nnoremap <leader>vl :ReloadVIMRC<cr>
+" copy stuff to os clipboard {{{3
+vmap <D-c> "*Y
+vmap <Leader>c "*Y
+" 3}}}
+" 2}}}
+" format file {{{2
+map <Leader>f mzgg=G`z<CR>
+autocmd FileType javascript noremap <buffer>  <Leader>f :call JsBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <Leader>f :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <Leader>f :call CSSBeautify()<cr>
+" 2}}}
+" indentation {{{2
+vnoremap > > gv
+vnoremap < < gv
+nnoremap > V>><Esc>
+nnoremap < V<<<Esc>
+" 2}}}
+" there should be a better use for the arrow keys {{{{2
+map <Left> <NOP>
+map <Right> <NOP>
+map <Up> <NOP>
+map <Down> <NOP>
+" 2}}}
+" Bubble single&multiple lines {{{2
+nmap <S-Up> ddkP
+nmap <S-Down> ddp
+vmap <S-Up> xkP`[V`]
+vmap <S-Down> xp`[V`]
+" 2}}}
+" Git {{{2
+nmap <Leader>gs :Gstatus<cr>
+nmap <Leader>ga :Git add --all<cr>
+nmap <Leader>gc :Gcommit<cr>
+nmap <Leader>gp :Git push<cr>
+nmap <Leader>gl :Git pull<cr>
+nmap <Leader>gd :Gdiff<cr>
+" 2}}}
+" ctrlP {{{2
+map <Leader>t :CtrlP<cr>
+" 2}}}
+" NERDTree {{{2
+map <leader>o :NERDTreeToggle %<cr>
+" 2}}}
+" }}}
+" COMMANDS {{{
+command! ReloadVIMRC execute "source ~/.vimrc"
+command! SudoWrite execute "w !sudo tee %"
 
- " }}}
- " Abbreviations {{{
- iabbrev @@    schtoeffel@gmail.com
- " }}}
+" }}}
+" Abbreviations {{{
+iabbrev @@    schtoeffel@gmail.com
+" }}}
 " local vimrc {{{
 " Do we have local vimrc?
- if filereadable('.vimrc.local')
-     " If so, go ahead and load it.
-     source .vimrc.local
- endif
- " }}}
+if filereadable('.vimrc.local')
+    " If so, go ahead and load it.
+    source .vimrc.local
+endif
+" }}}
