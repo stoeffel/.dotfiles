@@ -181,6 +181,7 @@ let g:ctrlp_working_path_mode = 0
 highlight SyntasticErrorSign cterm=none gui=none ctermfg=88 guifg=#870000
 highlight SyntasticWarningSign cterm=none gui=none ctermfg=130 guifg=#af5f00
 let g:syntastic_enable_signs=1
+let g:syntastic_check_on_open=1
 let g:syntastic_enable_highlighting = 0
 let g:syntastic_error_symbol='✘'
 let g:syntastic_warning_symbol='✗'
