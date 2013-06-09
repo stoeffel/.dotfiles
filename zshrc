@@ -59,7 +59,11 @@ alias l="ls -la"
 
 # VID (very important directories)
 alias b="cd /opt/boxen/repo"
+alias bv="cd /opt/boxen/repo;vim"
+alias bx="boxen"
 alias d="cd ~/.dotfiles"
+alias dv="cd ~/.dotfiles;vim"
+alias dl="d;git pull;"
 alias s="cd ~/src"
 
 # DEPRECATED
