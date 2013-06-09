@@ -190,9 +190,6 @@ let g:syntastic_enable_highlighting = 0
 let g:syntastic_error_symbol='✘'
 let g:syntastic_warning_symbol='✗'
 " 2}}}
-" SNIPMATE {{{2
-autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
-" 2}}}
 " }}}
 " MAPPINGS {{{
 " <leader>
@@ -200,7 +197,7 @@ let mapleader = ","
 " general {{{2
 inoremap jj <esc>
 cnoremap jj <esc><cr>
-nnoremap <leader>vr :vsplit $MYVIMRC<cr>
+nnoremap <leader>vr :split $MYVIMRC<cr>
 nnoremap <leader>vl :ReloadVIMRC<cr>
 " copy stuff to os clipboard {{{3
 vmap <D-c> "*Y
