@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="norm"
+ZSH_THEME="robbyrussell"
 
 
 # rupa's z-script
@@ -59,7 +59,11 @@ alias l="ls -la"
 
 # VID (very important directories)
 alias b="cd /opt/boxen/repo"
+alias bv="cd /opt/boxen/repo;vim;cd -;"
+alias bx="boxen"
 alias d="cd ~/.dotfiles"
+alias dv="cd ~/.dotfiles;vim;cd -;" # edit dotfiles, and go back were you came from
+alias dl="d;git pull;"
 alias s="cd ~/src"
 
 # DEPRECATED
@@ -76,13 +80,6 @@ rvim () { # connects to a remote server and opens vim
         return 1
     fi
     mvim scp://root@$1/$2/
-}
-
-topCmds () { # most used cmds
-    history |
-        awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' |
-        sort -rn |
-        head
 }
 
 # ZSTYLES

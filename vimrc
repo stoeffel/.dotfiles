@@ -22,6 +22,8 @@ Bundle 'sjl/gundo.vim'
 Bundle 'editorconfig-vim'
 " fuzzy finder
 Bundle 'ctrlp.vim'
+" zoom into a window
+Bundle 'ZoomWin'
 " jshint
 Bundle 'vim-scripts/jshint.vim'
 " fuzzy code completion
@@ -62,6 +64,7 @@ Bundle 'textobj-user'
 " Colorschemes {{{2
 Bundle 'vim-colors-solarized'
 Bundle 'molokai'
+Bundle 'chriskempson/vim-tomorrow-theme'
 " 2}}}
 " Languages {{{2
 Bundle "pangloss/vim-javascript"
@@ -71,8 +74,7 @@ Bundle "vim-ruby/vim-ruby"
 
 filetype plugin indent on "enable loading plugin
 syntax enable
-colorscheme solarized
-set bg=dark
+colorscheme Tomorrow-Night-Eighties
 " }}}
 " GUI ? {{{
 " check if gui or in shell
@@ -190,9 +192,6 @@ let g:syntastic_enable_highlighting = 0
 let g:syntastic_error_symbol='✘'
 let g:syntastic_warning_symbol='✗'
 " 2}}}
-" SNIPMATE {{{2
-autocmd FileType snippet setlocal noexpandtab shiftwidth=7 tabstop=7
-" 2}}}
 " }}}
 " MAPPINGS {{{
 " <leader>
@@ -200,7 +199,7 @@ let mapleader = ","
 " general {{{2
 inoremap jj <esc>
 cnoremap jj <esc><cr>
-nnoremap <leader>vr :vsplit $MYVIMRC<cr>
+nnoremap <leader>vr :split $MYVIMRC<cr>
 nnoremap <leader>vl :ReloadVIMRC<cr>
 " copy stuff to os clipboard {{{3
 vmap <D-c> "*Y
@@ -246,6 +245,9 @@ map <Leader>t :CtrlP<cr>
 " 2}}}
 " NERDTree {{{2
 map <leader>o :NERDTreeToggle %<cr>
+" 2}}}
+" Gundo {{{2
+map <leader>g :GundoToggle<cr>
 " 2}}}
 " }}}
 " COMMANDS {{{
