@@ -62,7 +62,7 @@ alias b="cd /opt/boxen/repo"
 alias bv="cd /opt/boxen/repo;vim;cd -;"
 alias bx="boxen"
 alias d="cd ~/.dotfiles"
-alias dv="cd ~/.dotfiles;vim;soz;cd -;" # edit dotfiles, source zshrc and go back were you came from
+alias dv="cd ~/.dotfiles;vim;cd -;" # edit dotfiles, and go back were you came from
 alias dl="d;git pull;"
 alias s="cd ~/src"
 
