@@ -247,6 +247,9 @@ map <Leader>t :CtrlP<cr>
 " NERDTree {{{2
 map <leader>o :NERDTreeToggle %<cr>
 " 2}}}
+" Gundo {{{2
+map <leader>g :GundoToggle<cr>
+" 2}}}
 " }}}
 " COMMANDS {{{
 command! ReloadVIMRC execute "source ~/.vimrc"
