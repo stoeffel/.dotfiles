@@ -34,6 +34,8 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'mileszs/ack.vim'
 " git for vim
 Bundle 'tpope/vim-fugitive'
+" more git
+Bundle 'airblade/vim-gitgutter'
 " will find your syntax errors
 Bundle 'scrooloose/syntastic'
 " Fileexplorer
