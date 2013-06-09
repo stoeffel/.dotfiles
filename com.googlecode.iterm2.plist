@@ -5575,9 +5575,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>961 435 800 348 0 0 2560 1418 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>1197 600 924 485 0 0 2560 1440 </string>
+	<string>1311 574 924 485 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 2560 1440 0 0 2560 1418 </string>
+	<string>1280 13 1270 1405 0 0 2560 1418 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -6123,11 +6123,11 @@
 			<key>Name</key>
 			<string>termi</string>
 			<key>Non Ascii Font</key>
-			<string>DroidSansMonoForPowerline 12</string>
+			<string>DroidSansMonoForPowerline 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>DroidSansMonoForPowerline 12</string>
+			<string>DroidSansMonoForPowerline 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
