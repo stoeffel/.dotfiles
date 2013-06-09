@@ -82,13 +82,6 @@ rvim () { # connects to a remote server and opens vim
     mvim scp://root@$1/$2/
 }
 
-topCmds () { # most used cmds
-    history |
-        awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' |
-        sort -rn |
-        head
-}
-
 # ZSTYLES
 # ==========================================
 

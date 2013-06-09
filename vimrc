@@ -22,6 +22,8 @@ Bundle 'sjl/gundo.vim'
 Bundle 'editorconfig-vim'
 " fuzzy finder
 Bundle 'ctrlp.vim'
+" zoom into a window
+Bundle 'ZoomWin'
 " jshint
 Bundle 'vim-scripts/jshint.vim'
 " fuzzy code completion
