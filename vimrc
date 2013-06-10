@@ -65,7 +65,6 @@ Bundle 'textobj-user'
 Bundle 'vim-colors-solarized'
 Bundle 'molokai'
 Bundle 'chriskempson/vim-tomorrow-theme'
-Bundle 'jellybeans.vim'
 Bundle 'w0ng/vim-hybrid'
 " 2}}}
 " Languages {{{2
