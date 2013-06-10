@@ -65,6 +65,7 @@ Bundle 'textobj-user'
 Bundle 'vim-colors-solarized'
 Bundle 'molokai'
 Bundle 'chriskempson/vim-tomorrow-theme'
+Bundle 'w0ng/vim-hybrid'
 " 2}}}
 " Languages {{{2
 Bundle "pangloss/vim-javascript"
@@ -74,7 +75,7 @@ Bundle "vim-ruby/vim-ruby"
 
 filetype plugin indent on "enable loading plugin
 syntax enable
-colorscheme Tomorrow-Night-Eighties
+colorscheme hybrid
 " }}}
 " GUI ? {{{
 " check if gui or in shell
