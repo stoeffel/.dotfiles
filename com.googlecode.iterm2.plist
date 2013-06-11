@@ -6008,9 +6008,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>585 107 655 277 0 0 1440 878 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>88 240 924 485 0 0 1440 900 </string>
+	<string>297 228 924 485 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 1440 874 0 0 1440 900 </string>
+	<string>0 0 1440 900 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 4 1440 874 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
@@ -6171,9 +6171,9 @@
 			<key>Background Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.15170273184776306</real>
+				<real>0.10324165970087051</real>
 				<key>Green Component</key>
-				<real>0.11783610284328461</real>
+				<real>0.079972431063652039</real>
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
