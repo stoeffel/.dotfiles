@@ -67,7 +67,6 @@ Bundle "ajf/puppet-vim"
 Bundle "vim-ruby/vim-ruby"
 Bundle "effkay/argonaut.vim"
 " 2}}}
-Bundle 'Lokaltog/powerline'
 Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on "enable loading plugin
@@ -150,13 +149,27 @@ set wildignore+=**/3rd
 set wildignore+=**/vm
 " 2}}}
 " statusline {{{2
-"if has("statusline") && !&cp
-    "set laststatus=2  " always show the status bar
+if has("statusline") && !&cp
+    set laststatus=2  " always show the status bar
+    function! InsertStatuslineColor(mode)
+        if a:mode == 'i'
+            hi statusline guibg=cyan ctermfg=136 guifg=#073642 ctermbg=black
+        elseif a:mode == 'r'
+            hi statusline guibg=#dc322f ctermfg=magenta guifg=#eee8d5 ctermbg=black
+        else
+            hi statusline guibg=#073642 ctermfg=black guifg=#fdf6e3 ctermbg=230
+        endif
+    endfunction
 
-    "" Start the status line
-    "set statusline=%<%f\ %h%m%r%=[\ %{&ft}\ ]\ %-14.(%l,%c%V%)\ %n#
+    au InsertEnter * call InsertStatuslineColor(v:insertmode)
+    au InsertLeave * hi statusline guibg=#073642 ctermfg=black guifg=#fdf6e3 ctermbg=230
 
-"endif
+    " default the statusline to green when entering Vim
+    hi statusline guibg=#073642 ctermfg=black guifg=#fdf6e3 ctermbg=230
+    " Start the status line
+    set statusline=%<%f\ %h%m%r%=[\ %{&ft}\ ]\ %-14.(%l,%c%V%)\ %n#
+
+endif
 " }}}
 " Enable persistent undo {{{2
 set undofile
@@ -186,9 +199,6 @@ let g:syntastic_enable_highlighting = 0
 let g:syntastic_error_symbol='✘'
 let g:syntastic_warning_symbol='✗'
 " 2}}}
-" Powerline {{{2
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-" 2}}}
 " }}}
 " MAPPINGS {{{
 " <leader>
@@ -196,6 +206,8 @@ let mapleader = ","
 " general {{{2
 inoremap jj <esc>
 cnoremap jj <esc><cr>
+" wierd double esc
+inoremap <esc> <esc><esc>
 nnoremap <leader>vr :split $MYVIMRC<cr>
 nnoremap <leader>vl :ReloadVIMRC<cr>
 " copy stuff to os clipboard {{{3
