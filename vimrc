@@ -76,7 +76,7 @@ Bundle "effkay/argonaut.vim"
 
 filetype plugin indent on "enable loading plugin
 syntax enable
-colorscheme argonaut
+colorscheme hybrid
 " }}}
 " GUI ? {{{
 " check if gui or in shell
