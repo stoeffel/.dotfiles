@@ -67,6 +67,7 @@ Bundle "ajf/puppet-vim"
 Bundle "vim-ruby/vim-ruby"
 Bundle "effkay/argonaut.vim"
 " 2}}}
+Bundle 'Lokaltog/powerline'
 Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on "enable loading plugin
@@ -149,13 +150,13 @@ set wildignore+=**/3rd
 set wildignore+=**/vm
 " 2}}}
 " statusline {{{2
-if has("statusline") && !&cp
-    set laststatus=2  " always show the status bar
+"if has("statusline") && !&cp
+    "set laststatus=2  " always show the status bar
 
-    " Start the status line
-    set statusline=%<%f\ %h%m%r%=[\ %{&ft}\ ]\ %-14.(%l,%c%V%)\ %n#
+    "" Start the status line
+    "set statusline=%<%f\ %h%m%r%=[\ %{&ft}\ ]\ %-14.(%l,%c%V%)\ %n#
 
-endif
+"endif
 " }}}
 " Enable persistent undo {{{2
 set undofile
@@ -184,6 +185,9 @@ let g:syntastic_check_on_open=1
 let g:syntastic_enable_highlighting = 0
 let g:syntastic_error_symbol='✘'
 let g:syntastic_warning_symbol='✗'
+" 2}}}
+" Powerline {{{2
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 " 2}}}
 " }}}
 " MAPPINGS {{{
