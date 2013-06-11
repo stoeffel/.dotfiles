@@ -35,6 +35,7 @@ alias sov="source ~/.vimrc"
 
 # Git
 alias ga="git add --all ."
+alias gd="git difftool"
 alias gs="git status"
 alias gp="git push"
 alias gl="git pull"

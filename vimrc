@@ -73,6 +73,7 @@ filetype plugin indent on "enable loading plugin
 syntax enable
 colorscheme solarized
 set bg=dark
+let g:solarized_termcolors=256
 " }}}
 " GUI ? {{{
 " check if gui or in shell
