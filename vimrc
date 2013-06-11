@@ -67,9 +67,12 @@ Bundle "ajf/puppet-vim"
 Bundle "vim-ruby/vim-ruby"
 Bundle "effkay/argonaut.vim"
 " 2}}}
+Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on "enable loading plugin
 syntax enable
+colorscheme solarized
+set bg=light
 " }}}
 " GUI ? {{{
 " check if gui or in shell
@@ -96,7 +99,6 @@ set autoindent
 set title
 set titlestring=%{getcwd()}\ -\ \(\ %t\ \)\ %a%r%m titlelen=70
 " 2}}}
-set bg=dark
 set antialias
 set encoding=utf-8  " what else
 set scrolloff=3
