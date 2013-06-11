@@ -71,11 +71,12 @@ Bundle 'w0ng/vim-hybrid'
 Bundle "pangloss/vim-javascript"
 Bundle "ajf/puppet-vim"
 Bundle "vim-ruby/vim-ruby"
+Bundle "effkay/argonaut.vim"
 " 2}}}
 
 filetype plugin indent on "enable loading plugin
 syntax enable
-colorscheme hybrid
+colorscheme argonaut
 " }}}
 " GUI ? {{{
 " check if gui or in shell
