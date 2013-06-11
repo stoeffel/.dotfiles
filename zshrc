@@ -39,6 +39,12 @@ alias gs="git status"
 alias gp="git push"
 alias gl="git pull"
 
+# Svn
+alias ss="svn status"
+alias sc="svn commit"
+alias sl="svn update"
+alias scl="svn checkout"
+
 # Vim
 alias v="vim"
 alias m="mvim"

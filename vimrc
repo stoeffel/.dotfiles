@@ -139,7 +139,6 @@ set wildignore+=**/node_modules/**
 set wildignore+=**/components/**
 set wildignore+=**/.bundle/**
 set wildignore+=**/.sass-cache/**
-set wildignore+=**/extjs/**
 set wildignore+=**/Library
 set wildignore+=**/Movies
 set wildignore+=**/Google\ Drive
