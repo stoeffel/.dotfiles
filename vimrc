@@ -61,12 +61,6 @@ Bundle 'textobj-function'
 Bundle 'textobj-indent'
 Bundle 'textobj-user'
 " 2}}}
-" Colorschemes {{{2
-Bundle 'vim-colors-solarized'
-Bundle 'molokai'
-Bundle 'chriskempson/vim-tomorrow-theme'
-Bundle 'w0ng/vim-hybrid'
-" 2}}}
 " Languages {{{2
 Bundle "pangloss/vim-javascript"
 Bundle "ajf/puppet-vim"
@@ -76,7 +70,6 @@ Bundle "effkay/argonaut.vim"
 
 filetype plugin indent on "enable loading plugin
 syntax enable
-colorscheme hybrid
 " }}}
 " GUI ? {{{
 " check if gui or in shell
@@ -103,6 +96,7 @@ set autoindent
 set title
 set titlestring=%{getcwd()}\ -\ \(\ %t\ \)\ %a%r%m titlelen=70
 " 2}}}
+set bg=dark
 set antialias
 set encoding=utf-8  " what else
 set scrolloff=3
@@ -158,10 +152,6 @@ if has("statusline") && !&cp
 
     " Start the status line
     set statusline=%<%f\ %h%m%r%=[\ %{&ft}\ ]\ %-14.(%l,%c%V%)\ %n#
-
-    hi StatusLine cterm=reverse gui=reverse
-    au InsertEnter * hi StatusLine cterm=bold,underline  gui=bold,underline
-    au InsertLeave * hi StatusLine cterm=reverse gui=reverse
 
 endif
 " }}}
