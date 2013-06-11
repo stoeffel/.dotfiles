@@ -72,7 +72,7 @@ Bundle 'altercation/vim-colors-solarized'
 filetype plugin indent on "enable loading plugin
 syntax enable
 colorscheme solarized
-set bg=light
+set bg=dark
 " }}}
 " GUI ? {{{
 " check if gui or in shell
