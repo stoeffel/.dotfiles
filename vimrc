@@ -95,6 +95,7 @@ function! ToggleBG()
     if &background == 'dark' | call Lighten()
     else                      | call Darken()
     endif
+    hi statusline guifg=#b58900 ctermfg=black guibg=#fdf6e3 ctermbg=230
 endfunction
 
 " 2}}}
@@ -182,15 +183,15 @@ if has("statusline") && !&cp
         elseif a:mode == 'r'
             hi statusline guifg=#d33682 ctermfg=magenta guibg=#eee8d5 ctermbg=black
         else
-            hi statusline guifg=#073642 ctermfg=black guibg=#fdf6e3 ctermbg=230
+            hi statusline guifg=#b58900 ctermfg=black guibg=#fdf6e3 ctermbg=230
         endif
     endfunction
 
     au InsertEnter * call InsertStatuslineColor(v:insertmode)
-    au InsertLeave * hi statusline guifg=#073642 ctermfg=black guibg=#fdf6e3 ctermbg=230
+    au InsertLeave * hi statusline guifg=#b58900 ctermfg=black guibg=#fdf6e3 ctermbg=230
 
     " default the statusline to green when entering Vim
-    hi statusline guifg=#073642 ctermfg=black guibg=#fdf6e3 ctermbg=230
+    hi statusline guifg=#b58900 ctermfg=black guibg=#fdf6e3 ctermbg=230
     " Start the status line
     set statusline=%<\ λ\ %f\ %h%m%r%=[\ %{&ft}\ ]\ %-14.(%l,%c%V%)\ %n#\ %0*
 
