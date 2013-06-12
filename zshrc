@@ -43,6 +43,7 @@ alias gl="git pull"
 
 # Svn
 alias ss="svn status"
+alias sa="svn status | grep '?' | sed 's/^.* /svn add /' | zsh"
 alias sc="svn commit"
 alias sl="svn update"
 alias scl="svn checkout"
