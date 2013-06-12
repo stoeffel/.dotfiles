@@ -91,6 +91,12 @@ function! Lighten()
     hi! link SignColumn LineNr
 endfunction
 
+function! ToggleBG()
+    if &background == 'dark' | call Lighten()
+    else                      | call Darken()
+    endif
+endfunction
+
 " 2}}}
 " }}}
 " GUI ? {{{
@@ -278,8 +284,8 @@ map <leader>o :NERDTreeToggle %<cr>
 map <leader>g :GundoToggle<cr>
 " 2}}}
 " Solarized {{{2
-map <F2> :call Darken()<cr>
-map <F3> :call Lighten()<cr>
+map <F2> :ToggleBG<cr>
+cnoremap ToggleBG call ToggleBG()<cr>
 " 2}}}
 " }}}
 " COMMANDS {{{
