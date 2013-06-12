@@ -209,8 +209,6 @@ set noswapfile
 " }}}
 " Plugins {{{1
 " ctrlP {{{2
-autocmd FocusGained * ClearCtrlPCache
-" TODO test with geofy:
 let g:ctrlp_working_path_mode = 0
 " 2}}}
 " SYNTASTIC {{{2
@@ -219,7 +217,7 @@ highlight SyntasticWarningSign cterm=none gui=none ctermfg=130 guifg=#af5f00
 highlight SyntasticErrorLine gui=none cterm=none
 highlight SyntasticWarningLine gui=none cterm=none
 let g:syntastic_enable_signs=1
-let g:syntastic_check_on_open=1
+let g:syntastic_check_on_open=0
 let g:syntastic_enable_highlighting = 0
 let g:syntastic_error_symbol='✘'
 let g:syntastic_warning_symbol='✗'
@@ -273,6 +271,9 @@ nmap <Leader>gc :Gcommit<cr>
 nmap <Leader>gp :Git push<cr>
 nmap <Leader>gl :Git pull<cr>
 nmap <Leader>gd :Gdiff<cr>
+" 2}}}
+" Svn {{{2
+nmap <Leader>ss :!svn status<cr>
 " 2}}}
 " ctrlP {{{2
 map <Leader>t :CtrlP<cr>
