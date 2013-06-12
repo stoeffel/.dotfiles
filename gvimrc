@@ -18,3 +18,4 @@ set guioptions-=m
 set guioptions-=M
 set guioptions+=c
 " }}}
+set guifont=Inconsolata:h18

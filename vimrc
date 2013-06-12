@@ -71,9 +71,27 @@ Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on "enable loading plugin
 syntax enable
+" SOLARIZED {{{2
+set bg=light
+" solarized options
+let g:solarized_termcolors = 16
+if has("gui_running")
+    let g:solarized_termcolors = 256
+endif
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
 colorscheme solarized
-set bg=dark
-let g:solarized_termcolors=256
+hi! link SignColumn LineNr
+function! Darken()
+    set bg=dark
+    hi! link SignColumn LineNr
+endfunction
+function! Lighten()
+    set bg=light
+    hi! link SignColumn LineNr
+endfunction
+
+" 2}}}
 " }}}
 " GUI ? {{{
 " check if gui or in shell
@@ -154,21 +172,21 @@ if has("statusline") && !&cp
     set laststatus=2  " always show the status bar
     function! InsertStatuslineColor(mode)
         if a:mode == 'i'
-            hi statusline guibg=cyan ctermfg=136 guifg=#073642 ctermbg=black
+            hi statusline guifg=#2aa198 ctermfg=136 guibg=#073642 ctermbg=black
         elseif a:mode == 'r'
-            hi statusline guibg=#dc322f ctermfg=magenta guifg=#eee8d5 ctermbg=black
+            hi statusline guifg=#d33682 ctermfg=magenta guibg=#eee8d5 ctermbg=black
         else
-            hi statusline guibg=#073642 ctermfg=black guifg=#fdf6e3 ctermbg=230
+            hi statusline guifg=#073642 ctermfg=black guibg=#fdf6e3 ctermbg=230
         endif
     endfunction
 
     au InsertEnter * call InsertStatuslineColor(v:insertmode)
-    au InsertLeave * hi statusline guibg=#073642 ctermfg=black guifg=#fdf6e3 ctermbg=230
+    au InsertLeave * hi statusline guifg=#073642 ctermfg=black guibg=#fdf6e3 ctermbg=230
 
     " default the statusline to green when entering Vim
-    hi statusline guibg=#073642 ctermfg=black guifg=#fdf6e3 ctermbg=230
+    hi statusline guifg=#073642 ctermfg=black guibg=#fdf6e3 ctermbg=230
     " Start the status line
-    set statusline=%<%f\ %h%m%r%=[\ %{&ft}\ ]\ %-14.(%l,%c%V%)\ %n#
+    set statusline=%<\ λ\ %f\ %h%m%r%=[\ %{&ft}\ ]\ %-14.(%l,%c%V%)\ %n#\ %0*
 
 endif
 " }}}
@@ -258,6 +276,10 @@ map <leader>o :NERDTreeToggle %<cr>
 " 2}}}
 " Gundo {{{2
 map <leader>g :GundoToggle<cr>
+" 2}}}
+" Solarized {{{2
+map <F2> :call Darken()<cr>
+map <F3> :call Lighten()<cr>
 " 2}}}
 " }}}
 " COMMANDS {{{
