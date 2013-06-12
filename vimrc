@@ -285,7 +285,7 @@ map <leader>o :NERDTreeToggle %<cr>
 map <leader>g :GundoToggle<cr>
 " 2}}}
 " Solarized {{{2
-map <F2> :ToggleBG<cr>
+map <leader>bg :ToggleBG<cr>
 cnoremap ToggleBG call ToggleBG()<cr>
 " 2}}}
 " }}}
