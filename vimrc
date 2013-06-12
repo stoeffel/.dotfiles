@@ -70,7 +70,8 @@ Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on "enable loading plugin
 syntax enable
-" SOLARIZED {{{2
+" }}}
+" SOLARIZED {{{
 set bg=light
 " solarized options
 let g:solarized_termcolors = 16
@@ -97,7 +98,6 @@ function! ToggleBG()
     hi statusline guifg=#b58900 ctermfg=black guibg=#fdf6e3 ctermbg=230
 endfunction
 
-" 2}}}
 " }}}
 " GUI ? {{{
 " check if gui or in shell
