@@ -65,7 +65,6 @@ Bundle 'textobj-user'
 Bundle "pangloss/vim-javascript"
 Bundle "ajf/puppet-vim"
 Bundle "vim-ruby/vim-ruby"
-Bundle "effkay/argonaut.vim"
 " 2}}}
 Bundle 'altercation/vim-colors-solarized'
 

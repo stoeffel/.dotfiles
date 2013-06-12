@@ -25,6 +25,7 @@ export PATH=$PATH:bin:/opt/boxen/rbenv/shims:/opt/boxen/rbenv/bin:/opt/boxen/rbe
 # EDITOR
 ########
 export EDITOR='vim'
+export VMAIL_BROWSER='lynx'
 
 # ALIASES
 #########
