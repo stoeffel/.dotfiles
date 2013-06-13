@@ -5967,22 +5967,33 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
-	<key>NSColorPanelMode</key>
-	<string>6</string>
-	<key>NSFontPanelAttributes</key>
-	<string>1, 0</string>
 	<key>NSFontPanelPreviewHeight</key>
 	<real>0.0</real>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/itermcolors</string>
-	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 875}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
 	<false/>
+	<key>NSTableView Columns KeyBingingTable</key>
+	<array>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErATCG
+		</data>
+		<string>198</string>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErATGG
+		</data>
+		<string>302</string>
+	</array>
+	<key>NSTableView Hidden Columns KeyBingingTable</key>
+	<array/>
+	<key>NSTableView Sort Ordering KeyBingingTable</key>
+	<array/>
 	<key>NSToolbar Configuration Terminal Toolbar</key>
 	<dict>
 		<key>TB Display Mode</key>
@@ -5994,16 +6005,14 @@
 		<key>TB Size Mode</key>
 		<integer>1</integer>
 	</dict>
-	<key>NSWindow Frame NSColorPanel</key>
-	<string>804 510 214 309 0 0 2560 1418 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>961 435 794 348 0 0 2560 1418 </string>
+	<string>585 107 655 277 0 0 1440 878 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>228 592 924 485 0 0 2560 1418 </string>
+	<string>297 228 924 485 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 2560 1414 0 0 2560 1440 </string>
+	<string>0 270 970 608 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>398 4 1290 1414 0 0 2560 1418 </string>
+	<string>0 4 1440 874 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -6719,12 +6728,12 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>5</integer>
+			<integer>1</integer>
 			<key>Working Directory</key>
 			<string>/Users/foo</string>
 		</dict>
 	</array>
-	<key>NoSyncNeverRemindPrefsChangesCopy</key>
+	<key>NoSyncNeverRemindPrefsChangesLost</key>
 	<true/>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
@@ -6774,7 +6783,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/bar/.dotfiles/</string>
+	<string>/Users/foo/.dotfiles</string>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -6790,7 +6799,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-06-12T05:41:10Z</date>
+	<date>2013-06-11T19:35:05Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>

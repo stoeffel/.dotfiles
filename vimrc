@@ -72,7 +72,7 @@ filetype plugin indent on "enable loading plugin
 syntax enable
 " }}}
 " SOLARIZED {{{
-set bg=light
+set bg=dark
 " solarized options
 let g:solarized_termcolors = 16
 if has("gui_running")
@@ -210,6 +210,7 @@ set noswapfile
 " Plugins {{{1
 " ctrlP {{{2
 let g:ctrlp_working_path_mode = 0
+set t_Co=16
 " 2}}}
 " SYNTASTIC {{{2
 highlight SyntasticErrorSign cterm=none gui=none ctermfg=88 guifg=#870000
@@ -234,8 +235,8 @@ inoremap <esc> <esc><esc>
 nnoremap <leader>vr :split $MYVIMRC<cr>
 nnoremap <leader>vl :ReloadVIMRC<cr>
 " copy stuff to os clipboard {{{3
-vmap <D-c> "*Y
-vmap <Leader>c "*Y
+vmap <D-c> "*y
+vmap <Leader>c "*y
 " 3}}}
 " 2}}}
 " format file {{{2
