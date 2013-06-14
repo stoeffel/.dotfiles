@@ -71,8 +71,8 @@ Bundle 'altercation/vim-colors-solarized'
 filetype plugin indent on "enable loading plugin
 syntax enable
 " }}}
-" SOLARIZED {{{
-set bg=dark
+" colorscheme {{{
+set bg=light
 " solarized options
 set t_Co=256
 let g:solarized_termcolors=16
