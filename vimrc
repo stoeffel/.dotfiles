@@ -72,8 +72,9 @@ filetype plugin indent on "enable loading plugin
 syntax enable
 " }}}
 " SOLARIZED {{{
-set bg=dark
+set bg=light
 " solarized options
+set t_Co=256
 let g:solarized_termcolors = 16
 if has("gui_running")
     let g:solarized_termcolors = 256
@@ -95,7 +96,7 @@ function! ToggleBG()
     if &background == 'dark' | call Lighten()
     else                      | call Darken()
     endif
-    hi statusline guifg=#b58900 ctermfg=black guibg=#fdf6e3 ctermbg=230
+    hi statusline guifg=#b58900 ctermfg=64 guibg=#fdf6e3 ctermbg=black
 endfunction
 
 " }}}
@@ -182,15 +183,15 @@ if has("statusline") && !&cp
         elseif a:mode == 'r'
             hi statusline guifg=#d33682 ctermfg=magenta guibg=#eee8d5 ctermbg=black
         else
-            hi statusline guifg=#b58900 ctermfg=black guibg=#fdf6e3 ctermbg=230
+            hi statusline guifg=#b58900 ctermfg=64 guibg=#fdf6e3 ctermbg=black
         endif
     endfunction
 
     au InsertEnter * call InsertStatuslineColor(v:insertmode)
-    au InsertLeave * hi statusline guifg=#b58900 ctermfg=black guibg=#fdf6e3 ctermbg=230
+    au InsertLeave * hi statusline guifg=#b58900 ctermfg=64 guibg=#fdf6e3 ctermbg=black
 
-    " default the statusline to green when entering Vim
-    hi statusline guifg=#b58900 ctermfg=black guibg=#fdf6e3 ctermbg=230
+    " default the statusline to 64 when entering Vim
+    hi statusline guifg=#b58900 ctermfg=64 guibg=#fdf6e3 ctermbg=black
     " Start the status line
     set statusline=%<\ λ\ %f\ %h%m%r%=[\ %{&ft}\ ]\ %-14.(%l,%c%V%)\ %n#\ %0*
 
@@ -210,7 +211,6 @@ set noswapfile
 " Plugins {{{1
 " ctrlP {{{2
 let g:ctrlp_working_path_mode = 0
-set t_Co=16
 " 2}}}
 " SYNTASTIC {{{2
 highlight SyntasticErrorSign cterm=none gui=none ctermfg=88 guifg=#870000
