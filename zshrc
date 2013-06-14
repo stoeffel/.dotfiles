@@ -55,6 +55,11 @@ alias vo="vim -u NONE -N"
 alias v="vim"
 alias m="mvim"
 
+# Tmux
+alias tn="tmux new -s"
+alias ta="tmux attach -t"
+alias tl="tmux ls"
+
 # Compass
 alias cc="compass compile"
 alias cw="compass watch"
