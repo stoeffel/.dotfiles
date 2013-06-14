@@ -72,10 +72,10 @@ filetype plugin indent on "enable loading plugin
 syntax enable
 " }}}
 " SOLARIZED {{{
-set bg=light
+set bg=dark
 " solarized options
 set t_Co=256
-let g:solarized_termcolors = 16
+let g:solarized_termcolors=16
 if has("gui_running")
     let g:solarized_termcolors = 256
 endif

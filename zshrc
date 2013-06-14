@@ -59,6 +59,7 @@ alias m="mvim"
 alias tn="tmux new -s"
 alias ta="tmux attach -t"
 alias tl="tmux ls"
+alias tk="tmux kill-session -t"
 
 # Compass
 alias cc="compass compile"
@@ -99,8 +100,20 @@ rvim () { # connects to a remote server and opens vim
     mvim scp://root@$1/$2/
 }
 
+tm () { # start a new tmux session in a project under ~/src
+    tmux new-session -s $1 -d
+    cd ~/src/$1
+    tmux split-window -v -p 20
+    tmux split-window -h -p 30
+    tmux -2 attach-session -d
+}
+
 # ZSTYLES
-# ==========================================
+#########
 
 zstyle ':completion:*' special-dirs true
 
+
+# Tmuxinator
+############
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
