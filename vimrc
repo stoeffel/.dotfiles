@@ -70,7 +70,7 @@ filetype plugin indent on "enable loading plugin
 syntax enable
 " }}}
 " colorscheme {{{
-set bg=dark
+set bg=light
 " solarized options
 let g:solarized_termcolors=16
 if has("gui_running")
