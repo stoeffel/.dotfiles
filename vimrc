@@ -191,7 +191,7 @@ if has("statusline") && !&cp
     " default the statusline to 64 when entering Vim
     hi statusline guifg=#b58900 ctermfg=64 guibg=#fdf6e3 ctermbg=black
     " Start the status line
-    set statusline=%<\ λ\ %f\ %h%m%r%=[\ %{&ft}\ ]\ %-14.(%l,%c%V%)\ %n#\ %0*
+    set statusline=%<\ λ\ %f\ %h%m%r%=[\ %{&ft}\ ]\ %-14.(%l,%c%V%)\ %n#\ %0*\ %{strftime(\"%H:%M\")}
 
 endif
 " }}}
