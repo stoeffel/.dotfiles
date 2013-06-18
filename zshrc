@@ -94,7 +94,7 @@ alias gst="echo use gs"
 
 rvim () { # connects to a remote server and opens vim
     if (( $# <= 1 ))
-        then echo usage: rvim server folder;
+    then echo usage: rvim server folder;
         return 1
     fi
     mvim scp://root@$1/$2/
@@ -108,12 +108,48 @@ tm () { # start a new tmux session in a project under ~/src
     tmux -2 attach-session -d
 }
 
+# TMUX STARTUP
+##############
+
+SESSIONS=( dotfiles code )
+
+function has-session {
+tmux has-session -t $1 2>/dev/null
+}
+
+function except
+{
+    if [ "$?" -eq 1 ] ; then
+        $1
+    fi
+}
+
+function session-code
+{
+    tmux new-session -s code -d
+    cd ~/src
+    tmux split-window -v -p 20
+    tmux split-window -h -p 30
+    tmux -2 attach-session -d
+}
+
+function session-dotfiles
+{
+    tmux new-session -s dotfiles -d
+    cd ~/.dotfiles
+    tmux split-window -v -p 10
+}
+
+#
+#MAIN
+for x in $SESSIONS
+do
+    echo $x
+    has-session $x
+    except session-$x
+done
+
 # ZSTYLES
 #########
 
 zstyle ':completion:*' special-dirs true
-
-
-# Tmuxinator
-############
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator

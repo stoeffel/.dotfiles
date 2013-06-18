@@ -72,7 +72,7 @@ filetype plugin indent on "enable loading plugin
 syntax enable
 " }}}
 " colorscheme {{{
-set bg=light
+set bg=dark
 " solarized options
 set t_Co=256
 let g:solarized_termcolors=16
