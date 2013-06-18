@@ -21,13 +21,13 @@ Bundle 'sjl/gundo.vim'
 " .editorconfig
 Bundle 'editorconfig-vim'
 " fuzzy finder
-Bundle 'ctrlp.vim'
+Bundle 'unite.vim'
+" autocompletion
+Bundle 'neocomplcache'
 " zoom into a window
 Bundle 'ZoomWin'
 " jshint
 Bundle 'vim-scripts/jshint.vim'
-" fuzzy code completion
-Bundle 'Valloric/YouCompleteMe'
 " { surround stuff }
 Bundle 'tpope/vim-surround'
 " multiple cursors
@@ -44,8 +44,6 @@ Bundle 'scrooloose/syntastic'
 Bundle 'The-NERD-tree'
 " you should write some comments
 Bundle 'The-NERD-Commenter'
-" Bufferexplorer
-Bundle 'Buffergator'
 " repeat your actions .
 Bundle 'repeat.vim'
 " the missing pairs
@@ -74,7 +72,6 @@ syntax enable
 " colorscheme {{{
 set bg=dark
 " solarized options
-set t_Co=256
 let g:solarized_termcolors=16
 if has("gui_running")
     let g:solarized_termcolors = 256
@@ -153,6 +150,7 @@ set autoread            " auto read when a file is changed from the outside
 set mouse=a
 set pastetoggle=<F4>
 set cmdheight=1
+set omnifunc=syntaxcomplete#Complete
 " add register for os clipboard {{{2
 set clipboard+=unnamed
 set clipboard+=unnamedplus
@@ -209,8 +207,24 @@ set noswapfile
 " 2}}}
 " }}}
 " Plugins {{{1
-" ctrlP {{{2
-let g:ctrlp_working_path_mode = 0
+" unite {{{2
+let g:unite_data_directory='~/.vim/.cache/unite'
+let g:unite_enable_start_insert=1
+let g:unite_source_history_yank_enable=1
+let g:unite_source_file_rec_max_cache_files=5000
+let g:unite_prompt='» '
+" 2}}}
+" neocomplcache {{{2
+let g:neocomplcache_enable_at_startup = 1
+" Recommended key-mappings.
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " 2}}}
 " SYNTASTIC {{{2
 highlight SyntasticErrorSign cterm=none gui=none ctermfg=88 guifg=#870000
@@ -234,6 +248,9 @@ cnoremap jj <esc><cr>
 inoremap <esc> <esc><esc>
 nnoremap <leader>vr :split $MYVIMRC<cr>
 nnoremap <leader>vl :ReloadVIMRC<cr>
+
+nnoremap <leader>s :w<cr>
+inoremap <leader>s <esc>:w<cr>
 " copy stuff to os clipboard {{{3
 vmap <D-c> "*y
 vmap <Leader>c "*y
@@ -276,8 +293,18 @@ nmap <Leader>gd :Gdiff<cr>
 " Svn {{{2
 nmap <Leader>ss :!svn status<cr>
 " 2}}}
-" ctrlP {{{2
-map <Leader>t :CtrlP<cr>
+" unite {{{2
+nnoremap <C-p> :Unite file_rec<cr>
+nmap <space> [unite]
+nnoremap [unite] <nop>
+
+nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
+nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=line line<cr>
+nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr>
+nnoremap <silent> [unite]/ :<C-u>Unite -no-quit -buffer-name=search grep:.<cr>
+nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<cr>
+nnoremap <silent> [unite]o :<C-u>Unite -auto-resize -buffer-name=outline outline<cr>
+nnoremap <silent> [unite]s :<C-u>Unite -quick-match buffer<cr>
 " 2}}}
 " NERDTree {{{2
 map <leader>o :NERDTreeToggle %<cr>
