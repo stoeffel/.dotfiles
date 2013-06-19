@@ -22,6 +22,7 @@ Bundle 'sjl/gundo.vim'
 Bundle 'editorconfig-vim'
 " fuzzy finder
 Bundle 'unite.vim'
+Bundle 'Shougo/unite-outline'
 " autocompletion
 Bundle 'neocomplcache'
 " zoom into a window
@@ -213,6 +214,13 @@ let g:unite_enable_start_insert=1
 let g:unite_source_history_yank_enable=1
 let g:unite_source_file_rec_max_cache_files=5000
 let g:unite_prompt='» '
+" Shorten the default update date of 500ms
+let g:unite_update_time = 200
+" Use the fuzzy matcher for everything
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+
+" Use the rank sorter for everything
+call unite#filters#sorter_default#use(['sorter_rank'])
 " 2}}}
 " neocomplcache {{{2
 let g:neocomplcache_enable_at_startup = 1
@@ -294,10 +302,11 @@ nmap <Leader>gd :Gdiff<cr>
 nmap <Leader>ss :!svn status<cr>
 " 2}}}
 " unite {{{2
-nnoremap <C-p> :Unite file_rec<cr>
 nmap <space> [unite]
 nnoremap [unite] <nop>
-
+" General fuzzy search
+nnoremap <silent> <C-p> :<C-u>Unite
+      \ -buffer-name=files buffer file_rec<CR>
 nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
 nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=line line<cr>
 nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr>
