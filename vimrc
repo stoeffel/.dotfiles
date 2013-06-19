@@ -213,7 +213,9 @@ let g:unite_data_directory='~/.vim/.cache/unite'
 let g:unite_enable_start_insert=1
 let g:unite_source_history_yank_enable=1
 let g:unite_source_file_rec_max_cache_files=5000
-let g:unite_prompt='» '
+let g:unite_prompt='∑ '
+let g:unite_winheight = 10
+let g:unite_split_rule = 'botright'
 " Shorten the default update date of 500ms
 let g:unite_update_time = 200
 " Use the fuzzy matcher for everything
@@ -306,7 +308,7 @@ nmap <space> [unite]
 nnoremap [unite] <nop>
 " General fuzzy search
 nnoremap <silent> <C-p> :<C-u>Unite
-      \ -buffer-name=files buffer file_rec<CR>
+      \ -buffer-name=files file_rec -auto-resize<CR>
 nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
 nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=line line<cr>
 nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr>
@@ -314,6 +316,7 @@ nnoremap <silent> [unite]/ :<C-u>Unite -no-quit -buffer-name=search grep:.<cr>
 nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<cr>
 nnoremap <silent> [unite]o :<C-u>Unite -auto-resize -buffer-name=outline outline<cr>
 nnoremap <silent> [unite]s :<C-u>Unite -quick-match buffer<cr>
+nnoremap <silent> [unite]f :<C-u>Unite file<cr>
 " 2}}}
 " NERDTree {{{2
 map <leader>o :NERDTreeToggle %<cr>
