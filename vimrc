@@ -220,9 +220,6 @@ let g:unite_split_rule = 'botright'
 let g:unite_update_time = 200
 " Use the fuzzy matcher for everything
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
-
-" Use the rank sorter for everything
-call unite#filters#sorter_default#use(['sorter_rank'])
 " 2}}}
 " neocomplcache {{{2
 let g:neocomplcache_enable_at_startup = 1
@@ -258,9 +255,6 @@ cnoremap jj <esc><cr>
 inoremap <esc> <esc><esc>
 nnoremap <leader>vr :split $MYVIMRC<cr>
 nnoremap <leader>vl :ReloadVIMRC<cr>
-
-nnoremap <leader>s :w<cr>
-inoremap <leader>s <esc>:w<cr>
 " copy stuff to os clipboard {{{3
 vmap <D-c> "*y
 vmap <Leader>c "*y
