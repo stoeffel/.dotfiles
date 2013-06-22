@@ -5,8 +5,13 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
-
+ZSH_THEME="terminalparty"
+# set tab title to cwd
+precmd () {
+  tab_label=${PWD/${HOME}/\~} # use 'relative' path
+  echo -ne "\e]2;${tab_label}\a" # set window title to full string
+  echo -ne "\e]1;${tab_label: -24}\a" # set tab title to rightmost 24 characters
+}
 
 # rupa's z-script
 . ~/z/z.sh

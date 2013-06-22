@@ -8,6 +8,7 @@
         "Ext",
         "window",
         "GLOBALS",
+        "module",
         "OpenLayers",
         "SESSION",
         "KP",

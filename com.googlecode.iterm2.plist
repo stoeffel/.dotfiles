@@ -5999,7 +5999,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>961 435 794 348 0 0 2560 1418 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>228 592 924 485 0 0 2560 1440 </string>
+	<string>228 578 924 485 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 2560 1440 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -6786,11 +6786,11 @@
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedURL</key>
-	<string>http://iterm2.googlecode.com/svn/trunk/appcasts/testing.xml</string>
+	<string>http://iterm2.com/appcasts/testing.xml</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-06-19T14:38:06Z</date>
+	<date>2013-06-22T06:16:09Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -6830,6 +6830,10 @@
 	<false/>
 	<key>UseLionStyleFullscreen</key>
 	<false/>
+	<key>WebKitDefaultFontSize</key>
+	<integer>11</integer>
+	<key>WebKitStandardFont</key>
+	<string>Lucida Grande</string>
 	<key>Window Arrangements</key>
 	<dict/>
 	<key>WindowNumber</key>
@@ -6843,6 +6847,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>1.0.0.20130319</string>
+	<string>1.0.0.20130613</string>
 </dict>
 </plist>
