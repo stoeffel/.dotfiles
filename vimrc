@@ -128,7 +128,7 @@ set encoding=utf-8  " what else
 set scrolloff=3
 set showmode
 set showcmd
-set list
+set nolist
 set listchars=tab:~\ ,trail:.
 set hidden  " hide buffers instead of closing
 set wildmenu
