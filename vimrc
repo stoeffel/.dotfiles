@@ -55,6 +55,8 @@ Bundle 'loremipsum'
 Bundle 'maksimr/vim-jsbeautify'
 " substitute
 Bundle 'abolish.vim'
+" Tabular
+Bundle 'Tabular'
 " textobj {{{2
 Bundle 'textobj-function'
 Bundle 'textobj-indent'
@@ -71,7 +73,7 @@ filetype plugin indent on "enable loading plugin
 syntax enable
 " }}}
 " colorscheme {{{
-set bg=light
+set bg=dark
 " solarized options
 let g:solarized_termcolors=16
 if has("gui_running")
@@ -207,6 +209,9 @@ set nobackup
 set noswapfile
 " 2}}}
 " }}}
+" Filetypes {{{
+au BufNewFile,BufRead *.md set filetype=markdown
+" }}}
 " Plugins {{{1
 " unite {{{2
 let g:unite_data_directory='~/.vim/.cache/unite'
@@ -255,6 +260,7 @@ cnoremap jj <esc><cr>
 inoremap <esc> <esc><esc>
 nnoremap <leader>vr :split $MYVIMRC<cr>
 nnoremap <leader>vl :ReloadVIMRC<cr>
+
 " copy stuff to os clipboard {{{3
 vmap <D-c> "*y
 vmap <Leader>c "*y
@@ -329,6 +335,10 @@ command! SudoWrite execute "w !sudo tee %"
 " }}}
 " Abbreviations {{{
 iabbrev @@    schtoeffel@gmail.com
+" }}}
+" Macros {{{
+nnoremap @u yypVr-
+nnoremap @U yypVr=
 " }}}
 " localvimrc {{{
 if filereadable('.vimrc.local') " Do we have local vimrc?
