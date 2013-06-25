@@ -63,6 +63,7 @@ alias gr="grunt"
 
 # Applications
 alias c="open -a Google\ Chrome"
+alias canary="open -a /Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --args --disable-web-security"
 alias st="open -a SourceTree"
 
 # List
