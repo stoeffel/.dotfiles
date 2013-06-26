@@ -318,7 +318,7 @@ nnoremap <silent> [unite]s :<C-u>Unite -quick-match buffer<cr>
 nnoremap <silent> [unite]f :<C-u>Unite file<cr>
 " 2}}}
 " NERDTree {{{2
-map <leader>o :NERDTreeToggle %<cr>
+map <leader>o :NERDTreeToggle<cr>
 " 2}}}
 " Gundo {{{2
 map <leader>g :GundoToggle<cr>
