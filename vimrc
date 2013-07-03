@@ -21,6 +21,7 @@ Bundle 'sjl/gundo.vim'
 " .editorconfig
 Bundle 'editorconfig-vim'
 " fuzzy finder
+Bundle 'ctrlp.vim'
 Bundle 'unite.vim'
 Bundle 'Shougo/unite-outline'
 " autocompletion
@@ -73,7 +74,7 @@ filetype plugin indent on "enable loading plugin
 syntax enable
 " }}}
 " colorscheme {{{
-set bg=dark
+set bg=light
 " solarized options
 let g:solarized_termcolors=16
 if has("gui_running")
@@ -213,6 +214,9 @@ set noswapfile
 au BufNewFile,BufRead *.md set filetype=markdown
 " }}}
 " Plugins {{{1
+" ctrlP {{{2
+let g:ctrlp_working_path_mode = 0
+" 2}}}
 " unite {{{2
 let g:unite_data_directory='~/.vim/.cache/unite'
 let g:unite_enable_start_insert=1
@@ -303,12 +307,13 @@ nmap <Leader>gd :Gdiff<cr>
 " Svn {{{2
 nmap <Leader>ss :!svn status<cr>
 " 2}}}
+" ctrlP {{{2
+map <Leader>t :CtrlP<cr>
+" 2}}}
 " unite {{{2
 nmap <space> [unite]
 nnoremap [unite] <nop>
 " General fuzzy search
-nnoremap <silent> <C-p> :<C-u>Unite
-      \ -buffer-name=files file_rec -auto-resize<CR>
 nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
 nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=line line<cr>
 nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr>
