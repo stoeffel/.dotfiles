@@ -28,6 +28,9 @@ Bundle 'Shougo/unite-outline'
 Bundle 'neocomplcache'
 " zoom into a window
 Bundle 'ZoomWin'
+" dash
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
 " jshint
 Bundle 'vim-scripts/jshint.vim'
 " { surround stuff }
@@ -323,7 +326,8 @@ nnoremap <silent> [unite]s :<C-u>Unite -quick-match buffer<cr>
 nnoremap <silent> [unite]f :<C-u>Unite file<cr>
 " 2}}}
 " NERDTree {{{2
-map <leader>o :NERDTreeToggle<cr>
+map <leader>no :NERDTreeToggle<cr>
+map <leader>nf :NERDTreeFind<cr>
 " 2}}}
 " Gundo {{{2
 map <leader>g :GundoToggle<cr>
@@ -336,7 +340,25 @@ cnoremap ToggleBG call ToggleBG()<cr>
 " COMMANDS {{{
 command! ReloadVIMRC execute "source ~/.vimrc"
 command! SudoWrite execute "w !sudo tee %"
-
+command! -nargs=* Only call CloseHiddenBuffers()
+function! CloseHiddenBuffers()
+  " figure out which buffers are visible in any tab
+  let visible = {}
+  for t in range(1, tabpagenr('$'))
+    for b in tabpagebuflist(t)
+      let visible[b] = 1
+    endfor
+  endfor
+  " close any buffer that are loaded and not visible
+  let l:tally = 0
+  for b in range(1, bufnr('$'))
+    if bufloaded(b) && !has_key(visible, b)
+      let l:tally += 1
+      exe 'bw ' . b
+    endif
+  endfor
+  echon "Deleted " . l:tally . " buffers"
+endfun
 " }}}
 " Abbreviations {{{
 iabbrev @@    schtoeffel@gmail.com
