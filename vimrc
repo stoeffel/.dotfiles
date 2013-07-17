@@ -61,6 +61,8 @@ Bundle 'maksimr/vim-jsbeautify'
 Bundle 'abolish.vim'
 " Tabular
 Bundle 'Tabular'
+" Scroll
+Bundle 'joeytwiddle/sexy_scroller.vim'
 " textobj {{{2
 Bundle 'textobj-function'
 Bundle 'textobj-indent'
