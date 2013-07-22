@@ -61,6 +61,8 @@ Bundle 'maksimr/vim-jsbeautify'
 Bundle 'abolish.vim'
 " Tabular
 Bundle 'Tabular'
+" airline
+Bundle 'bling/vim-airline'
 " textobj {{{2
 Bundle 'textobj-function'
 Bundle 'textobj-indent'
@@ -77,7 +79,7 @@ filetype plugin indent on "enable loading plugin
 syntax enable
 " }}}
 " colorscheme {{{
-set bg=dark
+set bg=light
 " solarized options
 let g:solarized_termcolors=16
 if has("gui_running")
@@ -100,7 +102,7 @@ function! ToggleBG()
     if &background == 'dark' | call Lighten()
     else                      | call Darken()
     endif
-    hi statusline guifg=#b58900 ctermfg=64 guibg=#fdf6e3 ctermbg=black
+    "hi statusline guifg=#b58900 ctermfg=64 guibg=#fdf6e3 ctermbg=black
 endfunction
 
 " }}}
@@ -180,27 +182,31 @@ set wildignore+=**/3rd
 set wildignore+=**/vm
 " 2}}}
 " statusline {{{2
-if has("statusline") && !&cp
-    set laststatus=2  " always show the status bar
-    function! InsertStatuslineColor(mode)
-        if a:mode == 'i'
-            hi statusline guifg=#2aa198 ctermfg=136 guibg=#073642 ctermbg=black
-        elseif a:mode == 'r'
-            hi statusline guifg=#d33682 ctermfg=magenta guibg=#eee8d5 ctermbg=black
-        else
-            hi statusline guifg=#b58900 ctermfg=64 guibg=#fdf6e3 ctermbg=black
-        endif
-    endfunction
+let g:airline_theme='solarized'
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+set laststatus=2  " always show the status bar
+"if has("statusline") && !&cp
+"set laststatus=2  " always show the status bar
+"function! InsertStatuslineColor(mode)
+"if a:mode == 'i'
+"hi statusline guifg=#2aa198 ctermfg=136 guibg=#073642 ctermbg=black
+"elseif a:mode == 'r'
+"hi statusline guifg=#d33682 ctermfg=magenta guibg=#eee8d5 ctermbg=black
+"else
+"hi statusline guifg=#b58900 ctermfg=64 guibg=#fdf6e3 ctermbg=black
+"endif
+"endfunction
 
-    au InsertEnter * call InsertStatuslineColor(v:insertmode)
-    au InsertLeave * hi statusline guifg=#b58900 ctermfg=64 guibg=#fdf6e3 ctermbg=black
+"au InsertEnter * call InsertStatuslineColor(v:insertmode)
+"au InsertLeave * hi statusline guifg=#b58900 ctermfg=64 guibg=#fdf6e3 ctermbg=black
 
-    " default the statusline to 64 when entering Vim
-    hi statusline guifg=#b58900 ctermfg=64 guibg=#fdf6e3 ctermbg=black
-    " Start the status line
-    set statusline=%<\ λ\ %f\ %h%m%r%=[\ %{&ft}\ ]\ %-14.(%l,%c%V%)\ %n#\ %0*\ %{strftime(\"%H:%M\")}
+"" default the statusline to 64 when entering Vim
+"hi statusline guifg=#b58900 ctermfg=64 guibg=#fdf6e3 ctermbg=black
+"" Start the status line
+"set statusline=%<\ λ\ %f\ %h%m%r%=[\ %{&ft}\ ]\ %-14.(%l,%c%V%)\ %n#\ %0*\ %{strftime(\"%H:%M\")}
 
-endif
+"endif
 " }}}
 " Enable persistent undo {{{2
 set undofile
@@ -342,22 +348,22 @@ command! ReloadVIMRC execute "source ~/.vimrc"
 command! SudoWrite execute "w !sudo tee %"
 command! -nargs=* Only call CloseHiddenBuffers()
 function! CloseHiddenBuffers()
-  " figure out which buffers are visible in any tab
-  let visible = {}
-  for t in range(1, tabpagenr('$'))
-    for b in tabpagebuflist(t)
-      let visible[b] = 1
+    " figure out which buffers are visible in any tab
+    let visible = {}
+    for t in range(1, tabpagenr('$'))
+        for b in tabpagebuflist(t)
+            let visible[b] = 1
+        endfor
     endfor
-  endfor
-  " close any buffer that are loaded and not visible
-  let l:tally = 0
-  for b in range(1, bufnr('$'))
-    if bufloaded(b) && !has_key(visible, b)
-      let l:tally += 1
-      exe 'bw ' . b
-    endif
-  endfor
-  echon "Deleted " . l:tally . " buffers"
+    " close any buffer that are loaded and not visible
+    let l:tally = 0
+    for b in range(1, bufnr('$'))
+        if bufloaded(b) && !has_key(visible, b)
+            let l:tally += 1
+            exe 'bw ' . b
+        endif
+    endfor
+    echon "Deleted " . l:tally . " buffers"
 endfun
 " }}}
 " Abbreviations {{{
