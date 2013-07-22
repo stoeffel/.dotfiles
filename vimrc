@@ -47,6 +47,8 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'scrooloose/syntastic'
 " Fileexplorer
 Bundle 'The-NERD-tree'
+" indentation
+Bundle 'Yggdroot/indentLine'
 " you should write some comments
 Bundle 'The-NERD-Commenter'
 " repeat your actions .
