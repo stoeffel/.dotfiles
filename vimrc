@@ -61,8 +61,6 @@ Bundle 'maksimr/vim-jsbeautify'
 Bundle 'abolish.vim'
 " Tabular
 Bundle 'Tabular'
-" Scroll
-Bundle 'joeytwiddle/sexy_scroller.vim'
 " textobj {{{2
 Bundle 'textobj-function'
 Bundle 'textobj-indent'
@@ -79,7 +77,7 @@ filetype plugin indent on "enable loading plugin
 syntax enable
 " }}}
 " colorscheme {{{
-set bg=light
+set bg=dark
 " solarized options
 let g:solarized_termcolors=16
 if has("gui_running")
