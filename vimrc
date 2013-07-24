@@ -20,6 +20,7 @@ Bundle 'vundle'
 Bundle 'sjl/gundo.vim'
 " .editorconfig
 Bundle 'editorconfig-vim'
+Bundle 'bling/vim-bufferline'
 " fuzzy finder
 Bundle 'ctrlp.vim'
 Bundle 'unite.vim'
