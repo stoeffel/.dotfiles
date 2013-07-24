@@ -185,8 +185,9 @@ set wildignore+=**/vm
 " 2}}}
 " statusline {{{2
 let g:airline_theme='solarized'
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
+  let g:airline_powerline_fonts=1
+"let g:airline_left_sep = ''
+"let g:airline_right_sep = ''
 set laststatus=2  " always show the status bar
 "if has("statusline") && !&cp
 "set laststatus=2  " always show the status bar
@@ -223,6 +224,7 @@ set noswapfile
 " }}}
 " Filetypes {{{
 au BufNewFile,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.json set filetype=json
 " }}}
 " Plugins {{{1
 " ctrlP {{{2

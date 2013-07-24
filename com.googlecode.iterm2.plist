@@ -5997,7 +5997,7 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>804 510 214 309 0 0 2560 1418 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>961 435 794 348 0 0 2560 1418 </string>
+	<string>486 351 794 348 0 0 2560 1418 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>244 512 924 485 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -6553,7 +6553,7 @@
 			<key>Name</key>
 			<string>termi</string>
 			<key>Non Ascii Font</key>
-			<string>Inconsolata 18</string>
+			<string>DroidSansMonoForPowerline 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
@@ -6798,7 +6798,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-07-22T08:58:05Z</date>
+	<date>2013-07-24T09:00:46Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
