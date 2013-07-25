@@ -5940,7 +5940,7 @@
 	<key>HideScrollbar</key>
 	<true/>
 	<key>HideTab</key>
-	<false/>
+	<true/>
 	<key>HighlightTabLabels</key>
 	<true/>
 	<key>HotKeyBookmark</key>
@@ -5999,7 +5999,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>486 351 794 348 0 0 2560 1418 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>244 512 924 485 0 0 2560 1418 </string>
+	<string>88 558 924 485 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>949 4 1450 1408 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
