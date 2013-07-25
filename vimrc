@@ -20,7 +20,6 @@ Bundle 'vundle'
 Bundle 'sjl/gundo.vim'
 " .editorconfig
 Bundle 'editorconfig-vim'
-Bundle 'bling/vim-bufferline'
 " fuzzy finder
 Bundle 'ctrlp.vim'
 Bundle 'unite.vim'
@@ -82,7 +81,7 @@ filetype plugin indent on "enable loading plugin
 syntax enable
 " }}}
 " colorscheme {{{
-set bg=light
+set bg=dark
 " solarized options
 let g:solarized_termcolors=16
 if has("gui_running")
@@ -90,7 +89,8 @@ if has("gui_running")
 endif
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
-colorscheme solarized
+"colorscheme solarized
+colorscheme Tomorrow-Night
 hi! link SignColumn LineNr
 function! Darken()
     set bg=dark
@@ -185,7 +185,7 @@ set wildignore+=**/3rd
 set wildignore+=**/vm
 " 2}}}
 " statusline {{{2
-let g:airline_theme='solarized'
+let g:airline_theme='ubaryd'
   let g:airline_powerline_fonts=1
 "let g:airline_left_sep = ''
 "let g:airline_right_sep = ''
@@ -373,6 +373,10 @@ endfun
 " }}}
 " Abbreviations {{{
 iabbrev @@    schtoeffel@gmail.com
+iabbrev fasle false
+iabbrev fuction function
+iabbrev listeneres listeners
+iabbrev cancle cancel
 " }}}
 " Macros {{{
 nnoremap @u yypVr-
