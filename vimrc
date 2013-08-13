@@ -72,6 +72,7 @@ Bundle 'textobj-user'
 " 2}}}
 " Languages {{{2
 Bundle "pangloss/vim-javascript"
+Bundle 'https://github.com/jelera/vim-javascript-syntax'
 Bundle "ajf/puppet-vim"
 Bundle "vim-ruby/vim-ruby"
 " 2}}}
@@ -91,6 +92,7 @@ let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 "colorscheme solarized
 colorscheme Tomorrow-Night
+Bundle 'badwolf'
 hi! link SignColumn LineNr
 function! Darken()
     set bg=dark
@@ -169,7 +171,7 @@ set clipboard+=unnamedplus
 " 2}}}
 " wildignores {{{2
 set wildignore+=**/node_modules/**
-set wildignore+=**/components/**
+set wildignore+=**/bower_components/**
 set wildignore+=**/.bundle/**
 set wildignore+=**/.sass-cache/**
 set wildignore+=**/Library
