@@ -24,10 +24,11 @@ Bundle 'editorconfig-vim'
 Bundle 'ctrlp.vim'
 Bundle 'unite.vim'
 Bundle 'Shougo/unite-outline'
+Bundle 'vimroom.vim'
 " autocompletion
 Bundle 'neocomplcache'
-" zoom into a window
-Bundle 'ZoomWin'
+" jsdoc
+Bundle 'heavenshell/vim-jsdoc'
 " dash
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
@@ -72,7 +73,6 @@ Bundle 'textobj-user'
 " 2}}}
 " Languages {{{2
 Bundle "pangloss/vim-javascript"
-Bundle 'https://github.com/jelera/vim-javascript-syntax'
 Bundle "ajf/puppet-vim"
 Bundle "vim-ruby/vim-ruby"
 " 2}}}
@@ -82,7 +82,7 @@ filetype plugin indent on "enable loading plugin
 syntax enable
 " }}}
 " colorscheme {{{
-set bg=dark
+set bg=light
 " solarized options
 let g:solarized_termcolors=16
 if has("gui_running")
@@ -90,8 +90,7 @@ if has("gui_running")
 endif
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
-"colorscheme solarized
-colorscheme Tomorrow-Night
+colorscheme solarized
 Bundle 'badwolf'
 hi! link SignColumn LineNr
 function! Darken()
@@ -187,7 +186,7 @@ set wildignore+=**/3rd
 set wildignore+=**/vm
 " 2}}}
 " statusline {{{2
-let g:airline_theme='ubaryd'
+let g:airline_theme='solarized'
   let g:airline_powerline_fonts=1
 "let g:airline_left_sep = ''
 "let g:airline_right_sep = ''
@@ -377,6 +376,7 @@ endfun
 iabbrev @@    schtoeffel@gmail.com
 iabbrev fasle false
 iabbrev fuction function
+iabbrev funciton function
 iabbrev listeneres listeners
 iabbrev cancle cancel
 " }}}

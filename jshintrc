@@ -1,73 +1,92 @@
 {
 
     "passfail"      : false,
-    "maxerr"        : 100,
+        "maxerr"        : 100,
 
 
-    "predef"        : [
-        "Ext",
-        "window",
-        "GLOBALS",
-        "module",
-        "OpenLayers",
-        "SESSION",
-        "KP",
-        "GFY",
-        "_KP",
-        "it",
-        "expect",
-        "describe",
-        "beforeEach",
-        "afterEach",
-        "waitsFor",
-        "runs",
-        "L",
-        "_GFY"
-    ],
-
-
-
-    "debug"         : false,
-    "devel"         : true,
-
-
-
-    "es5"           : true,
-    "strict"        : false,
-    "globalstrict"  : false,
-
-
-
-    "asi"           : false,
-    "laxbreak"      : true,
-    "bitwise"       : true,
-    "boss"          : false,
-    "curly"         : false,
-    "eqeqeq"        : true,
-    "eqnull"        : false,
-    "evil"          : false,
-    "expr"          : false,
-    "forin"         : false,
-    "immed"         : true,
-    "latedef"       : true,
-    "loopfunc"      : false,
-    "noarg"         : true,
-    "regexp"        : true,
-    "regexdash"     : false,
-    "scripturl"     : true,
-    "shadow"        : false,
-    "supernew"      : false,
-    "undef"         : true,
+        "predef"        : [
+            "Ext",
+            "window",
+            "GLOBALS",
+            "module",
+            "OpenLayers",
+            "SESSION",
+            "KP",
+            "GFY",
+            "_KP",
+            "it",
+            "expect",
+            "describe",
+            "beforeEach",
+            "afterEach",
+            "waitsFor",
+            "runs",
+            "L",
+            "_GFY",
+            "_",
+            "_V_",
+            "afterEach",
+            "beforeEach",
+            "confirm",
+            "context",
+            "describe",
+            "expect",
+            "it",
+            "jasmine",
+            "JSHINT",
+            "mostRecentAjaxRequest",
+            "qq",
+            "runs",
+            "spyOn",
+            "spyOnEvent",
+            "waitsFor",
+            "xdescribe",
+            "CMP"
+            ],
 
 
 
-    "newcap"        : true,
-    "noempty"       : true,
-    "nonew"         : true,
-    "nomen"         : false,
-    "onevar"        : false,
-    "plusplus"      : false,
-    "sub"           : false,
-    "trailing"      : true,
-    "white"         : false
+        "debug"         : false,
+        "devel"         : true,
+
+
+
+        "es5"           : false,
+        "strict"        : false,
+        "globalstrict"  : false,
+
+
+
+        "asi"           : false,
+        "laxbreak"      : true,
+        "bitwise"       : true,
+        "boss"          : false,
+        "curly"         : false,
+        "eqeqeq"        : true,
+        "eqnull"        : false,
+        "evil"          : false,
+        "expr"          : false,
+        "forin"         : false,
+        "immed"         : true,
+        "latedef"       : true,
+        "loopfunc"      : false,
+        "noarg"         : true,
+        "regexp"        : true,
+        "regexdash"     : false,
+        "scripturl"     : true,
+        "shadow"        : false,
+        "supernew"      : false,
+        "undef"         : true,
+        "unused"         : "vars",
+
+
+        "newcap"        : true,
+        "noempty"       : true,
+        "nonew"         : true,
+        "nomen"         : false,
+        "onevar"        : false,
+        "plusplus"      : false,
+        "sub"           : false,
+        "trailing"      : true,
+        "white"         : false
 }
