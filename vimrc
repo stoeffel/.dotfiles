@@ -273,6 +273,13 @@ inoremap <esc> <esc><esc>
 nnoremap <leader>vr :split $MYVIMRC<cr>
 nnoremap <leader>vl :ReloadVIMRC<cr>
 
+" stuff for mono (C#)
+nnoremap <leader>mc :!gmcs %<cr>
+fun! MonoRun()
+    execute '!mono '.substitute(expand('%:t'),"cs","exe", "")
+endfun
+nnoremap <leader>mr :call MonoRun()<cr>
+
 " copy stuff to os clipboard {{{3
 vmap <D-c> "*y
 vmap <Leader>c "*y
