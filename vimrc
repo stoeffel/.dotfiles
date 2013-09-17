@@ -24,20 +24,14 @@ Bundle 'editorconfig-vim'
 Bundle 'ctrlp.vim'
 Bundle 'unite.vim'
 Bundle 'Shougo/unite-outline'
-Bundle 'vimroom.vim'
 " autocompletion
 Bundle 'neocomplcache'
 " jsdoc
 Bundle 'heavenshell/vim-jsdoc'
-" dash
-Bundle 'rizzatti/funcoo.vim'
-Bundle 'rizzatti/dash.vim'
 " jshint
 Bundle 'vim-scripts/jshint.vim'
 " { surround stuff }
 Bundle 'tpope/vim-surround'
-" multiple cursors
-Bundle 'terryma/vim-multiple-cursors'
 " ack finds your stuff
 Bundle 'mileszs/ack.vim'
 " git for vim
@@ -48,8 +42,6 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'scrooloose/syntastic'
 " Fileexplorer
 Bundle 'The-NERD-tree'
-" indentation
-Bundle 'Yggdroot/indentLine'
 " you should write some comments
 Bundle 'The-NERD-Commenter'
 " repeat your actions .
@@ -75,6 +67,7 @@ Bundle 'textobj-user'
 Bundle "pangloss/vim-javascript"
 Bundle "ajf/puppet-vim"
 Bundle "vim-ruby/vim-ruby"
+Bundle 'smarty-syntax'
 " 2}}}
 Bundle 'altercation/vim-colors-solarized'
 
