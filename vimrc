@@ -56,6 +56,8 @@ Bundle 'maksimr/vim-jsbeautify'
 Bundle 'abolish.vim'
 " Tabular
 Bundle 'Tabular'
+" Emoji
+Bundle 'junegunn/vim-emoji'
 " airline
 Bundle 'bling/vim-airline'
 " textobj {{{2
@@ -258,8 +260,16 @@ highlight SyntasticWarningLine gui=none cterm=none
 let g:syntastic_enable_signs=1
 let g:syntastic_check_on_open=0
 let g:syntastic_enable_highlighting = 0
-let g:syntastic_error_symbol='✘'
-let g:syntastic_warning_symbol='✗'
+" 2}}}
+" Emoji {{{2
+silent! if emoji#available()
+  let g:gitgutter_sign_added = emoji#for('+1')
+  let g:gitgutter_sign_modified = emoji#for('punch')
+  let g:gitgutter_sign_removed = emoji#for('-1')
+  let g:gitgutter_sign_modified_removed = emoji#for('hand')
+    let g:syntastic_error_symbol= emoji#for('scream')
+    let g:syntastic_warning_symbol= emoji#for('cry')
+endif
 " 2}}}
 " }}}
 " MAPPINGS {{{
