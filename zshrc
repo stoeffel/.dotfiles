@@ -78,8 +78,8 @@ alias dv="cd ~/.dotfiles;vim;cd -;" # edit dotfiles, and go back were you came f
 alias dl="d;git pull;"
 alias s="cd ~/src"
 
-alias sencha="/Users/bar/bin/Sencha/Cmd/3.1.2.342/sencha";
-alias sen="/Users/bar/bin/Sencha/Cmd/3.1.2.342/sencha";
+alias sencha="/Users/$USER/bin/Sencha/Cmd/3.1.2.342/sencha";
+alias sen="/Users/$USER/bin/Sencha/Cmd/3.1.2.342/sencha";
 
 # DEPRECATED
 alias ll="echo use l"

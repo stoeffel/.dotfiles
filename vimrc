@@ -280,6 +280,14 @@ fun! MonoRun()
 endfun
 nnoremap <leader>mr :call MonoRun()<cr>
 
+" stuff for java
+nnoremap <leader>jc :!javac %<cr>
+fun! JavaRun()
+    execute '!java -Djava.security.policy=wideopen.policy '.substitute(expand('%:t'),"java","", "")
+endfun
+nnoremap <leader>jr :<cr>
+
+
 " copy stuff to os clipboard {{{3
 vmap <D-c> "*y
 vmap <Leader>c "*y
