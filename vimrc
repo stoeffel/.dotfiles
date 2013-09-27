@@ -263,10 +263,6 @@ let g:syntastic_enable_highlighting = 0
 " 2}}}
 " Emoji {{{2
 silent! if emoji#available()
-  let g:gitgutter_sign_added = emoji#for('+1')
-  let g:gitgutter_sign_modified = emoji#for('punch')
-  let g:gitgutter_sign_removed = emoji#for('-1')
-  let g:gitgutter_sign_modified_removed = emoji#for('hand')
     let g:syntastic_error_symbol= emoji#for('scream')
     let g:syntastic_warning_symbol= emoji#for('cry')
 endif
