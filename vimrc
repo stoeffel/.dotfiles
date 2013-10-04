@@ -56,6 +56,7 @@ Bundle 'maksimr/vim-jsbeautify'
 Bundle 'abolish.vim'
 " Tabular
 Bundle 'Tabular'
+Bundle 'YankRing.vim'
 " Emoji
 Bundle 'junegunn/vim-emoji'
 " airline
