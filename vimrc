@@ -167,7 +167,6 @@ set clipboard+=unnamedplus
 " 2}}}
 " wildignores {{{2
 set wildignore+=**/node_modules/**
-set wildignore+=**/bower_components/**
 set wildignore+=**/.bundle/**
 set wildignore+=**/.sass-cache/**
 set wildignore+=**/Library
