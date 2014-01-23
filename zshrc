@@ -16,7 +16,7 @@ ZSH_THEME="norm"
 plugins=(git node npm nyan bower gem gitfast last-working-dir vundle svn)
 
 source $ZSH/oh-my-zsh.sh
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+#[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
 # Customize to your needs...
 export PATH=$PATH:bin:/opt/boxen/rbenv/shims:/opt/boxen/rbenv/bin:/opt/boxen/rbenv/plugins/ruby-build/bin:/opt/boxen/phpenv/shims:/opt/boxen/phpenv/bin:/opt/boxen/phpenv/plugins/php-build/bin:/opt/boxen/nodenv/shims:/opt/boxen/nodenv/bin:/opt/boxen/bin:/opt/boxen/homebrew/bin:/opt/boxen/homebrew/sbin:./node_modules/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/$USER/.gem/ruby/1.8/bin:/opt/nginx/sbin:/Users/$USER/3rd/adt-bundle-mac-x86_64-20130219/sdk/tools:/Users/$USER/3rd/adt-bundle-mac-x86_64-20130219/sdk/platform-tools:/Users/$USER/bin:/Users/$USER/.bash_it/plugins/available/todo
@@ -78,8 +78,9 @@ alias dv="cd ~/.dotfiles;vim;cd -;" # edit dotfiles, and go back were you came f
 alias dl="d;git pull;"
 alias s="cd ~/src"
 
-alias sencha="/Users/bar/bin/Sencha/Cmd/4.0.0.203/sencha";
-alias sen="/Users/bar/bin/Sencha/Cmd/4.0.0.203/sencha";
+SEN_VERSION=$(cd /Users/bar/bin/Sencha/Cmd/;ls | egrep '^[0-9]+' | tail -n 1)
+alias sencha="/Users/bar/bin/Sencha/Cmd/$SEN_VERSION/sencha";
+alias sen="/Users/bar/bin/Sencha/Cmd/$SEN_VERSION/sencha";
 
 # DEPRECATED
 alias ll="echo use l"
