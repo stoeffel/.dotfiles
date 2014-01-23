@@ -73,14 +73,14 @@ Bundle "vim-ruby/vim-ruby"
 Bundle 'smarty-syntax'
 Bundle 'kchmck/vim-coffee-script'
 " 2}}}
-Bundle 'molokai'
+Bundle 'sickill/vim-monokai'
 
 filetype plugin indent on "enable loading plugin
 syntax enable
 " }}}
 " colorscheme {{{
 set bg=dark
-colorscheme molokai
+colorscheme monokai
 hi! link SignColumn LineNr
 function! Darken()
     set bg=dark
@@ -175,7 +175,7 @@ set wildignore+=**/vm
 set wildignore+=**/*.class
 " 2}}}
 " statusline {{{2
-let g:airline_theme='dark'
+let g:airline_theme='badwolf'
   let g:airline_powerline_fonts=1
 "let g:airline_left_sep = ''
 "let g:airline_right_sep = ''
