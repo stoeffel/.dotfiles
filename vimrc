@@ -71,6 +71,7 @@ Bundle "pangloss/vim-javascript"
 Bundle "ajf/puppet-vim"
 Bundle "vim-ruby/vim-ruby"
 Bundle 'smarty-syntax'
+Bundle 'kchmck/vim-coffee-script'
 " 2}}}
 Bundle 'altercation/vim-colors-solarized'
 
@@ -179,6 +180,7 @@ set wildignore+=**/Pictures
 set wildignore+=**/Public
 set wildignore+=**/3rd
 set wildignore+=**/vm
+set wildignore+=**/*.class
 " 2}}}
 " statusline {{{2
 let g:airline_theme='solarized'
@@ -222,6 +224,7 @@ set noswapfile
 " Filetypes {{{
 au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.json set filetype=json
+au BufNewFile,BufRead *.coffee set filetype=coffee
 " }}}
 " Plugins {{{1
 " ctrlP {{{2
