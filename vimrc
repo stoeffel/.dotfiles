@@ -73,22 +73,14 @@ Bundle "vim-ruby/vim-ruby"
 Bundle 'smarty-syntax'
 Bundle 'kchmck/vim-coffee-script'
 " 2}}}
-Bundle 'altercation/vim-colors-solarized'
+Bundle 'molokai'
 
 filetype plugin indent on "enable loading plugin
 syntax enable
 " }}}
 " colorscheme {{{
 set bg=dark
-" solarized options
-let g:solarized_termcolors=16
-if has("gui_running")
-    let g:solarized_termcolors = 256
-endif
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
-colorscheme solarized
-Bundle 'badwolf'
+colorscheme molokai
 hi! link SignColumn LineNr
 function! Darken()
     set bg=dark
@@ -183,7 +175,7 @@ set wildignore+=**/vm
 set wildignore+=**/*.class
 " 2}}}
 " statusline {{{2
-let g:airline_theme='solarized'
+let g:airline_theme='dark'
   let g:airline_powerline_fonts=1
 "let g:airline_left_sep = ''
 "let g:airline_right_sep = ''
