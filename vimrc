@@ -72,15 +72,19 @@ Bundle "ajf/puppet-vim"
 Bundle "vim-ruby/vim-ruby"
 Bundle 'smarty-syntax'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'moll/vim-node'
 " 2}}}
 Bundle 'sickill/vim-monokai'
+Bundle 'molokai'
+Bundle 'mango.vim'
+
 
 filetype plugin indent on "enable loading plugin
 syntax enable
 " }}}
 " colorscheme {{{
 set bg=dark
-colorscheme monokai
+colorscheme mango
 hi! link SignColumn LineNr
 function! Darken()
     set bg=dark
@@ -159,6 +163,10 @@ set clipboard+=unnamedplus
 " 2}}}
 " wildignores {{{2
 set wildignore+=**/node_modules/**
+set wildignore+=**/bower_components/**
+set wildignore+=**/touch/**
+set wildignore+=**/packages/**
+set wildignore+=**/cordova/**
 set wildignore+=**/.bundle/**
 set wildignore+=**/.sass-cache/**
 set wildignore+=**/Library
@@ -176,9 +184,9 @@ set wildignore+=**/*.class
 " 2}}}
 " statusline {{{2
 let g:airline_theme='badwolf'
-  let g:airline_powerline_fonts=1
-"let g:airline_left_sep = ''
-"let g:airline_right_sep = ''
+  "let g:airline_powerline_fonts=1
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 set laststatus=2  " always show the status bar
 "if has("statusline") && !&cp
 "set laststatus=2  " always show the status bar
