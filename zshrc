@@ -16,11 +16,10 @@ ZSH_THEME="norm"
 plugins=(git node npm nyan bower gem gitfast last-working-dir vundle svn)
 
 source $ZSH/oh-my-zsh.sh
-#[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
 # Customize to your needs...
-export PATH=$PATH:bin:/opt/boxen/rbenv/shims:/opt/boxen/rbenv/bin:/opt/boxen/rbenv/plugins/ruby-build/bin:/opt/boxen/phpenv/shims:/opt/boxen/phpenv/bin:/opt/boxen/phpenv/plugins/php-build/bin:/opt/boxen/nodenv/shims:/opt/boxen/nodenv/bin:/opt/boxen/bin:/opt/boxen/homebrew/bin:/opt/boxen/homebrew/sbin:./node_modules/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/$USER/.gem/ruby/1.8/bin:/opt/nginx/sbin:/Users/$USER/3rd/adt-bundle-mac-x86_64-20130219/sdk/tools:/Users/$USER/3rd/adt-bundle-mac-x86_64-20130219/sdk/platform-tools:/Users/$USER/bin:/Users/$USER/.bash_it/plugins/available/todo
-
+export PATH=$PATH:bin:./node_modules/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/$USER/.gem/ruby/1.8/bin:/opt/nginx/sbin:/Users/$USER/3rd/adt-bundle-mac-x86_64-20130219/sdk/tools:/Users/$USER/3rd/adt-bundle-mac-x86_64-20130219/sdk/platform-tools:/Users/$USER/bin:/Users/$USER/.bash_it/plugins/available/todo
+export PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
 export TERM='xterm-256color'
 
 # EDITOR
@@ -70,22 +69,24 @@ alias st="open -a SourceTree"
 alias l="ls -la"
 
 # VID (very important directories)
-alias b="cd /opt/boxen/repo"
-alias bv="cd /opt/boxen/repo;vim;cd -;"
-alias bx="boxen"
 alias d="cd ~/.dotfiles"
 alias dv="cd ~/.dotfiles;vim;cd -;" # edit dotfiles, and go back were you came from
 alias dl="d;git pull;"
 alias s="cd ~/src"
 
-SEN_VERSION=$(cd /Users/bar/bin/Sencha/Cmd/;ls | egrep '^[0-9]+' | tail -n 1)
-alias sencha="/Users/bar/bin/Sencha/Cmd/$SEN_VERSION/sencha";
-alias sen="/Users/bar/bin/Sencha/Cmd/$SEN_VERSION/sencha";
+SEN_VERSION=$(cd /Users/$USER/bin/Sencha/Cmd/;ls | egrep '^[0-9]+' | tail -n 1)
+alias sencha="/Users/${USER}/bin/Sencha/Cmd/$SEN_VERSION/sencha";
+alias sen="/Users/${USER}/bin/Sencha/Cmd/$SEN_VERSION/sencha";
+alias senw="sen web start";
+alias senb="sen app build native --clean";
 
 # DEPRECATED
 alias ll="echo use l"
 alias gall="echo use ga"
 alias gst="echo use gs"
+
+# PHP SERVER
+alias phpserver="php -S localhost:8000 -c ~/.dotfiles/php.ini"
 
 # FUNCTIONS
 ###########
@@ -102,3 +103,7 @@ rvim () { # connects to a remote server and opens vim
 #########
 
 zstyle ':completion:*' special-dirs true
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+

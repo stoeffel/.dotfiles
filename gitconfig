@@ -22,10 +22,8 @@
 	user = stoeffel
 [hub]
 protocol = https
-[credential]
-helper = /opt/boxen/bin/boxen-git-credential
 [core]
-excludesfile = /opt/boxen/config/git/gitignore
+	excludesfile = /Users/stoeffel/.gitignore_global
 editor = vim --noplugin
 [diff]
 tool=vimdiff
