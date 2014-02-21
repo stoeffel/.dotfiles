@@ -88,6 +88,10 @@ alias gst="echo use gs"
 # PHP SERVER
 alias phpserver="php -S localhost:8000 -c ~/.dotfiles/php.ini"
 
+# TMUX
+alias ta="tmux -u -2 attach-session -t base"
+alias tn="tmux -u -2 new-session -s base"
+
 # FUNCTIONS
 ###########
 
@@ -105,5 +109,4 @@ rvim () { # connects to a remote server and opens vim
 zstyle ':completion:*' special-dirs true
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 

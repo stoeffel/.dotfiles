@@ -11,22 +11,19 @@ filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-syntax on
 " Bundles for vim
 Bundle 'vundle'
-" treeview of undo history
-Bundle 'sjl/gundo.vim'
 " .editorconfig
 Bundle 'editorconfig-vim'
 " fuzzy finder
-Bundle 'ctrlp.vim'
-Bundle 'unite.vim'
+Bundle 'wincent/Command-T'
 " autocompletion
 Bundle 'neocomplcache'
 " jshint
 Bundle 'vim-scripts/jshint.vim'
 " { surround stuff }
 Bundle 'tpope/vim-surround'
+Bundle 'gcmt/wildfire.vim'
 " git for vim
 Bundle 'tpope/vim-fugitive'
 " will find your syntax errors
@@ -43,12 +40,6 @@ Bundle 'unimpaired.vim'
 Bundle 'maksimr/vim-jsbeautify'
 " substitute
 Bundle 'abolish.vim'
-" airline
-Bundle 'bling/vim-airline'
-" textobj
-Bundle 'textobj-function'
-Bundle 'textobj-indent'
-Bundle 'textobj-user'
 " Languages
 Bundle "pangloss/vim-javascript"
 Bundle "ajf/puppet-vim"
@@ -56,15 +47,14 @@ Bundle "vim-ruby/vim-ruby"
 Bundle 'smarty-syntax'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'moll/vim-node'
-Bundle 'mango.vim'
+Bundle 'geekjuice/vim-mocha'
 
+Bundle 'jgdavey/tslime.vim'
 
 filetype plugin indent on "enable loading plugin
 syntax enable
-" colorscheme
-set bg=dark
-colorscheme mango
-hi! link SignColumn LineNr
+set background=light
+colorscheme solarized
 
 " GUI ?
 " check if gui or in shell
@@ -139,9 +129,6 @@ set wildignore+=**/3rd
 set wildignore+=**/vm
 set wildignore+=**/*.class
 " statusline
-let g:airline_theme='badwolf'
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
 set laststatus=2  " always show the status bar
 " Enable persistent undo
 set undofile
@@ -157,20 +144,6 @@ au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.json set filetype=json
 au BufNewFile,BufRead *.coffee set filetype=coffee
 " Plugins
-" ctrlP
-let g:ctrlp_working_path_mode = 0
-" unite
-let g:unite_data_directory='~/.vim/.cache/unite'
-let g:unite_enable_start_insert=1
-let g:unite_source_history_yank_enable=1
-let g:unite_source_file_rec_max_cache_files=5000
-let g:unite_prompt='∑ '
-let g:unite_winheight = 10
-let g:unite_split_rule = 'botright'
-" Shorten the default update date of 500ms
-let g:unite_update_time = 200
-" Use the fuzzy matcher for everything
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1
 " Recommended key-mappings.
@@ -240,25 +213,15 @@ nmap <Leader>gl :Git pull<cr>
 nmap <Leader>gd :Gdiff<cr>
 " Svn
 nmap <Leader>ss :!svn status<cr>
-" ctrlP
-map <Leader>t :CtrlP<cr>
-map <C-p> :CtrlP<cr>
-" unite
-nmap <space> [unite]
-nnoremap [unite] <nop>
-" General fuzzy search
-nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
-nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=line line<cr>
-nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr>
-nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<cr>
-nnoremap <silent> [unite]o :<C-u>Unite -auto-resize -buffer-name=outline outline<cr>
-nnoremap <silent> [unite]s :<C-u>Unite -quick-match buffer<cr>
-nnoremap <silent> [unite]f :<C-u>Unite file<cr>
 " NERDTree
 map <leader>no :NERDTreeToggle<cr>
 map <leader>nf :NERDTreeFind<cr>
-" Gundo
-map <leader>g :GundoToggle<cr>
+" CommandT
+let g:CommandTHighlightColor = 'Pmenu'
+let g:CommandTMatchWindowReverse = 1
+let g:CommandTMaxHeight = 10
+map <C-p> :CommandT<cr>
+map <Leader>t :CommandT<cr>
 " COMMANDS
 command! ReloadVIMRC execute "source ~/.vimrc"
 command! SudoWrite execute "w !sudo tee %"
@@ -289,13 +252,12 @@ iabbrev funciton function
 iabbrev listeneres listeners
 iabbrev cancle cancel
 
-cabbrev gs Gstatus
-cabbrev ga Git add --all
-cabbrev gc Gcommit
-cabbrev gp Git push
-cabbrev gl Git pull
-cabbrev gd Gdiff
-
 " Macros
 nnoremap @u yypVr-
 nnoremap @U yypVr=
+
+let g:mocha_js_command = 'call Send_to_Tmux("!mocha --recursive --colors {spec}\n")'
+nnoremap mt :call RunCurrentSpecFile()<CR>
+nnoremap ms :call RunNearestSpec()<CR>
+nnoremap ml :call RunLastSpec()<CR>
+nnoremap ma :call RunAllSpecs()<CR>
