@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="norm"
+ZSH_THEME="robbyrussell"
 
 # rupa's z-script
 . ~/z/z.sh
@@ -13,7 +13,7 @@ ZSH_THEME="norm"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git node npm nyan bower gem gitfast last-working-dir vundle svn)
+plugins=(git node npm nyan bower gem gitfast last-working-dir vundle svn tmux tmuxinator)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -75,6 +75,7 @@ alias dl="d;git pull;"
 alias s="cd ~/src"
 
 SEN_VERSION=$(cd /Users/$USER/bin/Sencha/Cmd/;ls | egrep '^[0-9]+' | tail -n 1)
+cd -
 alias sencha="/Users/${USER}/bin/Sencha/Cmd/$SEN_VERSION/sencha";
 alias sen="/Users/${USER}/bin/Sencha/Cmd/$SEN_VERSION/sencha";
 alias senw="sen web start";
@@ -110,3 +111,4 @@ zstyle ':completion:*' special-dirs true
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+source ~/.bin/tmuxinator.zsh

@@ -53,7 +53,7 @@ Bundle 'jgdavey/tslime.vim'
 
 filetype plugin indent on "enable loading plugin
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized
 
 " GUI ?
@@ -124,7 +124,6 @@ set wildignore+=**/Documents
 set wildignore+=**/Desktop
 set wildignore+=**/archive
 set wildignore+=**/Pictures
-set wildignore+=**/Public
 set wildignore+=**/3rd
 set wildignore+=**/vm
 set wildignore+=**/*.class
@@ -256,6 +255,7 @@ iabbrev cancle cancel
 nnoremap @u yypVr-
 nnoremap @U yypVr=
 
+" Mocha
 let g:mocha_js_command = 'call Send_to_Tmux("!mocha --recursive --colors {spec}\n")'
 nnoremap mt :call RunCurrentSpecFile()<CR>
 nnoremap ms :call RunNearestSpec()<CR>
