@@ -54,7 +54,6 @@ Bundle 'jgdavey/tslime.vim'
 filetype plugin indent on "enable loading plugin
 syntax enable
 set background=dark
-colorscheme solarized
 
 " GUI ?
 " check if gui or in shell

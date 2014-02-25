@@ -90,8 +90,9 @@ alias gst="echo use gs"
 alias phpserver="php -S localhost:8000 -c ~/.dotfiles/php.ini"
 
 # TMUX
-alias ta="tmux -u -2 attach-session -t base"
-alias tn="tmux -u -2 new-session -s base"
+alias tmux="tmux -u"
+alias ta="tmux -2 attach-session -t base"
+alias tn="tmux -2 new-session -s base"
 alias ts="tmux switch-client -t"
 
 # FUNCTIONS
@@ -112,5 +113,4 @@ zstyle ':completion:*' special-dirs true
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-source ~/.bin/tmuxinator.zsh
 export LC_ALL=en_US.UTF-8
