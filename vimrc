@@ -77,8 +77,6 @@ set softtabstop=4
 set expandtab
 set autoindent
 " title
-set title
-set titlestring=%{getcwd()}\ -\ \(\ %t\ \)\ %a%r%m titlelen=70
 set antialias
 set encoding=utf-8  " what else
 set scrolloff=3
@@ -130,7 +128,10 @@ set wildignore+=**/3rd
 set wildignore+=**/vm
 set wildignore+=**/*.class
 " statusline
-set laststatus=2  " always show the status bar
+set laststatus=0  " always show the status bar
+autocmd BufEnter * let &titlestring =  '%f%m'
+set title
+
 " Enable persistent undo
 set undofile
 set undodir=~/tmp/vim/undo
