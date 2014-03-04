@@ -49,6 +49,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'moll/vim-node'
 Bundle 'geekjuice/vim-mocha'
 
+Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'jgdavey/tslime.vim'
 
 
