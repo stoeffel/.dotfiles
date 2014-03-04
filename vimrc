@@ -51,6 +51,7 @@ Bundle 'geekjuice/vim-mocha'
 
 Bundle 'jgdavey/tslime.vim'
 
+
 filetype plugin indent on "enable loading plugin
 syntax enable
 set background=dark
@@ -112,6 +113,7 @@ set wildignore+=**/node_modules/**
 set wildignore+=**/bower_components/**
 set wildignore+=**/touch/**
 set wildignore+=**/packages/**
+set wildignore+=**/coverage/**
 set wildignore+=**/cordova/**
 set wildignore+=**/.bundle/**
 set wildignore+=**/.sass-cache/**
@@ -254,9 +256,12 @@ iabbrev cancle cancel
 nnoremap @u yypVr-
 nnoremap @U yypVr=
 
+nnoremap <Leader>nt :call Send_to_Tmux("npm test\n")<cr>
 " Mocha
-let g:mocha_js_command = 'call Send_to_Tmux("!mocha --recursive --colors {spec}\n")'
+let g:mocha_js_command = 'call Send_to_Tmux("mocha --recursive --colors {spec}\n")'
 nnoremap mt :call RunCurrentSpecFile()<CR>
 nnoremap ms :call RunNearestSpec()<CR>
 nnoremap ml :call RunLastSpec()<CR>
 nnoremap ma :call RunAllSpecs()<CR>
+
+set timeoutlen=1000 ttimeoutlen=0

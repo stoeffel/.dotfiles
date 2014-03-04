@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="dracula"
 
 # rupa's z-script
 . ~/z/z.sh
@@ -13,7 +13,8 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git node npm nyan bower gem gitfast last-working-dir vundle svn tmux tmuxinator)
+plugins=(zsh-syntax-highlighting git node npm nyan bower gem gitfast vundle svn tmux tmuxinator )
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -74,10 +75,8 @@ alias dv="cd ~/.dotfiles;vim;cd -;" # edit dotfiles, and go back were you came f
 alias dl="d;git pull;"
 alias s="cd ~/src"
 
-SEN_VERSION=$(cd /Users/$USER/bin/Sencha/Cmd/;ls | egrep '^[0-9]+' | tail -n 1)
-cd -
-alias sencha="/Users/${USER}/bin/Sencha/Cmd/$SEN_VERSION/sencha";
-alias sen="/Users/${USER}/bin/Sencha/Cmd/$SEN_VERSION/sencha";
+alias sencha="/Users/${USER}/bin/Sencha/Cmd/4.0.2.67/sencha";
+alias sen="/Users/${USER}/bin/Sencha/Cmd/4.0.2.67/sencha";
 alias senw="sen web start";
 alias senb="sen app build native --clean";
 
@@ -91,20 +90,9 @@ alias phpserver="php -S localhost:8000 -c ~/.dotfiles/php.ini"
 
 # TMUX
 alias tmux="tmux -u"
-alias ta="tmux -2 attach-session -t base"
-alias tn="tmux -2 new-session -s base"
+alias ta="tmux -2 attach-session -t"
+alias tn="tmux -2 new-session -s"
 alias ts="tmux switch-client -t"
-
-# FUNCTIONS
-###########
-
-rvim () { # connects to a remote server and opens vim
-    if (( $# <= 1 ))
-    then echo usage: rvim server folder;
-        return 1
-    fi
-    mvim scp://root@$1/$2/
-}
 
 # ZSTYLES
 #########

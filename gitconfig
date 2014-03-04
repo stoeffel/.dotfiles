@@ -33,3 +33,5 @@ tool=vimdiff
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[ghi]
+	token = 4cf5310751b1ca1dccb39a35d1c05c5b6574e4e3
