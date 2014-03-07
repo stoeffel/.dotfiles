@@ -23,7 +23,6 @@ Bundle 'neocomplcache'
 Bundle 'vim-scripts/jshint.vim'
 " { surround stuff }
 Bundle 'tpope/vim-surround'
-Bundle 'gcmt/wildfire.vim'
 " git for vim
 Bundle 'tpope/vim-fugitive'
 " will find your syntax errors
@@ -265,5 +264,7 @@ nnoremap mt :call RunCurrentSpecFile()<CR>
 nnoremap ms :call RunNearestSpec()<CR>
 nnoremap ml :call RunLastSpec()<CR>
 nnoremap ma :call RunAllSpecs()<CR>
+
+nmap <Leader>" :%s/"/\'/g<cr>
 
 set timeoutlen=1000 ttimeoutlen=0

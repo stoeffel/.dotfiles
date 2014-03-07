@@ -66,6 +66,10 @@ alias c="open -a Google\ Chrome"
 alias canary="open -a /Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --args --disable-web-security"
 alias st="open -a SourceTree"
 
+function op() {
+    chrome-cli open http://127.0.0.1/$1
+}
+
 # List
 alias l="ls -la"
 
@@ -93,6 +97,7 @@ alias tmux="tmux -u"
 alias ta="tmux -2 attach-session -t"
 alias tn="tmux -2 new-session -s"
 alias ts="tmux switch-client -t"
+alias ms="mux start"
 
 # ZSTYLES
 #########
@@ -102,5 +107,4 @@ zstyle ':completion:*' special-dirs true
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export LC_ALL=en_US.UTF-8
-bindkey -v
 
