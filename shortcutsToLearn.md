@@ -1,15 +1,13 @@
 vim
 ===
-* cgn
-    * c next selected
+cx
 
 tmux
 ====
-* f
-    * find window
-* q
-    * show panel nr
-* ,
-    * rename window
-* c
-    * new window
+* {}
+* o
+
+zsh
+===
+gh
+!!

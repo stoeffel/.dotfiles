@@ -40,6 +40,7 @@ Bundle 'maksimr/vim-jsbeautify'
 " substitute
 Bundle 'abolish.vim'
 " Languages
+Bundle 'sql.vim'
 Bundle "pangloss/vim-javascript"
 Bundle "ajf/puppet-vim"
 Bundle "vim-ruby/vim-ruby"
@@ -51,10 +52,13 @@ Bundle 'geekjuice/vim-mocha'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'jgdavey/tslime.vim'
 
+Bundle 'tommcdo/vim-exchange'
+
 
 filetype plugin indent on "enable loading plugin
 syntax enable
 set background=dark
+colorscheme solarized
 
 " GUI ?
 " check if gui or in shell
