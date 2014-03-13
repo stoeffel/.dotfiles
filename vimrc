@@ -53,7 +53,6 @@ Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'jgdavey/tslime.vim'
 
 Bundle 'tommcdo/vim-exchange'
-Bundle 'reedes/vim-colors-pencil'
 
 
 filetype plugin indent on "enable loading plugin
