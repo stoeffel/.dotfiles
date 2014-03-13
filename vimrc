@@ -53,12 +53,13 @@ Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'jgdavey/tslime.vim'
 
 Bundle 'tommcdo/vim-exchange'
+Bundle 'reedes/vim-colors-pencil'
 
 
 filetype plugin indent on "enable loading plugin
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme dracula
 
 " GUI ?
 " check if gui or in shell
