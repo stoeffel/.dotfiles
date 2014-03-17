@@ -42,6 +42,11 @@ alias gs="git status"
 alias gp="git push"
 alias gl="git pull"
 
+# NPM
+alias ni="npm install --save "
+alias nt="npm test"
+alias ns="npm run-script "
+
 # Svn
 alias ss="svn status"
 alias sa="svn status | grep '?' | sed 's/^.* /svn add /' | zsh"

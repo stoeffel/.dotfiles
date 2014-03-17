@@ -58,7 +58,7 @@ Bundle 'tommcdo/vim-exchange'
 filetype plugin indent on "enable loading plugin
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme dracula
 
 " GUI ?
 " check if gui or in shell
