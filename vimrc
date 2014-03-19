@@ -16,7 +16,7 @@ Bundle 'vundle'
 " .editorconfig
 Bundle 'editorconfig-vim'
 " fuzzy finder
-Bundle 'wincent/Command-T'
+Bundle 'ctrlp.vim'
 " autocompletion
 Bundle 'neocomplcache'
 " jshint
@@ -40,7 +40,6 @@ Bundle 'maksimr/vim-jsbeautify'
 " substitute
 Bundle 'abolish.vim'
 " Languages
-Bundle 'sql.vim'
 Bundle "pangloss/vim-javascript"
 Bundle "ajf/puppet-vim"
 Bundle "vim-ruby/vim-ruby"
@@ -222,11 +221,7 @@ nmap <Leader>ss :!svn status<cr>
 map <leader>no :NERDTreeToggle<cr>
 map <leader>nf :NERDTreeFind<cr>
 " CommandT
-let g:CommandTHighlightColor = 'Pmenu'
-let g:CommandTMatchWindowReverse = 1
-let g:CommandTMaxHeight = 10
-map <C-p> :CommandT<cr>
-map <Leader>t :CommandT<cr>
+map <Leader>t :CtrlP<cr>
 " COMMANDS
 command! ReloadVIMRC execute "source ~/.vimrc"
 command! SudoWrite execute "w !sudo tee %"
