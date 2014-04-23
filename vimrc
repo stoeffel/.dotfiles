@@ -4,42 +4,24 @@
 " autor: Stoffel
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" yes it's 2013
 set nocompatible
-" VUNDLE
-filetype off                   " required!
-
+filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-" Bundles for vim
+
 Bundle 'vundle'
-" .editorconfig
 Bundle 'editorconfig-vim'
-" fuzzy finder
 Bundle 'ctrlp.vim'
-" autocompletion
-Bundle 'neocomplcache'
-" jshint
 Bundle 'vim-scripts/jshint.vim'
-" { surround stuff }
 Bundle 'tpope/vim-surround'
-" git for vim
 Bundle 'tpope/vim-fugitive'
-" will find your syntax errors
 Bundle 'scrooloose/syntastic'
-" Fileexplorer
-Bundle 'The-NERD-tree'
-" you should write some comments
+Bundle 'tpope/vim-vinegar'
 Bundle 'The-NERD-Commenter'
-" repeat your actions .
 Bundle 'repeat.vim'
-" the missing pairs
 Bundle 'unimpaired.vim'
-" what a beauty
 Bundle 'maksimr/vim-jsbeautify'
-" substitute
 Bundle 'abolish.vim'
-" Languages
 Bundle "pangloss/vim-javascript"
 Bundle "ajf/puppet-vim"
 Bundle "vim-ruby/vim-ruby"
@@ -47,17 +29,16 @@ Bundle 'smarty-syntax'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'moll/vim-node'
 Bundle 'geekjuice/vim-mocha'
-
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'jgdavey/tslime.vim'
-
 Bundle 'tommcdo/vim-exchange'
 
 
 filetype plugin indent on "enable loading plugin
 syntax enable
 set background=dark
-colorscheme dracula
+colorscheme default
+hi Search guibg=none ctermbg=none  gui=underline,bold cterm=underline,bold
 
 " GUI ?
 " check if gui or in shell
@@ -106,12 +87,12 @@ set autoread            " auto read when a file is changed from the outside
 set mouse=a
 set pastetoggle=<F4>
 set cmdheight=1
-set omnifunc=syntaxcomplete#Complete
 " add register for os clipboard
 set clipboard=unnamed
 " wildignores
 set wildignore+=**/node_modules/**
 set wildignore+=**/bower_components/**
+set wildignore+=**/dist/**
 set wildignore+=**/touch/**
 set wildignore+=**/packages/**
 set wildignore+=**/coverage/**
@@ -130,9 +111,7 @@ set wildignore+=**/3rd
 set wildignore+=**/vm
 set wildignore+=**/*.class
 " statusline
-set laststatus=0  " always show the status bar
-autocmd BufEnter * let &titlestring =  '%f%m'
-set title
+set laststatus=2  " always show the status bar
 
 " Enable persistent undo
 set undofile
@@ -148,17 +127,6 @@ au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.json set filetype=json
 au BufNewFile,BufRead *.coffee set filetype=coffee
 " Plugins
-" neocomplcache
-let g:neocomplcache_enable_at_startup = 1
-" Recommended key-mappings.
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " SYNTASTIC
 highlight SyntasticErrorSign cterm=none gui=none ctermfg=88 guifg=#870000
 highlight SyntasticWarningSign cterm=none gui=none ctermfg=130 guifg=#af5f00
@@ -217,11 +185,10 @@ nmap <Leader>gl :Git pull<cr>
 nmap <Leader>gd :Gdiff<cr>
 " Svn
 nmap <Leader>ss :!svn status<cr>
-" NERDTree
-map <leader>no :NERDTreeToggle<cr>
-map <leader>nf :NERDTreeFind<cr>
+
 " CommandT
 map <Leader>t :CtrlP<cr>
+map <Leader>tr :ClearCtrlPCache<cr>
 " COMMANDS
 command! ReloadVIMRC execute "source ~/.vimrc"
 command! SudoWrite execute "w !sudo tee %"
@@ -266,4 +233,13 @@ nnoremap ma :call RunAllSpecs()<CR>
 
 nmap <Leader>" :%s/"/\'/g<cr>
 
-set timeoutlen=1000 ttimeoutlen=0
+nnoremap Q :normal n.<cr>
+
+nnoremap <Space> :silent bn<cr>
+nnoremap <BS> :silent bd<cr>
+
+autocmd BufEnter *.md exe 'noremap <leader>p :!chrome-cli open file://%:p<CR>'
+
+set timeoutlen=400 ttimeoutlen=0
+set omnifunc=syntaxcomplete#Complete
+set completeopt+=longest
