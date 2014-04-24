@@ -84,8 +84,8 @@ alias dv="cd ~/.dotfiles;vim;cd -;" # edit dotfiles, and go back were you came f
 alias dl="d;git pull;"
 alias s="cd ~/src"
 
-alias sencha="/Users/${USER}/bin/Sencha/Cmd/4.0.2.67/sencha";
-alias sen="/Users/${USER}/bin/Sencha/Cmd/4.0.2.67/sencha";
+alias sencha="/Users/${USER}/bin/Sencha/Cmd/4.0.4.84/sencha";
+alias sen="/Users/${USER}/bin/Sencha/Cmd/4.0.4.84/sencha";
 alias senw="sen web start";
 alias senb="sen app build native --clean";
 

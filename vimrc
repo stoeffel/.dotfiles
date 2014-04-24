@@ -94,7 +94,6 @@ set wildignore+=**/node_modules/**
 set wildignore+=**/bower_components/**
 set wildignore+=**/dist/**
 set wildignore+=**/touch/**
-set wildignore+=**/packages/**
 set wildignore+=**/coverage/**
 set wildignore+=**/cordova/**
 set wildignore+=**/.bundle/**
@@ -189,6 +188,7 @@ nmap <Leader>ss :!svn status<cr>
 " CommandT
 map <Leader>t :CtrlP<cr>
 map <Leader>tr :ClearCtrlPCache<cr>
+let g:ctrlp_working_path_mode = '0'
 " COMMANDS
 command! ReloadVIMRC execute "source ~/.vimrc"
 command! SudoWrite execute "w !sudo tee %"
