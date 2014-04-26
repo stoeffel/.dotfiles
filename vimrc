@@ -6,38 +6,39 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'vundle'
-Bundle 'editorconfig-vim'
-Bundle 'ctrlp.vim'
-Bundle 'vim-scripts/jshint.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-vinegar'
-Bundle 'The-NERD-Commenter'
-Bundle 'repeat.vim'
-Bundle 'unimpaired.vim'
-Bundle 'maksimr/vim-jsbeautify'
-Bundle 'abolish.vim'
-Bundle "pangloss/vim-javascript"
-Bundle "ajf/puppet-vim"
-Bundle "vim-ruby/vim-ruby"
-Bundle 'smarty-syntax'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'moll/vim-node'
-Bundle 'geekjuice/vim-mocha'
-Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'jgdavey/tslime.vim'
-Bundle 'tommcdo/vim-exchange'
-
+Plugin 'vundle'
+Plugin 'editorconfig-vim'
+Plugin 'ctrlp.vim'
+Plugin 'vim-scripts/jshint.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-vinegar'
+Plugin 'The-NERD-Commenter'
+Plugin 'repeat.vim'
+Plugin 'unimpaired.vim'
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'abolish.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'ajf/puppet-vim'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'smarty-syntax'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'moll/vim-node'
+Plugin 'geekjuice/vim-mocha'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'jgdavey/tslime.vim'
+Plugin 'tommcdo/vim-exchange'
+" All of your Plugins must be added before the following line
+call vundle#end()
 
 filetype plugin indent on "enable loading plugin
 syntax enable
-set background=dark
 colorscheme default
+set background=light
 hi Search guibg=none ctermbg=none  gui=underline,bold cterm=underline,bold
 
 " GUI ?
@@ -222,6 +223,7 @@ iabbrev cancle cancel
 " Macros
 nnoremap @u yypVr-
 nnoremap @U yypVr=
+nnoremap <leader>tf ye"_dtfea "f{%lx
 
 nnoremap <Leader>nt :call Send_to_Tmux("npm test\n")<cr>
 " Mocha

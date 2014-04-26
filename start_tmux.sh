@@ -9,7 +9,7 @@ tmux has-session -t _default || tmux new-session -s _default -d
 
 # present menu for user to choose which workspace to open
 PS3="Please choose your session: "
-options=($(tmux list-sessions -F "#S") "NEW SESSION" "BASH")
+options=("MUX" "NEW SESSION" $(tmux list-sessions -F "#S"))
 echo "Available sessions"
 echo "------------------"
 echo " "
@@ -21,9 +21,12 @@ do
             tmux new -s "$SESSION_NAME"
             break
             ;;
-        "BASH")
-            bash --login
-            break;;
+        "MUX")
+            read -p "start mux session: " SESSION_NAME
+            echo tmuxinator start $SESSION_NAME
+            zsh --login -c "tmuxinator start ${SESSION_NAME}"
+            break
+            ;;
         *)
             tmux attach-session -t $opt
             break
