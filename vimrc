@@ -32,12 +32,13 @@ Plugin 'geekjuice/vim-mocha'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'tommcdo/vim-exchange'
+Plugin 'reedes/vim-colors-pencil'
 " All of your Plugins must be added before the following line
 call vundle#end()
 
 filetype plugin indent on "enable loading plugin
 syntax enable
-colorscheme default
+colorscheme pencil
 set background=light
 hi Search guibg=none ctermbg=none  gui=underline,bold cterm=underline,bold
 
@@ -69,9 +70,20 @@ set showcmd
 set nolist
 set listchars=tab:~\ ,trail:.
 set hidden  " hide buffers instead of closing
+
+set path=**
 set wildmenu
 set wildmode=full
-set path=**
+set wildignore+=**/node_modules/**
+set wildignore+=**/bower_components/**
+set wildignore+=**/dist/**
+set wildignore+=**/touch/**
+set wildignore+=**/coverage/**
+set wildignore+=**/cordova/**
+set wildignore+=**/.bundle/**
+set wildignore+=**/.sass-cache/**
+set wildignore+=**/*.class
+
 set visualbell
 set cursorline
 set ttyfast
@@ -90,26 +102,7 @@ set pastetoggle=<F4>
 set cmdheight=1
 " add register for os clipboard
 set clipboard=unnamed
-" wildignores
-set wildignore+=**/node_modules/**
-set wildignore+=**/bower_components/**
-set wildignore+=**/dist/**
-set wildignore+=**/touch/**
-set wildignore+=**/coverage/**
-set wildignore+=**/cordova/**
-set wildignore+=**/.bundle/**
-set wildignore+=**/.sass-cache/**
-set wildignore+=**/Library
-set wildignore+=**/Movies
-set wildignore+=**/Google\ Drive
-set wildignore+=**/Downloads
-set wildignore+=**/Documents
-set wildignore+=**/Desktop
-set wildignore+=**/archive
-set wildignore+=**/Pictures
-set wildignore+=**/3rd
-set wildignore+=**/vm
-set wildignore+=**/*.class
+
 " statusline
 set laststatus=2  " always show the status bar
 
@@ -126,7 +119,7 @@ set noswapfile
 au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.json set filetype=json
 au BufNewFile,BufRead *.coffee set filetype=coffee
-" Plugins
+
 " SYNTASTIC
 highlight SyntasticErrorSign cterm=none gui=none ctermfg=88 guifg=#870000
 highlight SyntasticWarningSign cterm=none gui=none ctermfg=130 guifg=#af5f00
@@ -135,24 +128,15 @@ highlight SyntasticWarningLine gui=none cterm=none
 let g:syntastic_enable_signs=1
 let g:syntastic_check_on_open=0
 let g:syntastic_enable_highlighting = 0
+
 " MAPPINGS
 " <leader>
 let mapleader = ","
-" general
-inoremap jj <esc>
-cnoremap jj <esc><cr>
+
 " wierd double esc
 inoremap <esc> <esc><esc>
 nnoremap <leader>vr :split $MYVIMRC<cr>
 nnoremap <leader>vl :ReloadVIMRC<cr>
-
-" stuff for java
-nnoremap <leader>jc :!javac %<cr>
-fun! JavaRun()
-    execute '!java -Djava.security.policy=wideopen.policy '.substitute(expand('%:t'),"java","", "")
-endfun
-nnoremap <leader>jr :<cr>
-
 
 " format file
 map <Leader>f mzgg=G`z<CR>
@@ -161,6 +145,7 @@ autocmd FileType javascript noremap <buffer>  <Leader>f :call JsBeautify()<cr>
 autocmd FileType html noremap <buffer> <Leader>f :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <Leader>f :call CSSBeautify()<cr>
+
 " indentation
 vnoremap > > gv
 vnoremap < < gv
@@ -186,10 +171,10 @@ nmap <Leader>gd :Gdiff<cr>
 " Svn
 nmap <Leader>ss :!svn status<cr>
 
-" CommandT
 map <Leader>t :CtrlP<cr>
 map <Leader>tr :ClearCtrlPCache<cr>
 let g:ctrlp_working_path_mode = '0'
+
 " COMMANDS
 command! ReloadVIMRC execute "source ~/.vimrc"
 command! SudoWrite execute "w !sudo tee %"
