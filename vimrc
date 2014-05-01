@@ -10,6 +10,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'vundle'
+Plugin 'terryma/vim-multiple-cursors'
 Plugin 'editorconfig-vim'
 Plugin 'ctrlp.vim'
 Plugin 'vim-scripts/jshint.vim'
