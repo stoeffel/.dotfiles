@@ -104,6 +104,8 @@ alias tn="tmux -2 new-session -s"
 alias ts="tmux switch-client -t"
 alias ms="mux start"
 
+alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
+
 # ZSTYLES
 #########
 
