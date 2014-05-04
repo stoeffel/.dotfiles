@@ -33,13 +33,15 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'tommcdo/vim-exchange'
 Plugin 'reedes/vim-colors-pencil'
-" All of your Plugins must be added before the following line
+Plugin 'altercation/vim-colors-solarized'
+
 call vundle#end()
 
-filetype plugin indent on "enable loading plugin
+filetype plugin indent on
 syntax enable
-colorscheme pencil
-set background=dark
+
+colorscheme solarized
+set background=light
 hi Search guibg=none ctermbg=none  gui=underline,bold cterm=underline,inverse
 set tabstop=4
 set shiftwidth=4

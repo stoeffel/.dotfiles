@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="minimal"
+ZSH_THEME="avit"
 
 # rupa's z-script
 . ~/z/z.sh
@@ -36,7 +36,7 @@ alias soz="source ~/.zshrc"
 alias sov="source ~/.vimrc"
 
 # Git
-alias ga="git add --all ."
+alias ga="git add"
 alias gd="git difftool"
 alias gs="git status"
 alias gp="git push"
