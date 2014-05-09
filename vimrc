@@ -41,7 +41,7 @@ filetype plugin indent on
 syntax enable
 
 colorscheme solarized
-set background=light
+set background=dark
 hi Search guibg=none ctermbg=none  gui=underline,bold cterm=underline,inverse
 set tabstop=4
 set shiftwidth=4
@@ -101,6 +101,12 @@ set omnifunc=syntaxcomplete#Complete
 
 let mapleader = ","
 
+nnoremap <leader>w :w<cr>
+nnoremap <leader>q :q<cr>
+nnoremap <leader>wq :wq<cr>
+
+inoremap jj <esc><esc>
+cnoremap jj <esc>
 inoremap <esc> <esc><esc>
 nnoremap <leader>vr :split $MYVIMRC<cr>
 nnoremap <leader>vl :ReloadVIMRC<cr>
@@ -169,24 +175,24 @@ set completeopt+=longest
 function! SwitchBetween(from, to)
     " TODO check if file exists
     let firstPath = RemoveWDFromPath(expand('%:p'))
-    if match(firstPath, '\/'.a:from.'\/') != -1
+    if match(firstPath, a:from.'\/') != -1
         let first = a:from
         let sec = a:to
-    elseif match(firstPath, '\/'.a:to.'\/') != -1
+    elseif match(firstPath, a:to.'\/') != -1
         let first = a:to
         let sec = a:from
     else
         return
     endif
-    let secPath = substitute(firstPath, '\/'.first.'\/',  '\/'.sec.'\/', 'g')
+    let secPath = substitute(firstPath, first.'\/',  sec.'\/', 'g')
     echo secPath
     execute "edit" secPath
 endfunction
 nnoremap <Leader>vc :call SwitchBetween('view', 'controller')<cr>
+nnoremap t<CR> :call SwitchBetween('lib', 'test')<cr>
 
 function! RemoveWDFromPath(path)
-    let cwd = substitute(getcwd(), '\/Users\/.*\/', '', '')
-    let cwd = substitute(getcwd(), '~\/', '', '')
+    let cwd = substitute(substitute(getcwd(), '\~\/', '', ''), '\/Users\/.*\/', '', '')
     return substitute(a:path, '.*' .cwd . '\/', '', '')
 endfunction
 

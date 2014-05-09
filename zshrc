@@ -26,7 +26,6 @@ export TERM='xterm-256color'
 # EDITOR
 ########
 export EDITOR='vim'
-export VMAIL_BROWSER='lynx'
 
 # ALIASES
 #########
@@ -37,13 +36,16 @@ alias sov="source ~/.vimrc"
 
 # Git
 alias ga="git add"
+alias gaa="git add ."
+alias gac="git commit -a"
 alias gd="git difftool"
 alias gs="git status"
 alias gp="git push"
 alias gl="git pull"
 
 # NPM
-alias ni="npm install --save "
+alias ni="npm install "
+alias np="npm publish "
 alias nt="npm test"
 alias ns="npm run-script "
 
