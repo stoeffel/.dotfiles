@@ -7,8 +7,6 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="avit"
 
-# rupa's z-script
-. ~/z/z.sh
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -47,6 +45,7 @@ alias gl="git pull"
 alias ni="npm install "
 alias np="npm publish "
 alias nt="npm test"
+alias nu="npm update"
 alias ns="npm run-script "
 
 # Svn
@@ -112,8 +111,6 @@ alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 #########
 
 zstyle ':completion:*' special-dirs true
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export LC_ALL=en_US.UTF-8
 

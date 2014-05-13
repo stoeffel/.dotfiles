@@ -20,4 +20,3 @@ set guioptions+=c
 " }}}
 set guifont=Inconsolata:h18
 
-colorscheme dracula
