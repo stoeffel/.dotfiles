@@ -21,5 +21,9 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'tommcdo/vim-exchange'
 Plugin 'reedes/vim-colors-pencil'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'jasonlong/lavalamp'
+Plugin 'mikewest/vimroom'
 
 call vundle#end()

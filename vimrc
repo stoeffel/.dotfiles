@@ -48,7 +48,6 @@ function! SwitchBetween(from, to)
     echo secPath
     execute "edit" secPath
 endfunction
-nnoremap t<CR> :call SwitchBetween('lib', 'test')<cr>
 
 function! RemoveWDFromPath(path)
     let cwd = substitute(substitute(getcwd(), '\~\/', '', ''), '\/Users\/.*\/', '', '')

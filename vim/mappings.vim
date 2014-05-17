@@ -19,21 +19,23 @@ nnoremap <leader>f mzgg=G`z<CR>
 nnoremap <leader>h :set hlsearch!<cr>
 nnoremap gs :Gstatus<cr>
 nnoremap gc :Gcommit<cr>
-nnoremap gp :Git push<cr>
+nnoremap gp :Dispatch git push<cr>
+nnoremap gd :Gdiff<cr>
 nnoremap <leader>gl :Dispatch git pull<cr>
-nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>t :CtrlP<cr>
 nnoremap <leader>tr :ClearCtrlPCache<cr>
-nnoremap <leader>d :Dispatch<space>
+nnoremap d<space> :Dispatch<space>
 nnoremap <leader>ni :Dispatch npm install --save<space>
 nnoremap <leader>nu :Dispatch npm update --save<space>
 nnoremap <leader>nt :Dispatch npm test<cr>
 nnoremap <leader>np :Dispatch npm publish<cr>
 nnoremap <leader>" :%s/"/\'/g<cr>
 nnoremap <leader>vc :call SwitchBetween('view', 'controller')<cr>
+nnoremap t<CR> :call SwitchBetween('lib', 'test')<cr>
 nnoremap <leader>fx :call FindXtype()<cr>
 nnoremap <leader>u yypVr-
 nnoremap <leader>U yypVr=
+nnoremap <silent> <Leader>mz <Plug>VimroomToggle
 autocmd FileType javascript noremap <buffer>  <leader>f :call JsBeautify()<cr>
 vnoremap af :<C-U>silent! :call TextObjectFunction()<CR>
 omap af :normal vaf<CR>
