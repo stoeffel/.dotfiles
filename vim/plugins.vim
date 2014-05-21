@@ -25,5 +25,7 @@ Plugin 'bling/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'jasonlong/lavalamp'
 Plugin 'mikewest/vimroom'
+Plugin 'tabular'
+
 
 call vundle#end()
