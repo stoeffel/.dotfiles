@@ -1,6 +1,7 @@
 let mapleader = "\<Space>"
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
+nnoremap <leader>Q :Q<cr>
 nnoremap <leader>wq :wq<cr>
 nnoremap <leader>b :b
 nnoremap <leader>bn :bnext<cr>
@@ -17,10 +18,10 @@ nnoremap <leader>vf :split ~/.dotfiles/vim/filetypes.vim<cr>
 nnoremap <leader>vl :ReloadVIMRC<cr>
 nnoremap <leader>f mzgg=G`z<CR>
 nnoremap <leader>h :set hlsearch!<cr>
-nnoremap gs :Gstatus<cr>
-nnoremap gc :Gcommit<cr>
-nnoremap gp :Dispatch git push<cr>
-nnoremap gd :Gdiff<cr>
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gc :Gcommit<cr>
+nnoremap <leader>gp :Dispatch git push<cr>
+nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gl :Dispatch git pull<cr>
 nnoremap <leader>t :CtrlP<cr>
 nnoremap <leader>tr :ClearCtrlPCache<cr>
