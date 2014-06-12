@@ -94,3 +94,4 @@ function! ExtractFunction()
     execute ":normal! a;"
 endfunction
 
+"%g/\/\*\*\n\(\_s*\*.*\n\)*/

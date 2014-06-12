@@ -4,8 +4,6 @@ nnoremap <leader>q :q<cr>
 nnoremap <leader>Q :Q<cr>
 nnoremap <leader>wq :wq<cr>
 nnoremap <leader>b :b
-nnoremap <leader>bn :bnext<cr>
-nnoremap <leader>bp :bprev<cr>
 nnoremap <leader>bd :bdel<cr>
 nnoremap <leader>ls :buffers<CR>:buffer<Space>
 nnoremap <leader>n :normal! n.<cr>
@@ -36,7 +34,6 @@ nnoremap t<CR> :call SwitchBetween('lib', 'test')<cr>
 nnoremap <leader>fx :call FindXtype()<cr>
 nnoremap <leader>u yypVr-
 nnoremap <leader>U yypVr=
-nnoremap <silent> <Leader>mz <Plug>VimroomToggle
 autocmd FileType javascript noremap <buffer>  <leader>f :call JsBeautify()<cr>
 vnoremap af :<C-U>silent! :call TextObjectFunction()<CR>
 omap af :normal vaf<CR>
@@ -48,7 +45,11 @@ vnoremap > > gv
 vnoremap < < gv
 nnoremap > V>><Esc>
 nnoremap < V<<<Esc>
-map <Left> <NOP>
-map <Right> <NOP>
-map <Up> <NOP>
-map <Down> <NOP>
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+map <leader>e :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+xnoremap . :normal .<cr>
+source ~/.dotfiles/vim/visual-at.vim
+

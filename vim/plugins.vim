@@ -3,7 +3,7 @@ call vundle#begin()
 
 Plugin 'Vundle.vim'
 Plugin 'editorconfig-vim'
-Plugin 'ctrlp.vim'
+"Plugin 'ctrlp.vim'
 Plugin 'vim-scripts/jshint.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
@@ -19,13 +19,8 @@ Plugin 'moll/vim-node'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tommcdo/vim-exchange'
-Plugin 'reedes/vim-colors-pencil'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'jasonlong/lavalamp'
-Plugin 'mikewest/vimroom'
-Plugin 'tabular'
-
+Plugin 'Tabular'
+Plugin 'chriskempson/base16-vim'
 
 call vundle#end()

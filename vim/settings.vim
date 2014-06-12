@@ -1,7 +1,4 @@
 set background=dark
-let g:solarized_contrast="high"    "default value is normal
-let g:solarized_visibility="high"    "default value is normal
-colorscheme solarized
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -55,5 +52,3 @@ let g:syntastic_check_on_open=0
 let g:syntastic_enable_highlighting = 0
 set omnifunc=syntaxcomplete#Complete
 let g:ctrlp_working_path_mode = '0'
-let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized'

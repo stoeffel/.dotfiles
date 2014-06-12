@@ -57,7 +57,8 @@ alias scl="svn checkout"
 
 # Vim
 alias vo="vim -u NONE -N"
-alias v="vim"
+alias vi="vim"
+alias v="mvim"
 alias m="mvim"
 
 # Compass
@@ -77,7 +78,7 @@ function op() {
 }
 
 # List
-alias l="ls -la"
+alias l="ls -a"
 
 # VID (very important directories)
 alias d="cd ~/.dotfiles"
@@ -85,8 +86,8 @@ alias dv="cd ~/.dotfiles;vim;cd -;" # edit dotfiles, and go back were you came f
 alias dl="d;git pull;"
 alias s="cd ~/src"
 
-alias sencha="/Users/${USER}/bin/Sencha/Cmd/4.0.4.84/sencha";
-alias sen="/Users/${USER}/bin/Sencha/Cmd/4.0.4.84/sencha";
+alias sencha="/Users/${USER}/bin/Sencha/Cmd/5.0.0.160/sencha";
+alias sen="/Users/${USER}/bin/Sencha/Cmd/5.0.0.160/sencha";
 alias senw="sen web start";
 alias senb="sen app build native --clean";
 
