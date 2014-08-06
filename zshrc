@@ -17,7 +17,7 @@ plugins=(zsh-syntax-highlighting git node npm nyan bower gem gitfast vundle svn 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:bin:./node_modules/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/$USER/.gem/ruby/1.8/bin:/opt/nginx/sbin:/Users/$USER/3rd/adt-bundle-mac-x86_64-20130219/sdk/tools:/Users/$USER/3rd/adt-bundle-mac-x86_64-20130219/sdk/platform-tools:/Users/$USER/bin:/Users/$USER/.bash_it/plugins/available/todo
+export PATH=$PATH:bin:./node_modules/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/$USER/.gem/ruby/1.8/bin:/opt/nginx/sbin:/Users/$USER/3rd/adt-bundle-mac-x86_64-20130219/sdk/tools:/Users/$USER/3rd/adt-bundle-mac-x86_64-20130219/sdk/platform-tools:/Users/$USER/bin:/Users/$USER/.bash_it/plugins/available/todo:~/bin/dart/dart-sdk/bin
 export PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
 export TERM='xterm-256color'
 
@@ -56,9 +56,10 @@ alias sl="svn update"
 alias scl="svn checkout"
 
 # Vim
+alias mvim='open -a MacVim'
 alias vo="vim -u NONE -N"
 alias vi="vim"
-alias v="mvim"
+alias v="vim"
 alias m="mvim"
 
 # Compass

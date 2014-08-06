@@ -7,7 +7,8 @@ set guioptions-=m
 set guioptions-=M
 set guioptions+=c
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h14
+set fu
 
-colorscheme base16-ocean
-set bg=light
+colorscheme pencil
+set bg=dark
 

@@ -22,5 +22,8 @@ Plugin 'tommcdo/vim-exchange'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Tabular'
 Plugin 'chriskempson/base16-vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'tpope/vim-leiningen'
+Plugin 'dart-lang/dart-vim-plugin'
 
 call vundle#end()

@@ -1,7 +1,6 @@
-set background=dark
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set autoindent
 set antialias
@@ -24,6 +23,7 @@ set wildignore+=**/cordova/**
 set wildignore+=**/.bundle/**
 set wildignore+=**/.sass-cache/**
 set wildignore+=**/*.class
+set wildignore+=**/*.beam
 set visualbell
 set cursorline
 set ttyfast
@@ -52,3 +52,5 @@ let g:syntastic_check_on_open=0
 let g:syntastic_enable_highlighting = 0
 set omnifunc=syntaxcomplete#Complete
 let g:ctrlp_working_path_mode = '0'
+
+hi Search guibg=NONE ctermbg=NONE  gui=reverse,bold

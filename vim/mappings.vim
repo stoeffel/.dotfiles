@@ -46,6 +46,7 @@ vnoremap < < gv
 nnoremap > V>><Esc>
 nnoremap < V<<<Esc>
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+cnoremap $$ <C-R>=fnameescape(expand('%'))<cr>
 map <leader>e :e %%
 map <leader>es :sp %%
 map <leader>ev :vsp %%
