@@ -53,4 +53,3 @@ let g:syntastic_enable_highlighting = 0
 set omnifunc=syntaxcomplete#Complete
 let g:ctrlp_working_path_mode = '0'
 
-hi Search guibg=NONE ctermbg=NONE  gui=reverse,bold

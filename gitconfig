@@ -1,5 +1,5 @@
 [user]
-	name = Christoph Hermann
+	name = stoeffel
 	email = schtoeffel@gmail.com
 [color]
 	diff = auto
@@ -8,10 +8,8 @@
 
 [color "diff"]
         meta = yellow
-
 [apply]
 	whitespace = nowarn
-
 [help]
 	autocorrect = 1
 [push]
@@ -20,6 +18,8 @@
 	enabled = 1
 [github]
 	user = stoeffel
+[reposerver]
+	user = stoeffel
 [hub]
 protocol = https
 [core]
@@ -27,11 +27,5 @@ protocol = https
 editor = vim --noplugin
 [diff]
 tool=vimdiff
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [ghi]
 	token = 4cf5310751b1ca1dccb39a35d1c05c5b6574e4e3

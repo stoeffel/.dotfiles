@@ -11,14 +11,13 @@ ZSH_THEME="purity"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(zsh-syntax-highlighting git node npm nyan bower gem gitfast vundle svn tmux tmuxinator vim)
+plugins=(zsh-syntax-highlighting git node npm nyan bower gem gitfast vundle svn vim)
 
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:bin:./node_modules/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/$USER/.gem/ruby/1.8/bin:/opt/nginx/sbin:/Users/$USER/3rd/adt-bundle-mac-x86_64-20130219/sdk/tools:/Users/$USER/3rd/adt-bundle-mac-x86_64-20130219/sdk/platform-tools:/Users/$USER/bin:/Users/$USER/.bash_it/plugins/available/todo:~/bin/dart/dart-sdk/bin
-export PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
+export PATH=$PATH:bin:./node_modules/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/home/$USER/.gem/ruby/1.8/bin:/opt/nginx/sbin:/home/$USER/3rd/adt-bundle-mac-x86_64-20130219/sdk/tools:/home/$USER/3rd/adt-bundle-mac-x86_64-20130219/sdk/platform-tools:/home/$USER/bin:/home/$USER/.bash_it/plugins/available/todo:~/bin/dart/dart-sdk/bin
 export TERM='xterm-256color'
 
 # EDITOR
@@ -87,10 +86,10 @@ alias dv="cd ~/.dotfiles;vim;cd -;" # edit dotfiles, and go back were you came f
 alias dl="d;git pull;"
 alias s="cd ~/src"
 
-alias sencha="/Users/${USER}/bin/Sencha/Cmd/5.0.0.160/sencha";
-alias sen="/Users/${USER}/bin/Sencha/Cmd/5.0.0.160/sencha";
-alias senw="sen web start";
-alias senb="sen app build native --clean";
+alias sencha="/home/${USER}/bin/Sencha/Cmd/5.0.0.160/sencha";
+alias sen="/home/${USER}/bin/Sencha/Cmd/5.0.0.160/sencha";
+alias senw="sen app watch";
+alias senb="sen app build";
 
 # DEPRECATED
 alias ll="echo use l"

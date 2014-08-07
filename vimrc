@@ -95,4 +95,5 @@ function! ExtractFunction()
 endfunction
 
 "%g/\/\*\*\n\(\_s*\*.*\n\)*/
-colorscheme default
+colorscheme solarized
+set bg=dark
