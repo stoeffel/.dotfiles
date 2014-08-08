@@ -489,7 +489,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey }, "g", function () awful.util.spawn(graphics) end),
 
     -- Prompt
-    awful.key({ modkey }, "r", function () awful.util.spawn("gnome-do") end),
+    awful.key({ modkey }, "r", function () awful.util.spawn("dmenu_run") end),
     awful.key({ modkey, "Shift" }, "r", function () mypromptbox[mouse.screen]:run() end),
     awful.key({ modkey }, "x",
               function ()

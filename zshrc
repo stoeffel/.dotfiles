@@ -64,6 +64,10 @@ alias m="mvim"
 # Compass
 alias cc="compass compile"
 alias cw="compass watch"
+ 
+# apt
+alias apti="sudo apt-get install"
+alias apts="apt-cache search"
 
 # Grunt
 alias gr="grunt"
