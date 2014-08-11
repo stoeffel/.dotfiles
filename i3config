@@ -14,7 +14,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Shift+b exec chromium-browser
+bindsym $mod+Shift+Return exec chromium-browser
 
 # kill focused window
 bindsym $mod+q kill
@@ -138,17 +138,19 @@ bar {
   status_command i3status
   position bottom
   colors {
-    separator #666666
-    background #222222
-    statusline #dddddd
-    focused_workspace #0088CC #0088CC #ffffff
-    active_workspace #333333 #333333 #ffffff
-    inactive_workspace #333333 #333333 #888888
-    urgent_workspace #2f343a #900000 #ffffff
+    separator #268bd2
+    background #002b36
+    statusline #2aa198
+    focused_workspace #2aa198 #2aa198 #fdf6e3 #2aa198
+    active_workspace #fdf6e3 #6c71c4 #fdf6e3
+    inactive_workspace #586e75 #93a1a1 #002b36
+    inactive_workspace #073642 #073642 #eee8d5 
+    urgent_workspace #d33682 #d33682 #fdf6e3
   }
 }
 new_window 1pixel
-client.focused #0088CC #0088CC #ffffff #dddddd
-client.focused_inactive #333333 #333333 #888888 #292d2e
-client.unfocused #333333 #333333 #888888 #292d2e
-client.urgent #2f343a #900000 #ffffff #900000
+
+client.focused #2aa198 #2aa198 #fdf6e3 #2aa198
+client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
+client.unfocused #073642 #073642 #93a1a1 #586e75
+client.urgent #d33682 #d33682 #fdf6e3 #dc322f
