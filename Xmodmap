@@ -249,7 +249,7 @@ keycode 255 =
 
 
 
-keycode 64 = Mode_switch
+keycode 108 = Mode_switch
 keysym e = e E EuroSign
 keysym c = c C cent
 keysym a = a A adiaeresis Adiaeresis
@@ -257,9 +257,13 @@ keysym o = o O odiaeresis Odiaeresis
 keysym u = u U udiaeresis Udiaeresis
 keysym s = s S ssharp
 
-remove Lock = Caps_Lock
+remove Mod4 = Super_L
+remove Mod1 = Alt_L
 remove Control = Control_L
-keysym Control_L = 9
-keysym Caps_Lock = Control_L
-add Lock = Caps_Lock
+keysym Control_L = Alt_L
+keysym Alt_L = Super_L
+keysym Super_L = Control_L
+add Mod4 = Super_L
+add Mod1 = Alt_L
 add Control = Control_L
+

@@ -17,7 +17,7 @@ plugins=(zsh-syntax-highlighting git node npm nyan bower gem gitfast vundle svn 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:bin:./node_modules/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/home/$USER/.gem/ruby/1.8/bin:/opt/nginx/sbin:/home/$USER/bin/adt-bundle-linux-x86_64-20140702/sdk/tools:/home/$USER/bin/adt-bundle-linux-x86_64-20140702/sdk/platform-tools:/home/$USER/bin:/home/$USER/.bash_it/plugins/available/todo:~/bin/dart/dart-sdk/bin
+export PATH=$PATH:bin:./node_modules/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/home/$USER/.gem/ruby/1.8/bin:/opt/nginx/sbin:/home/$USER/bin/adt-bundle-linux-x86_64-20140702/sdk/tools:/home/$USER/bin/adt-bundle-linux-x86_64-20140702/sdk/platform-tools:/home/$USER/bin:/home/$USER/.bash_it/plugins/available/todo:~/bin/dart/dart-sdk/bin:~/.dotfiles/bin
 export TERM='xterm-256color'
 
 # EDITOR
@@ -64,7 +64,7 @@ alias m="mvim"
 # Compass
 alias cc="compass compile"
 alias cw="compass watch"
- 
+
 # apt
 alias apti="sudo apt-get install"
 alias apts="apt-cache search"
