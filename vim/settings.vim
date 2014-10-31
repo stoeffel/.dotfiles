@@ -6,6 +6,7 @@ set autoindent
 set antialias
 set encoding=utf-8
 set scrolloff=3
+let &showbreak='↪ '
 set showmode
 set showcmd
 set nolist

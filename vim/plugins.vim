@@ -3,7 +3,7 @@ call vundle#begin()
 
 Plugin 'Vundle.vim'
 Plugin 'editorconfig-vim'
-"Plugin 'ctrlp.vim'
+Plugin 'ctrlp.vim'
 Plugin 'vim-scripts/jshint.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
@@ -25,5 +25,6 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-leiningen'
 Plugin 'dart-lang/dart-vim-plugin'
+Plugin 'davidhalter/jedi-vim'
 
 call vundle#end()
