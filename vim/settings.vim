@@ -15,6 +15,7 @@ set hidden
 set path=**
 set wildmenu
 set wildmode=full
+set wildignorecase
 set wildignore+=**/node_modules/**
 set wildignore+=**/bower_components/**
 set wildignore+=**/dist/**
@@ -54,4 +55,3 @@ let g:syntastic_enable_highlighting = 0
 set omnifunc=syntaxcomplete#Complete
 let g:ctrlp_working_path_mode = '0'
 
-hi Search guibg=NONE ctermbg=NONE  gui=reverse,bold
