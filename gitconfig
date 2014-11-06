@@ -1,6 +1,6 @@
 [user]
-	name = stoeffel
-	email = schtoeffel@gmail.com
+	name = Christoph Hermann
+	email = chermann@tocco.ch
 [color]
 	diff = auto
 	status = auto
@@ -29,3 +29,11 @@ editor = vim --noplugin
 tool=vimdiff
 [ghi]
 	token = 4cf5310751b1ca1dccb39a35d1c05c5b6574e4e3
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[alias]
+	undo-commit = reset --soft HEAD^

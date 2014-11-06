@@ -8,6 +8,7 @@
             "Ext",
             "window",
             "GLOBALS",
+            "nice2",
             "module",
             "OpenLayers",
             "SESSION",

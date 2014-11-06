@@ -5,13 +5,12 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="purity"
-
+ZSH_THEME="miloshadzic"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(zsh-syntax-highlighting git node npm nyan bower gem gitfast vundle svn vim)
+plugins=(git node npm bower gem gitfast vundle )
 
 
 source $ZSH/oh-my-zsh.sh
@@ -53,6 +52,15 @@ alias sa="svn status | grep '?' | sed 's/^.* /svn add /' | zsh"
 alias sc="svn commit"
 alias sl="svn update"
 alias scl="svn checkout"
+
+#Mvn
+alias mvn_install_customer_test="mvn -pl customer/test -am install -DskipTests -T2.0C"
+
+#Java
+alias java_run_nice="java ch.tocco.nice2.boot.Nice2  -Xms512m -Xmx1024m -XX:MaxPermSize=256m -XX:+HeapDumpOnOutOfMemoryError -ea -server -Dcom.sun.management.jmxremote -Djava.security.policy=../../src/etc/java.policy -Dch.tocco.nice2.devcon=true -Dch.tocco.nice2.cms.repository.lazyinit=true -Dch.tocco.nice2.runenv=development -Djetty.logs=var/log -XX:+UseG1GC  -logConfig ../logback.xml -maven target/hiveapp-runtime -Duser.dir=/Users/stoeffel/src/nice2/nice2-master/customer/test"
+function nice() {
+  java ch.tocco.nice2.boot.Nice2  -Xms512m -Xmx1024m -XX:MaxPermSize=256m -XX:+HeapDumpOnOutOfMemoryError -ea -server -Dcom.sun.management.jmxremote -Djava.security.policy=../../src/etc/java.policy -Dch.tocco.nice2.devcon=true -Dch.tocco.nice2.cms.repository.lazyinit=true -Dch.tocco.nice2.runenv=development -Djetty.logs=var/log -XX:+UseG1GC  -logConfig ../logback.xml -maven target/hiveapp-runtime -Duser.dir=/Users/stoeffel/src/nice2/nice2-master/$1 -cp ./boot/*
+}
 
 # Vim
 alias mvim='open -a MacVim'
@@ -119,3 +127,5 @@ zstyle ':completion:*' special-dirs true
 
 export LC_ALL=en_US.UTF-8
 
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home
+export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=300m"

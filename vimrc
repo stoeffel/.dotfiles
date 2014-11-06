@@ -95,4 +95,4 @@ function! ExtractFunction()
 endfunction
 
 "%g/\/\*\*\n\(\_s*\*.*\n\)*/
-"colorscheme solarized
+colorscheme solarized

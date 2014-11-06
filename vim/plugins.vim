@@ -26,5 +26,6 @@ Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-leiningen'
 Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'java.vim'
 
 call vundle#end()

@@ -20,3 +20,6 @@ Session.vim
 # SASS #
 ########
 *.sass-cache
+
+#nice
+nice2/**/var
