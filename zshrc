@@ -16,7 +16,8 @@ plugins=(git node npm bower gem gitfast vundle )
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:bin:./node_modules/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/home/$USER/.gem/ruby/1.8/bin:/opt/nginx/sbin:/home/$USER/bin/adt-bundle-linux-x86_64-20140702/sdk/tools:/home/$USER/bin/adt-bundle-linux-x86_64-20140702/sdk/platform-tools:/home/$USER/bin:/home/$USER/.bash_it/plugins/available/todo:~/bin/dart/dart-sdk/bin:~/.dotfiles/bin
+export ECLIPSE_HOME=/Applications/eclipse/
+export PATH=$PATH:bin:./node_modules/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/home/$USER/.gem/ruby/1.8/bin:/opt/nginx/sbin:/home/$USER/bin/adt-bundle-linux-x86_64-20140702/sdk/tools:/home/$USER/bin/adt-bundle-linux-x86_64-20140702/sdk/platform-tools:/home/$USER/bin:/home/$USER/.bash_it/plugins/available/todo:~/bin/dart/dart-sdk/bin:~/.dotfiles/bin:/Applications/eclipse
 export TERM='xterm-256color'
 
 # EDITOR
@@ -37,7 +38,7 @@ alias gac="git commit -a"
 alias gd="git difftool"
 alias gs="git status"
 alias gp="git push"
-alias gl="git pull"
+alias gl="git pull --rebase"
 alias gerrit-hook="scp -p -P 29418 chermann@git.tocco.ch:hooks/commit-msg .git/hooks/"
 function vn () {
     vim `git status | grep new | awk '{print $3}'`
@@ -49,6 +50,11 @@ function vm () {
 
 function vc () {
     vim `git unpushed | awk '{print $2}'`
+}
+
+function githubpr() {
+    git fetch origin pull/$1/head:$2
+    git checkout $2
 }
 
 # NPM
@@ -133,7 +139,16 @@ alias ms="mux start"
 
 alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 
-# ZSTYLES
+alias fc='noglob fc'
+alias find='noglob find'
+alias ftp='noglob ftp'
+alias history='noglob history'
+alias locate='noglob locate'
+alias rake='noglob rake'
+alias rsync='noglob rsync'
+alias scp='noglob scp'
+alias sftp='noglob sftp'
+
 #########
 
 zstyle ':completion:*' special-dirs true

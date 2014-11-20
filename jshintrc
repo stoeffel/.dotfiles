@@ -6,6 +6,7 @@
 
         "predef"        : [
             "Ext",
+            "require",
             "window",
             "GLOBALS",
             "nice2",

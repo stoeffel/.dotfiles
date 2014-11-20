@@ -1,0 +1,35 @@
+{
+  "name": "retrieve-arguments",
+  "version": "1.0.1",
+  "description": "Retrieves the argumentnames of a function",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "bin": {
+    "retrieve-arguments": "cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/stoeffel/retrieve-arguments"
+  },
+  "keywords": [
+    "cli",
+    "function",
+    "arguments",
+    "introspection"
+  ],
+  "author": "stoeffel",
+  "license": "MIT",
+  "bugs": {
+    "url": "http://github.com/stoeffel/retrieve-arguments/issues"
+  },
+  "homepage": "http://github.com/stoeffel/retrieve-arguments",
+  "devDependencies": {
+    "mocha": "~1.20.1"
+  },
+  "dependencies": {
+    "ramda": "^0.10.0",
+    "yargs": "^3.3.1"
+  }
+}

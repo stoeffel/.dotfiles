@@ -1,6 +1,6 @@
 [user]
-	name = Christoph Hermann
-	email = chermann@tocco.ch
+	name = stoeffel
+	email = schtoeffel@gmail.com
 [color]
 	diff = auto
 	status = auto
@@ -22,18 +22,24 @@
 [hub]
 protocol = https
 [core]
-	excludesfile = /Users/stoeffel/.gitignore_global
+	excludesfile = ~/.gitignore
 editor = vim --noplugin
 [diff]
 tool=vimdiff
-[ghi]
-	token = 4cf5310751b1ca1dccb39a35d1c05c5b6574e4e3
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [alias]
 	undo-commit = reset --soft HEAD^
 	unpushed = diff origin/master..HEAD --name-status
+    sshow = "!f() { git stash show stash^{/$*} -p; }; f"
+    sapply = "!f() { git stash apply stash^{/$*}; }; f"
+[merge]
+	tool = vimdiff
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f

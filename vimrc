@@ -94,5 +94,12 @@ function! ExtractFunction()
     execute ":normal! a;"
 endfunction
 
+set cursorline
+hi cursorline cterm=none term=none
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+highlight CursorLine guibg=#303000 ctermbg=234
+
 "%g/\/\*\*\n\(\_s*\*.*\n\)*/
 colorscheme solarized
+set bg=dark

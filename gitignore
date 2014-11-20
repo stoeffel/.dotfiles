@@ -8,6 +8,7 @@
 Icon?
 ehthumbs.db
 Thumbs.db
+.idea
 
 # VIM #
 #######
@@ -22,6 +23,6 @@ Session.vim
 *.sass-cache
 
 #nice
-nice2/**/var
+customer/**/var
 
 node_modules

@@ -9,6 +9,5 @@ set guioptions+=c
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h14
 set fu
 
-colorscheme pencil
 set bg=dark
 

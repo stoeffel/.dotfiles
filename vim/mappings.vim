@@ -24,6 +24,7 @@ nnoremap <leader>t :CtrlP<cr>
 nnoremap <leader><leader> :CtrlP<cr>
 nnoremap <leader>l :CtrlPMRU<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
+nnoremap <leader>o :CtrlP optional<cr>
 nnoremap <leader>tr :ClearCtrlPCache<cr>
 nnoremap d<space> :Dispatch<space>
 nnoremap <leader>ni :Dispatch npm install --save<space>

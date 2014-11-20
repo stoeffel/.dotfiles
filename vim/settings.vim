@@ -1,3 +1,4 @@
+set mouse=a
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -27,6 +28,11 @@ set wildignore+=**/.bundle/**
 set wildignore+=**/.sass-cache/**
 set wildignore+=**/*.class
 set wildignore+=**/*.beam
+set wildignore+=**/*.jrxml
+set wildignore+=**/pom.xml
+set wildignore+=**/hiveapp-mount.properties
+set wildignore+=**/java.policy
+set wildignore+=**/db_changes.sql
 set visualbell
 set cursorline
 set ttyfast
@@ -58,5 +64,4 @@ let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_max_depth = 80
 let g:ctrlp_max_files=0
 let g:ctrlp_max_height = 40
-
 
