@@ -47,6 +47,10 @@ function vm () {
     vim `git status | grep modified | awk '{print $2}'`
 }
 
+function vc () {
+    vim `git unpushed | awk '{print $2}'`
+}
+
 # NPM
 alias ni="npm install "
 alias np="npm publish "

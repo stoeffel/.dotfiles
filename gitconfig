@@ -36,3 +36,4 @@ tool=vimdiff
 	trustExitCode = true
 [alias]
 	undo-commit = reset --soft HEAD^
+	unpushed = diff origin/master..HEAD --name-status
