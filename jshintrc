@@ -9,6 +9,7 @@
             "window",
             "GLOBALS",
             "nice2",
+            "getText",
             "module",
             "OpenLayers",
             "SESSION",

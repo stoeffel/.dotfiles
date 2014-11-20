@@ -17,6 +17,7 @@ set wildmenu
 set wildmode=full
 set wildignorecase
 set wildignore+=**/node_modules/**
+set wildignore+=**/target/**
 set wildignore+=**/bower_components/**
 set wildignore+=**/dist/**
 set wildignore+=**/touch/**
@@ -56,4 +57,6 @@ set omnifunc=syntaxcomplete#Complete
 let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_max_depth = 80
 let g:ctrlp_max_files=0
+let g:ctrlp_max_height = 40
+
 

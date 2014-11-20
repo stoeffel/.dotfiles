@@ -18,8 +18,7 @@
 	enabled = 1
 [github]
 	user = stoeffel
-[reposerver]
-	user = stoeffel
+	email = schtoeffel@gmail.com
 [hub]
 protocol = https
 [core]

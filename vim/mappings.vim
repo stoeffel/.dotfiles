@@ -3,7 +3,6 @@ nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
 nnoremap <leader>Q :Q<cr>
 nnoremap <leader>wq :wq<cr>
-nnoremap <leader>b :b
 nnoremap <leader>bd :bdel<cr>
 nnoremap <leader>ls :buffers<CR>:buffer<Space>
 nnoremap <leader>n :normal! n.<cr>
@@ -22,6 +21,9 @@ nnoremap <leader>gp :Dispatch git push<cr>
 nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gl :Dispatch git pull<cr>
 nnoremap <leader>t :CtrlP<cr>
+nnoremap <leader><leader> :CtrlP<cr>
+nnoremap <leader>l :CtrlPMRU<cr>
+nnoremap <leader>b :CtrlPBuffer<cr>
 nnoremap <leader>tr :ClearCtrlPCache<cr>
 nnoremap d<space> :Dispatch<space>
 nnoremap <leader>ni :Dispatch npm install --save<space>

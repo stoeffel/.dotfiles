@@ -38,6 +38,14 @@ alias gd="git difftool"
 alias gs="git status"
 alias gp="git push"
 alias gl="git pull"
+alias gerrit-hook="scp -p -P 29418 chermann@git.tocco.ch:hooks/commit-msg .git/hooks/"
+function vn () {
+    vim `git status | grep new | awk '{print $3}'`
+}
+
+function vm () {
+    vim `git status | grep modified | awk '{print $2}'`
+}
 
 # NPM
 alias ni="npm install "
@@ -55,11 +63,15 @@ alias scl="svn checkout"
 
 #Mvn
 alias mvn_install_customer_test="mvn -pl customer/test -am install -DskipTests -T2.0C"
+function mvn_nice() {
+  echo "...installing customer ${1}"
+  mvn -pl customer/$1 -am install -DskipTests -T2.0C
+}
 
-#Java
-alias java_run_nice="java ch.tocco.nice2.boot.Nice2  -Xms512m -Xmx1024m -XX:MaxPermSize=256m -XX:+HeapDumpOnOutOfMemoryError -ea -server -Dcom.sun.management.jmxremote -Djava.security.policy=../../src/etc/java.policy -Dch.tocco.nice2.devcon=true -Dch.tocco.nice2.cms.repository.lazyinit=true -Dch.tocco.nice2.runenv=development -Djetty.logs=var/log -XX:+UseG1GC  -logConfig ../logback.xml -maven target/hiveapp-runtime -Duser.dir=/Users/stoeffel/src/nice2/nice2-master/customer/test"
-function nice() {
-  java ch.tocco.nice2.boot.Nice2  -Xms512m -Xmx1024m -XX:MaxPermSize=256m -XX:+HeapDumpOnOutOfMemoryError -ea -server -Dcom.sun.management.jmxremote -Djava.security.policy=../../src/etc/java.policy -Dch.tocco.nice2.devcon=true -Dch.tocco.nice2.cms.repository.lazyinit=true -Dch.tocco.nice2.runenv=development -Djetty.logs=var/log -XX:+UseG1GC  -logConfig ../logback.xml -maven target/hiveapp-runtime -Duser.dir=/Users/stoeffel/src/nice2/nice2-master/$1 -cp ./boot/*
+#Nice
+compctl -/ -W ~/src/nice2/ n2
+function n2 () {
+  cd ~/src/nice2/${1}
 }
 
 # Vim
@@ -67,15 +79,12 @@ alias mvim='open -a MacVim'
 alias vo="vim -u NONE -N"
 alias vi="vim"
 alias v="vim"
+alias v.="vim ."
 alias m="mvim"
 
 # Compass
 alias cc="compass compile"
 alias cw="compass watch"
-
-# apt
-alias apti="sudo apt-get install"
-alias apts="apt-cache search"
 
 # Grunt
 alias gr="grunt"

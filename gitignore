@@ -23,3 +23,5 @@ Session.vim
 
 #nice
 nice2/**/var
+
+node_modules
