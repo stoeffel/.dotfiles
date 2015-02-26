@@ -1,8 +1,29 @@
-.stoeffel
+.dotfiles
 =========
 
-My dotfiles
+## System requirements:
 
-* vim
+* OS X 10.10+
+* Xcode 6.0.1+
+* Command Line Tools for Xcode
+
+## installation
+
+```sh
+git clone https://github.com/stoeffel/.dotfiles ~/.dotfiles
+cd .dotfiles
+install
+```
+
+# included
+
+* brew
+* node
+* nvm
+* hub
+* tmux
+* vim-settings
 * zsh
-* some other stuff
+* oh-my-zsh
+* oh-my-git
+

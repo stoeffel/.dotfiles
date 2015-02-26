@@ -1,0 +1,34 @@
+#!/bin/sh
+
+
+
+# oh my zsh
+wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
+
+# antigen
+cd ~ && git clone https://github.com/zsh-users/antigen.git .antigen
+
+# brew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install node
+brew install nvm
+brew install hub
+brew install tmux
+brew install reattach-to-user-namespace
+
+ln   -s   ~/.zshrc            .zshrc
+ln   -s   ~/editorconfig      editorconfig
+ln   -s   ~/gitconfig         .gitconfig
+ln   -s   ~/gitignore         .gitignore
+ln   -s   ~/gvimrc            .gvimrc
+ln   -s   ~/hyper.kmlibrary   hyper.kmlibrary
+ln   -s   ~/jshintrc          .jshintrc
+ln   -s   ~/private.xml       private.xml
+ln   -s   ~/solarized         solarized
+ln   -s   ~/tmux.conf         tmux.conf
+ln   -s   ~/vimrc             .vimrc
+ln   -s   ~/zprofile          .zprofile
+ln   -s   ~/zshrc             .zshrc
+
+curl https://pqrs.org/osx/karabiner/files/Karabiner-10.6.0.dmg > ~/Downloads/Karabiner.dmg
+curl https://iterm2.com/downloads/stable/iTerm2_v2_0.zip > ~/Downloads/iTerm2.zip
