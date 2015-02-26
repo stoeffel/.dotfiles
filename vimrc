@@ -101,5 +101,6 @@ autocmd WinLeave * setlocal nocursorline
 highlight CursorLine guibg=#303000 ctermbg=234
 
 "%g/\/\*\*\n\(\_s*\*.*\n\)*/
-colorscheme solarized
+colorscheme base16-monokai
+let g:airline_theme="base16"
 set bg=dark

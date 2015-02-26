@@ -26,5 +26,6 @@ Plugin 'vim-stylus'
 Plugin 'less-syntax'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'bling/vim-airline'
+Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
