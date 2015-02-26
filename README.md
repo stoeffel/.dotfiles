@@ -1,6 +1,8 @@
 .dotfiles
 =========
 
+![screenshot](screenshot.png)
+
 ## System requirements:
 
 * OS X 10.10+
@@ -12,18 +14,22 @@
 ```sh
 git clone https://github.com/stoeffel/.dotfiles ~/.dotfiles
 cd .dotfiles
-install
+./install
 ```
 
 # included
 
 * brew
 * node
-* nvm
+    * nvm
+    * http-server
+    * yeoman
 * hub
 * tmux
-* vim-settings
+* neovim
+    * vim-settings
+    * vundle
 * zsh
-* oh-my-zsh
-* oh-my-git
+    * oh-my-zsh
+    * oh-my-git
 

@@ -24,5 +24,7 @@ Plugin 'ack.vim'
 Plugin 'jade.vim'
 Plugin 'vim-stylus'
 Plugin 'less-syntax'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'bling/vim-airline'
 
 call vundle#end()

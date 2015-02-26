@@ -3,7 +3,8 @@
 
 
 # oh my zsh
-wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
+curl https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+
 
 # antigen
 cd ~ && git clone https://github.com/zsh-users/antigen.git .antigen
@@ -15,20 +16,34 @@ brew install nvm
 brew install hub
 brew install tmux
 brew install reattach-to-user-namespace
+brew tap neovim/homebrew-neovim
+brew install --HEAD neovim
 
-ln   -s   ~/.zshrc            .zshrc
-ln   -s   ~/editorconfig      editorconfig
-ln   -s   ~/gitconfig         .gitconfig
-ln   -s   ~/gitignore         .gitignore
-ln   -s   ~/gvimrc            .gvimrc
-ln   -s   ~/hyper.kmlibrary   hyper.kmlibrary
-ln   -s   ~/jshintrc          .jshintrc
-ln   -s   ~/private.xml       private.xml
-ln   -s   ~/solarized         solarized
-ln   -s   ~/tmux.conf         tmux.conf
-ln   -s   ~/vimrc             .vimrc
-ln   -s   ~/zprofile          .zprofile
-ln   -s   ~/zshrc             .zshrc
+pip install neovim
 
+ln   -s   ~/.dotfiles/editorconfig      ~/editorconfig
+ln   -s   ~/.dotfiles/gitconfig         ~/.gitconfig
+ln   -s   ~/.dotfiles/gitignore         ~/.gitignore
+ln   -s   ~/.dotfiles/gvimrc            ~/.gvimrc
+ln   -s   ~/.dotfiles/jshintrc          ~/.jshintrc
+ln   -s   ~/.dotfiles/tmux.conf         ~/tmux.conf
+ln   -s   ~/.dotfiles/vimrc             ~/.nvimrc
+ln   -s   ~/.dotfiles/zprofile          ~/.zprofile
+ln   -s   ~/.dotfiles/zshrc             ~/.zshrc
+
+# vundle
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+# Downloads
 curl https://pqrs.org/osx/karabiner/files/Karabiner-10.6.0.dmg > ~/Downloads/Karabiner.dmg
-curl https://iterm2.com/downloads/stable/iTerm2_v2_0.zip > ~/Downloads/iTerm2.zip
+curl https://iterm2.com/downloads/stable/iTerm2_v2_0.zip -LOk > ~/Downloads/iTerm2.zip
+curl https://github.com/newmarcel/KeepingYouAwake/releases/download/1.2.1/KeepingYouAwake-1.2.1.zip -LOk > ~/Downloads/KeepingYouAwake-1.2.1.zip
+
+# node
+nvm install 0.10
+nvm use 0.10
+
+# node_modules
+npm install http-server -g
+npm install -g yo
+npm install --global dark-mode

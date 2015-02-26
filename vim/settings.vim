@@ -65,3 +65,4 @@ let g:ctrlp_max_depth = 80
 let g:ctrlp_max_files=0
 let g:ctrlp_max_height = 40
 
+let g:airline_powerline_fonts = 1

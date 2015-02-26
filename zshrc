@@ -13,7 +13,7 @@ export TERM='xterm-256color'
 
 # EDITOR
 ########
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # ALIASES
 #########
@@ -77,10 +77,10 @@ function n2 () {
 
 # Vim
 alias mvim='open -a MacVim'
-alias vo="vim -u NONE -N"
-alias vi="vim"
-alias v="vim"
-alias v.="vim ."
+alias vo="nvim -u NONE -N"
+alias vi="nvim"
+alias v="nvim"
+alias v.="nvim ."
 alias m="mvim"
 
 # Compass
@@ -158,3 +158,5 @@ antigen-bundle arialdomartini/oh-my-git
 antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
 
 antigen-apply
+
+dark-mode --mode Dark
