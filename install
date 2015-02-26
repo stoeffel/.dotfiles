@@ -15,6 +15,7 @@ brew install node
 brew install nvm
 brew install hub
 brew install tmux
+brew install wget
 brew install reattach-to-user-namespace
 brew tap neovim/homebrew-neovim
 brew install --HEAD neovim
@@ -36,8 +37,8 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Downloads
 curl https://pqrs.org/osx/karabiner/files/Karabiner-10.6.0.dmg > ~/Downloads/Karabiner.dmg
-curl https://iterm2.com/downloads/stable/iTerm2_v2_0.zip -LOk > ~/Downloads/iTerm2.zip
-curl https://github.com/newmarcel/KeepingYouAwake/releases/download/1.2.1/KeepingYouAwake-1.2.1.zip -LOk > ~/Downloads/KeepingYouAwake-1.2.1.zip
+wget -O ~/Downloads/iTerm2.zip https://iterm2.com/downloads/stable/iTerm2_v2_0.zip
+wget -O ~/Downloads/KeepingYouAwake-1.2.1.zip https://github.com/newmarcel/KeepingYouAwake/releases/download/1.2.1/KeepingYouAwake-1.2.1.zip
 
 # node
 nvm install 0.10
