@@ -45,6 +45,6 @@ nvm install 0.10
 nvm use 0.10
 
 # node_modules
-npm install http-server -g
+npm install serve -g
 npm install -g yo
 npm install --global dark-mode
