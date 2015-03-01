@@ -30,6 +30,7 @@ ln -sf ~/.dotfiles/git/gitignore     ~/.gitignore
 
 ln -sf ~/.dotfiles/vim/gvimrc        ~/.gvimrc
 ln -sf ~/.dotfiles/vim/vimrc         ~/.nvimrc
+ln -sf ~/.dotfiles/vim/vimrc         ~/.vimrc
 
 ln -sf ~/.dotfiles/jshintrc          ~/.jshintrc
 

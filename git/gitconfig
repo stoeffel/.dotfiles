@@ -23,7 +23,7 @@
 protocol = https
 [core]
 	excludesfile = ~/.gitignore
-editor = vim --noplugin
+editor = nvim --noplugin
 [diff]
 tool=vimdiff
 [difftool "sourcetree"]
