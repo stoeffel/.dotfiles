@@ -23,21 +23,6 @@ brew install --HEAD neovim
 pip install neovim
 
 # links
-ln -sf ~/.dotfiles/editorconfig      ~/editorconfig
-
-ln -sf ~/.dotfiles/git/gitconfig     ~/.gitconfig
-ln -sf ~/.dotfiles/git/gitignore     ~/.gitignore
-
-ln -sf ~/.dotfiles/vim/gvimrc        ~/.gvimrc
-ln -sf ~/.dotfiles/vim/vimrc         ~/.nvimrc
-ln -sf ~/.dotfiles/vim/vimrc         ~/.vimrc
-
-ln -sf ~/.dotfiles/jshintrc          ~/.jshintrc
-
-ln -sf ~/.dotfiles/tmux.conf         ~/tmux.conf
-
-ln -sf ~/.dotfiles/zsh/zprofile      ~/.zprofile
-ln -sf ~/.dotfiles/zsh/zshrc         ~/.zshrc
 
 # vundle
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim

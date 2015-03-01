@@ -1,4 +1,12 @@
 [
-    ["./foo", "gulpfile.js"],
-    ["./bar", "gulpfile.js"]
+    ["./editorconfig"  , "../editorconfig"] 
+   ,["./git/gitconfig" , "../.gitconfig"]   
+   ,["./git/gitignore" , "../.gitignore"]   
+   ,["./vim/gvimrc"    , "../.gvimrc"]      
+   ,["./vim/vimrc"     , "../.nvimrc"]      
+   ,["./vim/vimrc"     , "../.vimrc"]       
+   ,["./jshintrc"      , "../.jshintrc"]    
+   ,["./tmux.conf"     , "../tmux.conf"]    
+   ,["./zsh/zprofile"  , "../.zprofile"]    
+   ,["./zsh/zshrc"     , "../.zshrc"]
 ]
