@@ -1,0 +1,4 @@
+[
+    ["./foo", "gulpfile.js"],
+    ["./bar", "gulpfile.js"]
+]

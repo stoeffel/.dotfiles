@@ -1,0 +1,24 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "description": ".dotfiles =========",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/stoeffel/.dotfiles"
+  },
+  "author": "schtoeffel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stoeffel/.dotfiles/issues"
+  },
+  "homepage": "https://github.com/stoeffel/.dotfiles",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-symlink": "^2.1.0",
+    "ramda": "^0.10.0"
+  }
+}
