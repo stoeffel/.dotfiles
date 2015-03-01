@@ -22,14 +22,24 @@ cd .dotfiles
 * brew
 * node
     * nvm
-    * http-server
+    * serve
     * yeoman
+    * dark-mode
 * hub
 * tmux
 * neovim
     * vim-settings
-    * vundle
+    * Vundle
 * zsh
     * oh-my-zsh
     * oh-my-git
+* wget
+* curl
+* tmux
+* hub
 
+# downloads
+
+* iterm2
+* Karabiner
+* KeepingYouAwake
