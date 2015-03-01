@@ -27,5 +27,6 @@ Plugin 'less-syntax'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'bling/vim-airline'
 Plugin 'chriskempson/base16-vim'
+Plugin 'vim-gitgutter'
 
 call vundle#end()
