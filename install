@@ -55,3 +55,4 @@ nvm use 0.10
 npm install serve -g
 npm install -g yo
 npm install --global dark-mode
+npm install -g gitgoodies

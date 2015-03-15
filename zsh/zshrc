@@ -23,6 +23,7 @@ alias soz="source ~/.zshrc"
 alias sov="source ~/.vimrc"
 
 # Git
+alias gg='noglob gg'
 alias ga="git add"
 alias gaa="git add ."
 alias gac="git commit -a"
