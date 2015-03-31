@@ -15,22 +15,24 @@ nnoremap <leader>vf :split ~/.dotfiles/vim/filetypes.vim<cr>
 nnoremap <leader>vl :ReloadVIMRC<cr>
 nnoremap <leader>f mzgg=G`z<CR>
 nnoremap <leader>h :set hlsearch!<cr>
-nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gs :split<cr>:term gg status<cr>
 nnoremap <leader>gc :Gcommit<cr>
-nnoremap <leader>gp :Dispatch git push<cr>
+nnoremap <leader>gp :!git push<cr>
 nnoremap <leader>gd :Gdiff<cr>
-nnoremap <leader>gl :Dispatch git pull<cr>
-nnoremap <leader>t :CtrlP<cr>
+nnoremap <leader>gl :!git pull<cr>
+nnoremap <leader>t :term<cr>
+nnoremap <leader>ts :split<cr>:term<cr>
+nnoremap <leader>tv :vsplit<cr>:term<cr>
 nnoremap <leader><leader> :CtrlP<cr>
 nnoremap <leader>l :CtrlPMRU<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
 nnoremap <leader>o :CtrlP optional<cr>
 nnoremap <leader>tr :ClearCtrlPCache<cr>
 nnoremap d<space> :Dispatch<space>
-nnoremap <leader>ni :Dispatch npm install --save<space>
-nnoremap <leader>nu :Dispatch npm update --save<space>
-nnoremap <leader>nt :Dispatch npm test<cr>
-nnoremap <leader>np :Dispatch npm publish<cr>
+nnoremap <leader>ni :!npm install --save<space>
+nnoremap <leader>nu :!npm update --save<space>
+nnoremap <leader>nt :split<cr>:term npm test<cr>
+nnoremap <leader>np :!npm publish<cr>
 nnoremap <leader>" :%s/"/\'/g<cr>
 nnoremap <leader>vc :call SwitchBetween('view', 'controller')<cr>
 nnoremap t<CR> :call SwitchBetween('lib', 'test')<cr>
@@ -57,4 +59,12 @@ map <leader>ev :vsp %%
 map <leader>et :tabe %%
 xnoremap . :normal .<cr>
 source ~/.dotfiles/vim/visual-at.vim
-
+tnoremap <Esc> <C-\><C-n>
+tnoremap <C-h> <C-\><C-n><C-w>h
+tnoremap <C-j> <C-\><C-n><C-w>j
+tnoremap <C-k> <C-\><C-n><C-w>k
+tnoremap <C-l> <C-\><C-n><C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
