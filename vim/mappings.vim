@@ -15,13 +15,13 @@ nnoremap <leader>vf :split ~/.dotfiles/vim/filetypes.vim<cr>
 nnoremap <leader>vl :ReloadVIMRC<cr>
 nnoremap <leader>f mzgg=G`z<CR>
 nnoremap <leader>h :set hlsearch!<cr>
-nnoremap <leader>gs :split<cr>:term gg status<cr>
+nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>gp :!git push<cr>
 nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gl :!git pull<cr>
 nnoremap <leader>t :term<cr>
-nnoremap <leader>ts :split<cr>:term<cr>
+nnoremap <leader>ts :split<cr>:res 10<cr>:term<cr>
 nnoremap <leader>tv :vsplit<cr>:term<cr>
 nnoremap <leader><leader> :CtrlP<cr>
 nnoremap <leader>l :CtrlPMRU<cr>
