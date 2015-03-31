@@ -17,9 +17,9 @@ nnoremap <leader>f mzgg=G`z<CR>
 nnoremap <leader>h :set hlsearch!<cr>
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gc :Gcommit<cr>
-nnoremap <leader>gp :!git push<cr>
+nnoremap <leader>gp :term git push<cr>
 nnoremap <leader>gd :Gdiff<cr>
-nnoremap <leader>gl :!git pull<cr>
+nnoremap <leader>gl :term git pull<cr>
 nnoremap <leader>t :term<cr>
 nnoremap <leader>ts :split<cr>:res 10<cr>:term<cr>
 nnoremap <leader>tv :vsplit<cr>:term<cr>
@@ -29,10 +29,10 @@ nnoremap <leader>b :CtrlPBuffer<cr>
 nnoremap <leader>o :CtrlP optional<cr>
 nnoremap <leader>tr :ClearCtrlPCache<cr>
 nnoremap d<space> :Dispatch<space>
-nnoremap <leader>ni :!npm install --save<space>
-nnoremap <leader>nu :!npm update --save<space>
+nnoremap <leader>ni :term npm install --save<space>
+nnoremap <leader>nu :term npm update --save<space>
 nnoremap <leader>nt :split<cr>:term npm test<cr>
-nnoremap <leader>np :!npm publish<cr>
+nnoremap <leader>np :term npm publish<cr>
 nnoremap <leader>" :%s/"/\'/g<cr>
 nnoremap <leader>vc :call SwitchBetween('view', 'controller')<cr>
 nnoremap t<CR> :call SwitchBetween('lib', 'test')<cr>
