@@ -9357,7 +9357,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-02-28T17:41:49Z</date>
+	<date>2015-03-31T14:42:01Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -9375,7 +9375,7 @@
 	<key>SwitchWindowModifier</key>
 	<integer>6</integer>
 	<key>TabViewType</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>ThreeFingerEmulates</key>
 	<false/>
 	<key>TmuxDashboardLimit</key>
@@ -9407,7 +9407,7 @@
 	<key>WindowNumber</key>
 	<true/>
 	<key>WindowStyle</key>
-	<integer>3</integer>
+	<integer>0</integer>
 	<key>WordCharacters</key>
 	<string> </string>
 	<key>findIgnoreCase_iTerm</key>

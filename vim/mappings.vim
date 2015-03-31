@@ -21,6 +21,7 @@ nnoremap <leader>gp :term git push<cr>
 nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gl :term git pull<cr>
 nnoremap <leader>t :term<cr>
+nnoremap <leader>t :tabnew<cr>term<cr>
 nnoremap <leader>ts :split<cr>:res 10<cr>:term<cr>
 nnoremap <leader>tv :vsplit<cr>:term<cr>
 nnoremap <leader><leader> :CtrlP<cr>
