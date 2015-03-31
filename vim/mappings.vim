@@ -57,6 +57,12 @@ map <leader>e :e %%
 map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabe %%
+nnoremap <A-S-tab> :tabprevious<CR>
+nnoremap <A-tab>   :tabnext<CR>
+nnoremap <A-t>     :tabnew<CR>
+inoremap <A-S-tab> <Esc>:tabprevious<CR>i
+inoremap <A-tab>   <Esc>:tabnext<CR>i
+inoremap <A-t>     <Esc>:tabnew<CR>
 xnoremap . :normal .<cr>
 source ~/.dotfiles/vim/visual-at.vim
 tnoremap <Esc> <C-\><C-n>
