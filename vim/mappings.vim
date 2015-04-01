@@ -21,7 +21,7 @@ nnoremap <leader>gp :term git push<cr>
 nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gl :term git pull<cr>
 nnoremap <leader>t :term<cr>
-nnoremap <leader>t :tabnew<cr>term<cr>
+nnoremap <leader>tt :tabnew<cr>term<cr>
 nnoremap <leader>ts :split<cr>:res 10<cr>:term<cr>
 nnoremap <leader>tv :vsplit<cr>:term<cr>
 nnoremap <leader><leader> :CtrlP<cr>
@@ -29,7 +29,7 @@ nnoremap <leader>l :CtrlPMRU<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
 nnoremap <leader>o :CtrlP optional<cr>
 nnoremap <leader>tr :ClearCtrlPCache<cr>
-nnoremap d<space> :Dispatch<space>
+nnoremap t<space> :term<space>
 nnoremap <leader>ni :term npm install --save<space>
 nnoremap <leader>nu :term npm update --save<space>
 nnoremap <leader>nt :split<cr>:term npm test<cr>
@@ -67,11 +67,10 @@ inoremap <A-t>     <Esc>:tabnew<CR>
 xnoremap . :normal .<cr>
 source ~/.dotfiles/vim/visual-at.vim
 tnoremap <Esc> <C-\><C-n>
-tnoremap <C-h> <C-\><C-n><C-w>h
-tnoremap <C-j> <C-\><C-n><C-w>j
-tnoremap <C-k> <C-\><C-n><C-w>k
-tnoremap <C-l> <C-\><C-n><C-w>l
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+tnoremap <C-w>h <C-\><C-n><C-w>h
+tnoremap <C-w>j <C-\><C-n><C-w>j
+tnoremap <C-w>k <C-\><C-n><C-w>k
+tnoremap <C-w>l <C-\><C-n><C-w>l
+tnoremap <C-w>t <C-\><C-n><C-w>w
+nnoremap <silent> <C-w>u :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <C-w>i :exe "resize " . (winheight(0) * 2/3)<CR>

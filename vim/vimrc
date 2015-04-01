@@ -95,12 +95,12 @@ function! ExtractFunction()
 endfunction
 
 set cursorline
-hi cursorline cterm=none term=none
+"hi cursorline cterm=none term=none
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
-highlight CursorLine guibg=#303000 ctermbg=234
+"highlight CursorLine guibg=#303000 ctermbg=234
 
 "%g/\/\*\*\n\(\_s*\*.*\n\)*/
-colorscheme base16-monokai
-let g:airline_theme="base16"
+colorscheme atom-dark-256
+let g:airline_theme="dark"
 set bg=dark

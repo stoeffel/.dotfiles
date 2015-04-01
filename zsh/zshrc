@@ -9,6 +9,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export ECLIPSE_HOME=/Applications/eclipse/
 export PATH=$PATH:bin:./node_modules/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/home/$USER/.gem/ruby/1.8/bin:/opt/nginx/sbin:/home/$USER/bin/adt-bundle-linux-x86_64-20140702/sdk/tools:/home/$USER/bin/adt-bundle-linux-x86_64-20140702/sdk/platform-tools:/home/$USER/bin:/home/$USER/.bash_it/plugins/available/todo:~/bin/dart/dart-sdk/bin:~/.dotfiles/bin:/Applications/eclipse
+export PATH=/opt/local/bin:/usr/local/sbin:/opt/local/sbin:$PATH
 export TERM='xterm-256color'
 
 # EDITOR
@@ -28,7 +29,7 @@ alias ga="gg a"
 alias gaa="git add ."
 alias gac="git commit -a"
 alias gd="git difftool"
-alias gs="git status"
+alias gs="git status;gg s"
 alias gp="git push"
 alias gl="git pull --rebase"
 alias gerrit-hook="scp -p -P 29418 chermann@git.tocco.ch:hooks/commit-msg .git/hooks/"
@@ -156,7 +157,7 @@ source "$HOME/.antigen/antigen.zsh"
 
 antigen-use oh-my-zsh
 antigen-bundle arialdomartini/oh-my-git
-antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
+antigen theme arialdomartini/oh-my-git-themes arialdo-granzestyle
 
 antigen-apply
 
