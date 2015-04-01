@@ -32,51 +32,6 @@ function! CloseHiddenBuffers()
     echon "Deleted " . l:tally . " buffers"
 endfun
 
-function! SwitchBetween(from, to)
-    " TODO check if file exists
-    let firstPath = RemoveWDFromPath(expand('%:p'))
-    if match(firstPath, a:from.'\/') != -1
-        let first = a:from
-        let sec = a:to
-    elseif match(firstPath, a:to.'\/') != -1
-        let first = a:to
-        let sec = a:from
-    else
-        return
-    endif
-    let secPath = substitute(firstPath, first.'\/',  sec.'\/', 'g')
-    echo secPath
-    execute "edit" secPath
-endfunction
-
-function! RemoveWDFromPath(path)
-    let cwd = substitute(substitute(getcwd(), '\~\/', '', ''), '\/Users\/.*\/', '', '')
-    return substitute(a:path, '.*' .cwd . '\/', '', '')
-endfunction
-
-function! GetXtypeFormLine()
-    let line = getline('.')
-    if match(getline('.'), "xtype") < 0
-        return -1
-    endif
-    return substitute(matchstr(line, "'.*'") ,"'","","g")
-endfunction
-
-function! FindXtype()
-    let xtype = GetXtypeFormLine()
-    if xtype < 0
-        return 0
-    endif
-    execute "vim " "/alias:\\s*'widget." . xtype . "'/ **/app/**/*.js"
-endfunction
-
-function! IsExtJs()
-    if match(getbufline('%',0,'$'), 'Ext.define') != -1
-        return 1
-    else
-        return 0
-    endif
-endfunction
 
 function! TextObjectFunction()
     normal! ]}%
@@ -95,6 +50,7 @@ function! ExtractFunction()
 endfunction
 
 set cursorline
+<<<<<<< HEAD
 "hi cursorline cterm=none term=none
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
@@ -103,3 +59,12 @@ autocmd WinLeave * setlocal nocursorline
 "%g/\/\*\*\n\(\_s*\*.*\n\)*/
 let g:airline_theme="dark"
 colorscheme seti
+=======
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+
+"%g/\/\*\*\n\(\_s*\*.*\n\)*/
+colorscheme atom-dark-256
+let g:airline_theme="powerlineish"
+set bg=dark
+>>>>>>> update stuff from my first day

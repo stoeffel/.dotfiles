@@ -66,4 +66,4 @@ let g:ctrlp_max_files=0
 let g:ctrlp_max_height = 40
 
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
