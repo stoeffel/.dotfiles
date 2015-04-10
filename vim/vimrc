@@ -101,6 +101,5 @@ autocmd WinLeave * setlocal nocursorline
 "highlight CursorLine guibg=#303000 ctermbg=234
 
 "%g/\/\*\*\n\(\_s*\*.*\n\)*/
-colorscheme atom-dark-256
 let g:airline_theme="dark"
-set bg=dark
+colorscheme seti

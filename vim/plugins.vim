@@ -11,6 +11,7 @@ Plugin 'bling/vim-airline'
 Plugin 'chriskempson/base16-vim'
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 Plugin 'gosukiwi/vim-atom-dark'
+Plugin 'trusktr/seti.vim'
 "Plugin 'christoomey/vim-tmux-navigator'
 "Plugin 'edkolev/tmuxline.vim'
 Plugin 'ctrlp.vim'
