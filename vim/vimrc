@@ -50,7 +50,6 @@ function! ExtractFunction()
 endfunction
 
 set cursorline
-<<<<<<< HEAD
 "hi cursorline cterm=none term=none
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
@@ -59,7 +58,6 @@ autocmd WinLeave * setlocal nocursorline
 "%g/\/\*\*\n\(\_s*\*.*\n\)*/
 let g:airline_theme="dark"
 colorscheme seti
-=======
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 
@@ -67,4 +65,6 @@ autocmd WinLeave * setlocal nocursorline
 colorscheme atom-dark-256
 let g:airline_theme="powerlineish"
 set bg=dark
->>>>>>> update stuff from my first day
+
+hi clear CursorLine
+hi CursorLine cterm=underline
