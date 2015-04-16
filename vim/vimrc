@@ -4,7 +4,7 @@ source ~/.dotfiles/vim/plugins.vim
 filetype plugin indent on
 syntax enable
 
-colorscheme seti
+colorscheme atom-dark-256
 
 source ~/.dotfiles/vim/mappings.vim
 source ~/.dotfiles/vim/filetypes.vim
@@ -62,3 +62,4 @@ let g:airline_theme="powerlineish"
 
 hi clear CursorLine
 hi CursorLine cterm=underline
+hi Visual guibg=blue guifg=white ctermbg=blue ctermfg=white
