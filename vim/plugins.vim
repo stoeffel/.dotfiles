@@ -34,5 +34,6 @@ Plugin 'vim-gitgutter'
 Plugin 'vim-scripts/jshint.vim'
 Plugin 'vim-stylus'
 Plugin 'mxw/vim-jsx'
+Plugin 'ZoomWin'
 
 call vundle#end()

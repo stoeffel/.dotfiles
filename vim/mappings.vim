@@ -66,7 +66,7 @@ inoremap <A-tab>   <Esc>:tabnext<CR>i
 inoremap <A-t>     <Esc>:tabnew<CR>
 xnoremap . :normal .<cr>
 source ~/.dotfiles/vim/visual-at.vim
-tnoremap <Esc> <C-\><C-n>
+tnoremap <Esc><Esc> <C-\><C-n>
 tnoremap <C-w>h <C-\><C-n><C-w>h
 tnoremap <C-w>j <C-\><C-n><C-w>j
 tnoremap <C-w>k <C-\><C-n><C-w>k

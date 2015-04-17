@@ -1,6 +1,6 @@
 [user]
-	name = stoeffel
-	email = schtoeffel@gmail.com
+	name = Christoph Hermann
+	email = christoph.hermann@kaba.com
 [color]
 	diff = auto
 	status = auto
@@ -22,13 +22,13 @@
 [hub]
 protocol = https
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/stoeffel/.gitignore
 editor = nvim --noplugin
 [diff]
 tool=vimdiff
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
