@@ -35,5 +35,6 @@ Plugin 'vim-scripts/jshint.vim'
 Plugin 'vim-stylus'
 Plugin 'mxw/vim-jsx'
 Plugin 'ZoomWin'
+Plugin 'NLKNguyen/papercolor-theme'
 
 call vundle#end()

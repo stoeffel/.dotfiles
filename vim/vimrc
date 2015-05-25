@@ -4,7 +4,7 @@ source ~/.dotfiles/vim/plugins.vim
 filetype plugin indent on
 syntax enable
 
-colorscheme atom-dark-256
+colorscheme PaperColor
 
 source ~/.dotfiles/vim/mappings.vim
 source ~/.dotfiles/vim/filetypes.vim
@@ -58,7 +58,7 @@ autocmd WinLeave * setlocal nocursorline
 "highlight CursorLine guibg=#303000 ctermbg=234
 
 "%g/\/\*\*\n\(\_s*\*.*\n\)*/
-let g:airline_theme="powerlineish"
+let g:airline_theme="silver"
 
 hi clear CursorLine
 hi CursorLine cterm=underline
