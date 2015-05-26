@@ -1,6 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
 
-#ZSH_THEME="miloshadzic"
+ZSH_THEME="pure"
 
 plugins=(git node npm bower gem gitfast vundle )
 
@@ -151,14 +151,5 @@ export LC_ALL=en_US.UTF-8
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home
 export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=300m"
 
-
-
-source "$HOME/.antigen/antigen.zsh"
-
-antigen-use oh-my-zsh
-antigen-bundle arialdomartini/oh-my-git
-antigen theme arialdomartini/oh-my-git-themes arialdo-granzestyle
-
-antigen-apply
 
 dark-mode --mode Dark
