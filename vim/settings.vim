@@ -56,14 +56,16 @@ if !isdirectory(expand(&undodir))
 endif
 set nobackup
 set noswapfile
-let g:syntastic_enable_signs=1
-let g:syntastic_check_on_open=0
-let g:syntastic_enable_highlighting = 0
+
 set omnifunc=syntaxcomplete#Complete
 let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_max_depth = 80
 let g:ctrlp_max_files=0
 let g:ctrlp_max_height = 40
 
+let g:syntastic_javascript_checkers = ['eslint', 'jshint']
+let g:syntastic_enable_signs=1
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_highlighting = 0
 "let g:airline_powerline_fonts = 1
 "let g:airline#extensions#tabline#enabled = 1

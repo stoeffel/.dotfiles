@@ -29,7 +29,8 @@ nnoremap <leader>l :CtrlPMRU<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
 nnoremap <leader>o :CtrlP optional<cr>
 nnoremap <leader>tr :ClearCtrlPCache<cr>
-nnoremap t<space> :term<space>
+nnoremap t<space> :split<cr>:term<space>
+nnoremap p<space> :split<cr>:term pm2i<space>
 nnoremap <leader>ni :term npm install --save<space>
 nnoremap <leader>nu :term npm update --save<space>
 nnoremap <leader>nt :split<cr>:term npm test<cr>

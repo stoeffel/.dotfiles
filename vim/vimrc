@@ -52,14 +52,11 @@ function! ExtractFunction()
     execute ":normal! a;"
 endfunction
 
-set cursorline
+set nocursorline
 "hi cursorline cterm=none term=none
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 "highlight CursorLine guibg=#303000 ctermbg=234
-
-"%g/\/\*\*\n\(\_s*\*.*\n\)*/
-let g:airline_theme="silver"
 
 hi clear CursorLine
 hi CursorLine cterm=underline

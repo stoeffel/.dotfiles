@@ -30,11 +30,11 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'unimpaired.vim'
-Plugin 'vim-gitgutter'
+"Plugin 'vim-gitgutter'
 Plugin 'vim-scripts/jshint.vim'
 Plugin 'vim-stylus'
-Plugin 'mxw/vim-jsx'
 Plugin 'ZoomWin'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()

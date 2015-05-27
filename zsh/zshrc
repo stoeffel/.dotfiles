@@ -45,12 +45,37 @@ function vc () {
     vim `git unpushed | awk '{print $2}'`
 }
 
+
+function lint_cloud () {
+    eslint --rulesdir ~/cloud/eslintrules -c ~/cloud/.eslintrc --ignore-path ~/cloud/.eslintignore $1
+}
+
+function lint_new () {
+    eslint --rulesdir ./eslintrules -c .eslintrc --ignore-path .eslintignore `git status | grep new | awk '{print $2}'`
+}
+
+function lint_modified () {
+    echo Linting `git status | grep modified | awk '{print $2}'`
+    eslint --rulesdir ./eslintrules -c .eslintrc --ignore-path .eslintignore `git status | grep modified | awk '{print $2}'`
+}
+
+function lint_unpushed () {
+    eslint --rulesdir ./eslintrules -c .eslintrc --ignore-path .eslintignore `git unpushed | awk '{print $2}'`
+}
+
+function lint () {
+    lint_new
+    lint_modified
+}
+
 function githubpr() {
     git fetch origin pull/$1/head:$2
     git checkout $2
 }
 
 # NPM
+alias n="npm "
+alias nr="npm run "
 alias ni="npm install "
 alias np="npm publish "
 alias nt="npm test"
@@ -64,19 +89,6 @@ alias sc="svn commit"
 alias sl="svn update"
 alias scl="svn checkout"
 
-#Mvn
-alias mvn_install_customer_test="mvn -pl customer/test -am install -DskipTests -T2.0C"
-function mvn_nice() {
-  echo "...installing customer ${1}"
-  mvn -pl customer/$1 -am install -DskipTests -T2.0C
-}
-
-#Nice
-compctl -/ -W ~/src/nice2/ n2
-function n2 () {
-  cd ~/src/nice2/${1}
-}
-
 # Vim
 alias mvim='open -a MacVim'
 alias vo="nvim -u NONE -N"
@@ -89,8 +101,8 @@ alias m="mvim"
 alias cc="compass compile"
 alias cw="compass watch"
 
-# Grunt
-alias gr="grunt"
+# Grulp
+alias gr="grulp"
 
 # Applications
 alias c="open -a Google\ Chrome"
@@ -105,7 +117,7 @@ function op() {
 alias l="ls -a"
 
 # VID (very important directories)
-alias d="cd ~/.dotfiles"
+alias cdd="cd ~/.dotfiles"
 alias dv="cd ~/.dotfiles;vim;cd -;" # edit dotfiles, and go back were you came from
 alias dl="d;git pull;"
 alias s="cd ~/src"
@@ -153,3 +165,6 @@ export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=300m"
 
 
 dark-mode --mode Dark
+
+unsetopt inc_append_history
+unsetopt share_history
