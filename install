@@ -56,3 +56,4 @@ npm install serve -g
 npm install -g yo
 npm install --global dark-mode
 npm install -g gitgoodies
+npm install -g cut-release
