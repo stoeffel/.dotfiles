@@ -90,7 +90,8 @@ alias sl="svn update"
 alias scl="svn checkout"
 
 # Vim
-alias mvim='open -a MacVim'
+alias mvim='open -a Neovim $*'
+alias neo='open -a Neovim $*'
 alias vo="nvim -u NONE -N"
 alias vi="nvim"
 alias v="nvim"

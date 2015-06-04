@@ -21,7 +21,7 @@ nnoremap <leader>gp :term git push<cr>
 nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gl :term git pull<cr>
 nnoremap <leader>t :term<cr>
-nnoremap <leader>tt :tabnew<cr>term<cr>
+nnoremap tt<leader> :tabnew<cr>:term<cr>
 nnoremap <leader>ts :split<cr>:res 10<cr>:term<cr>
 nnoremap <leader>tv :vsplit<cr>:term<cr>
 nnoremap <leader><leader> :CtrlP<cr>
@@ -59,19 +59,31 @@ map <leader>e :e %%
 map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabe %%
-nnoremap <A-S-tab> :tabprevious<CR>
-nnoremap <A-tab>   :tabnext<CR>
-nnoremap <A-t>     :tabnew<CR>
-inoremap <A-S-tab> <Esc>:tabprevious<CR>i
-inoremap <A-tab>   <Esc>:tabnext<CR>i
-inoremap <A-t>     <Esc>:tabnew<CR>
+nnoremap ,p :tabprevious<CR>
+nnoremap ,n :tabnext<CR>
+nnoremap ,t :tabnew<CR>
 xnoremap . :normal .<cr>
 source ~/.dotfiles/vim/visual-at.vim
-tnoremap <Esc><Esc> <C-\><C-n>
-tnoremap <C-w>h <C-\><C-n><C-w>h
-tnoremap <C-w>j <C-\><C-n><C-w>j
-tnoremap <C-w>k <C-\><C-n><C-w>k
-tnoremap <C-w>l <C-\><C-n><C-w>l
-tnoremap <C-w>t <C-\><C-n><C-w>w
+" terminal settings:
+if exists(':terminal')
+  " allow terminal buffer size to be very large
+  let g:terminal_scrollback_buffer_size = 100000
+
+  " map esc to exit to normal mode in terminal too
+  tnoremap <Esc> <C-\><C-n>
+
+  " Jump and Create splits easily
+  tnoremap <C-w>h <C-\><C-n><C-w>h
+  tnoremap <C-w>j <C-\><C-n><C-w>j
+  tnoremap <C-w>k <C-\><C-n><C-w>k
+  tnoremap <C-w>l <C-\><C-n><C-w>l
+  tnoremap <C-w>t <C-\><C-n><C-w>w
+  tnoremap ,n <C-\><C-n>:tabnext<CR>
+  tnoremap ,p <C-\><C-n>:tabprevious<CR>
+  tnoremap ,t <C-\><C-n>:tabnew<CR>
+
+  " go into insert mode when entering the terminal
+  au WinEnter term://* startinsert
+endif
 nnoremap <silent> <C-w>u :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <C-w>i :exe "resize " . (winheight(0) * 2/3)<CR>

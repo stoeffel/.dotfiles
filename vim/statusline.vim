@@ -8,6 +8,7 @@ function! GitStatus()
 endfunction
 
 function! Status(winnr)
+
   " Left
   let stat=" "
   if mode() == 'v'
@@ -25,7 +26,7 @@ function! Status(winnr)
   else
     let stat.=''
   endif
-  let stat.=" %{expand('%:p:h:t')}/%{expand('%:t:r')} "
+  let stat.=" %{fnamemodify('.', ':p:h:t')}/../%{expand('%:p:h:t')}/%{expand('%:t:r')} "
   let stat.="%{&modified ? '' : ''}"
 
   " Right
@@ -37,6 +38,7 @@ function! Status(winnr)
   if exists('g:loaded_syntastic_checker')
     let stat.="%{SyntasticStatuslineFlag()}"
   endif
+  let stat.="  %{expand('%:e')} "
   let stat.="%#warningmsg#"
   let stat.='%r'
 

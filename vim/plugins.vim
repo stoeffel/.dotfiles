@@ -7,7 +7,7 @@ Plugin 'Vundle.vim'
 Plugin 'abolish.vim'
 Plugin 'ack.vim'
 Plugin 'altercation/vim-colors-solarized'
-"Plugin 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 Plugin 'chriskempson/base16-vim'
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 Plugin 'gosukiwi/vim-atom-dark'
