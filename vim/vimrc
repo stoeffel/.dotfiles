@@ -4,7 +4,9 @@ source ~/.dotfiles/vim/plugins.vim
 filetype plugin indent on
 syntax enable
 
-colorscheme PaperColor
+set t_Co=256
+set bg=light
+colorscheme solarized
 
 source ~/.dotfiles/vim/mappings.vim
 source ~/.dotfiles/vim/filetypes.vim
@@ -57,6 +59,15 @@ set nocursorline
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 "highlight CursorLine guibg=#303000 ctermbg=234
+"
+
+if executable('ack')
+  set grepprg=ack\ -s\ -H\ --nogroup\ --color\ --column\ 1
+  set grepformat=%f:%l:%c:%m,%f:%l:%m
+endif
+
+command! -bang -nargs=* -complete=file -bar Grep silent! grep! <args>
+autocmd QuickFixCmdPost *grep* cwindow
 
 hi clear CursorLine
 hi CursorLine cterm=underline

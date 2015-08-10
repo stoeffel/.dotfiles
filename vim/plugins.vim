@@ -6,6 +6,7 @@ Plugin 'Vundle.vim'
 
 Plugin 'abolish.vim'
 Plugin 'ack.vim'
+Plugin 'ag.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'chriskempson/base16-vim'

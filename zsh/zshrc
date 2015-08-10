@@ -74,7 +74,6 @@ function githubpr() {
 }
 
 # NPM
-alias n="npm "
 alias nr="npm run "
 alias ni="npm install "
 alias np="npm publish "
@@ -159,6 +158,12 @@ alias sftp='noglob sftp'
 
 zstyle ':completion:*' special-dirs true
 
+
+function appClient () {
+  cd $1/host/client
+}
+
+
 export LC_ALL=en_US.UTF-8
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home
@@ -169,3 +174,6 @@ dark-mode --mode Dark
 
 unsetopt inc_append_history
 unsetopt share_history
+
+export NVM_DIR="/Users/stoeffel/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

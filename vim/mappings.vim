@@ -25,6 +25,7 @@ nnoremap tt<leader> :tabnew<cr>:term<cr>
 nnoremap <leader>ts :split<cr>:res 10<cr>:term<cr>
 nnoremap <leader>tv :vsplit<cr>:term<cr>
 nnoremap <leader><leader> :CtrlP<cr>
+nnoremap ,, :Ag
 nnoremap <leader>l :CtrlPMRU<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
 nnoremap <leader>o :CtrlP optional<cr>
