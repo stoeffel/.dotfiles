@@ -6,7 +6,7 @@ syntax enable
 
 set t_Co=256
 set bg=light
-colorscheme solarized
+colorscheme PaperColor
 
 source ~/.dotfiles/vim/mappings.vim
 source ~/.dotfiles/vim/filetypes.vim
