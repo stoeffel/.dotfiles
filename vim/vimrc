@@ -5,8 +5,8 @@ filetype plugin indent on
 syntax enable
 
 set t_Co=256
-set bg=light
-colorscheme PaperColor
+set bg=dark
+colorscheme solarized
 
 source ~/.dotfiles/vim/mappings.vim
 source ~/.dotfiles/vim/filetypes.vim

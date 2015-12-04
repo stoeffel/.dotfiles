@@ -25,4 +25,5 @@ Session.vim
 #nice
 customer/**/var
 
+nohup.out
 node_modules
