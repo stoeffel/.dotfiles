@@ -8,6 +8,7 @@ Plugin 'abolish.vim'
 Plugin 'ack.vim'
 Plugin 'ag.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'chriskempson/base16-vim'
 Plugin 'bling/vim-airline'
 Plugin 'chriskempson/base16-vim'
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
