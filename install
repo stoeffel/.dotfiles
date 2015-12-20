@@ -12,6 +12,7 @@ cd ~ && git clone https://github.com/zsh-users/antigen.git .antigen
 # brew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install node
+brew install pt
 brew install nvm
 brew install hub
 brew install tmux
@@ -35,6 +36,7 @@ ln -sf ~/.dotfiles/vim/vimrc         ~/.vimrc
 ln -sf ~/.dotfiles/jshintrc          ~/.jshintrc
 
 ln -sf ~/.dotfiles/tmux.conf         ~/tmux.conf
+ln -sf ~/.dotfiles/ptignore          ~/.ptignore
 
 ln -sf ~/.dotfiles/zsh/zprofile      ~/.zprofile
 ln -sf ~/.dotfiles/zsh/zshrc         ~/.zshrc
