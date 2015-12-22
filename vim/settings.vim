@@ -79,6 +79,7 @@ let g:syntastic_enable_signs=1
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_highlighting = 0
 
+
 let g:airline_theme='solarized'
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1

@@ -9,6 +9,8 @@ Plugin 'ack.vim'
 Plugin 'ag.vim'
 Plugin 'b4b4r07/vim-pt'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'joshdick/airline-onedark.vim'
+Plugin 'joshdick/onedark.vim'
 Plugin 'bling/vim-airline'
 Plugin 'chriskempson/base16-vim'
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
