@@ -1,4 +1,5 @@
 {
+"esnext" : true,
 
     "passfail"      : false,
         "maxerr"        : 100,

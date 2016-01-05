@@ -27,3 +27,5 @@ customer/**/var
 
 nohup.out
 node_modules
+
+.tern-port
