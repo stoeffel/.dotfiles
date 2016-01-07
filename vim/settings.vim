@@ -4,8 +4,6 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set autoindent
-set antialias
-set encoding=utf-8
 set scrolloff=3
 let &showbreak='↪ '
 set showmode

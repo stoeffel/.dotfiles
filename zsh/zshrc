@@ -14,7 +14,7 @@ export TERM='xterm-256color'
 
 # EDITOR
 ########
-export EDITOR='nvim'
+export EDITOR='nvim -u ~/.vimrc'
 
 # ALIASES
 #########
@@ -93,10 +93,10 @@ alias scl="svn checkout"
 alias mvim='open -a Neovim $*'
 alias neo='open -a Neovim $*'
 alias vo="nvim -u NONE -N"
-alias vi="nvim"
-alias v="nvim"
-alias v.="nvim ."
-alias m="mvim"
+alias vi="nvim -u ~/.vimrc"
+alias v="nvim -u ~/.vimrc"
+alias v.="nvim -u ~/.vimrc ."
+alias m="mvim -u ~/.vimrc"
 
 # Compass
 alias cc="compass compile"
