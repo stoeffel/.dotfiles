@@ -13,9 +13,11 @@ nnoremap <leader>ls :buffers<CR>:buffer<Space>
 nnoremap <leader>sh :set hlsearch!<cr>
 
 " git
-nnoremap <leader>gs :Gstatus<cr>
-nnoremap <leader>gc :Gcommit<cr>
-nnoremap <leader>gd :Gdiff<cr>
+nnoremap gs :Gstatus<cr>
+nnoremap gs :Gstatus<cr>
+nnoremap gc :Gcommit<cr>
+nnoremap gd :Gdiff<cr>
+nnoremap gl :Gpull --rebase<cr>
 
 " CtrlP
 nnoremap <leader><leader> :CtrlP<cr>
