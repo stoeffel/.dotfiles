@@ -9,68 +9,9 @@ set bg=dark
 let g:solarized_termtrans=1
 colorscheme solarized
 
+source ~/.dotfiles/vim/functions.vim
 source ~/.dotfiles/vim/mappings.vim
 source ~/.dotfiles/vim/filetypes.vim
 source ~/.dotfiles/vim/abbreviations.vim
 source ~/.dotfiles/vim/settings.vim
 source ~/.dotfiles/vim/terminal.vim
-"source ~/.dotfiles/vim/statusline.vim
-
-
-command! ReloadVIMRC execute "source ~/.vimrc"
-command! SudoWrite execute "w !sudo tee %"
-command! -nargs=* Only call CloseHiddenBuffers()
-function! CloseHiddenBuffers()
-    " figure out which buffers are visible in any tab
-    let visible = {}
-    for t in range(1, tabpagenr('$'))
-        for b in tabpagebuflist(t)
-            let visible[b] = 1
-        endfor
-    endfor
-    " close any buffer that are loaded and not visible
-    let l:tally = 0
-    for b in range(1, bufnr('$'))
-        if bufloaded(b) && !has_key(visible, b)
-            let l:tally += 1
-            exe 'bw ' . b
-        endif
-    endfor
-    echon "Deleted " . l:tally . " buffers"
-endfun
-
-
-function! TextObjectFunction()
-    normal! ]}%
-    execute "normal ?function\<CR>"
-    normal! vf{%
-endfunction
-
-function! ExtractFunction()
-    let functionName = input('Function name: ')
-    call TextObjectFunction()
-    execute ":normal! c" . functionName
-    execute ":normal! Ovar " . functionName . " = "
-    normal! p
-    normal! f{%
-    execute ":normal! a;"
-endfunction
-
-set nocursorline
-"hi cursorline cterm=none term=none
-autocmd WinEnter * setlocal cursorline
-autocmd WinLeave * setlocal nocursorline
-"highlight CursorLine guibg=#303000 ctermbg=234
-"
-
-if executable('ack')
-  set grepprg=ack\ -s\ -H\ --nogroup\ --color\ --column\ 1
-  set grepformat=%f:%l:%c:%m,%f:%l:%m
-endif
-
-command! -bang -nargs=* -complete=file -bar Grep silent! grep! <args>
-autocmd QuickFixCmdPost *grep* cwindow
-
-hi clear CursorLine
-hi CursorLine cterm=underline
-hi Visual guibg=blue guifg=white ctermbg=blue ctermfg=white
