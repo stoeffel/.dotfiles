@@ -1,8 +1,6 @@
 .dotfiles
 =========
 
-![screenshot](screenshot.png)
-
 ## System requirements:
 
 * OS X 10.10+
@@ -21,12 +19,11 @@ cd .dotfiles
 
 * brew
 * node
-    * nvm
+    * n
     * serve
     * yeoman
     * dark-mode
 * hub
-* tmux
 * neovim
     * vim-settings
     * Vundle
@@ -35,8 +32,6 @@ cd .dotfiles
     * oh-my-git
 * wget
 * curl
-* tmux
-* hub
 
 # downloads
 
