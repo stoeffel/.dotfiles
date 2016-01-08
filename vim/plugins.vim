@@ -24,6 +24,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-vinegar'
 Plugin 'unimpaired.vim'
 Plugin 'vim-gitgutter'
+Plugin 'vim-multiple-cursors'
 
 " style
 Plugin 'altercation/vim-colors-solarized'
