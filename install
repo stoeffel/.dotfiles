@@ -1,7 +1,6 @@
 #!/bin/sh
 
 
-
 # oh my zsh
 curl https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
@@ -13,15 +12,11 @@ cd ~ && git clone https://github.com/zsh-users/antigen.git .antigen
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install node
 brew install pt
-brew install nvm
 brew install hub
-brew install tmux
 brew install wget
-brew install reattach-to-user-namespace
 brew tap neovim/homebrew-neovim
-brew install --HEAD neovim
+brew install neovim
 
-pip install neovim
 
 # links
 ln -sf ~/.dotfiles/editorconfig      ~/editorconfig
@@ -30,12 +25,10 @@ ln -sf ~/.dotfiles/git/gitconfig     ~/.gitconfig
 ln -sf ~/.dotfiles/git/gitignore     ~/.gitignore
 
 ln -sf ~/.dotfiles/vim/gvimrc        ~/.gvimrc
-ln -sf ~/.dotfiles/vim/vimrc         ~/.nvimrc
 ln -sf ~/.dotfiles/vim/vimrc         ~/.vimrc
 
 ln -sf ~/.dotfiles/jshintrc          ~/.jshintrc
 
-ln -sf ~/.dotfiles/tmux.conf         ~/tmux.conf
 ln -sf ~/.dotfiles/ptignore          ~/.ptignore
 
 ln -sf ~/.dotfiles/zsh/zprofile      ~/.zprofile
@@ -49,9 +42,10 @@ curl https://pqrs.org/osx/karabiner/files/Karabiner-10.6.0.dmg > ~/Downloads/Kar
 wget -O ~/Downloads/iTerm2.zip https://iterm2.com/downloads/stable/iTerm2_v2_0.zip
 wget -O ~/Downloads/KeepingYouAwake-1.2.1.zip https://github.com/newmarcel/KeepingYouAwake/releases/download/1.2.1/KeepingYouAwake-1.2.1.zip
 
-# node
-nvm install 0.10
-nvm use 0.10
+
+# install node
+curl -L http://git.io/n-install | bash
+n latest
 
 # node_modules
 npm install serve -g
