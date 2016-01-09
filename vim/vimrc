@@ -1,17 +1,9 @@
 set nocompatible
-filetype off
+
 source ~/.dotfiles/vim/plugins.vim
-filetype plugin indent on
-syntax enable
-
-set t_Co=256
-set bg=dark
-let g:solarized_termtrans=1
-colorscheme solarized
-
 source ~/.dotfiles/vim/functions.vim
+source ~/.dotfiles/vim/settings.vim
 source ~/.dotfiles/vim/mappings.vim
 source ~/.dotfiles/vim/filetypes.vim
 source ~/.dotfiles/vim/abbreviations.vim
-source ~/.dotfiles/vim/settings.vim
 source ~/.dotfiles/vim/terminal.vim

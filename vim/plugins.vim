@@ -1,3 +1,4 @@
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -5,7 +6,6 @@ Plugin 'Vundle.vim'
 
 
 Plugin 'Tabular'
-Plugin 'The-NERD-Commenter'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'abolish.vim'
 Plugin 'b4b4r07/vim-pt'
@@ -16,6 +16,7 @@ Plugin 'kassio/neoterm'
 Plugin 'repeat.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'tommcdo/vim-exchange'
+Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-sensible'
@@ -39,3 +40,5 @@ Plugin 'vim-scripts/jshint.vim'
 Plugin 'vim-stylus'
 
 call vundle#end()
+filetype plugin indent on
+syntax enable

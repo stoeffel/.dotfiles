@@ -1,3 +1,8 @@
+set t_Co=256
+set bg=dark
+let g:solarized_termtrans=1
+colorscheme solarized
+
 set mouse=a
 let &showbreak='↪ '
 set hidden

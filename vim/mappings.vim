@@ -14,8 +14,6 @@ nnoremap <leader>sh :set hlsearch!<cr>
 
 " git
 nnoremap gs :Gstatus<cr>
-nnoremap gs :Gstatus<cr>
-nnoremap gc :Gcommit<cr>
 nnoremap gd :Gdiff<cr>
 nnoremap gl :Gpull --rebase<cr>
 
