@@ -1,13 +1,6 @@
 #!/bin/sh
 
 
-# oh my zsh
-curl https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-
-
-# antigen
-cd ~ && git clone https://github.com/zsh-users/antigen.git .antigen
-
 # brew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install node
@@ -16,6 +9,11 @@ brew install hub
 brew install wget
 brew tap neovim/homebrew-neovim
 brew install neovim
+
+brew install fish
+
+curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
+omf help
 
 
 # links
@@ -30,9 +28,8 @@ ln -sf ~/.dotfiles/vim/vimrc         ~/.vimrc
 ln -sf ~/.dotfiles/jshintrc          ~/.jshintrc
 
 ln -sf ~/.dotfiles/ptignore          ~/.ptignore
+ln -sf ~/.dotfiles/fish/config.fish          ~/.config/fish/config.fish
 
-ln -sf ~/.dotfiles/zsh/zprofile      ~/.zprofile
-ln -sf ~/.dotfiles/zsh/zshrc         ~/.zshrc
 
 # vundle
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
