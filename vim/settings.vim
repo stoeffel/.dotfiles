@@ -11,21 +11,11 @@ set wildmenu
 set wildmode=full
 set wildignorecase
 set wildignore+=**/node_modules/**
-set wildignore+=**/target/**
 set wildignore+=**/bower_components/**
 set wildignore+=**/dist/**
-set wildignore+=**/touch/**
 set wildignore+=**/coverage/**
-set wildignore+=**/cordova/**
 set wildignore+=**/.bundle/**
 set wildignore+=**/.sass-cache/**
-set wildignore+=**/*.class
-set wildignore+=**/*.beam
-set wildignore+=**/*.jrxml
-set wildignore+=**/pom.xml
-set wildignore+=**/hiveapp-mount.properties
-set wildignore+=**/java.policy
-set wildignore+=**/db_changes.sql
 
 set ttyfast
 set number
