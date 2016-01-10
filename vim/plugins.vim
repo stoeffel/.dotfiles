@@ -26,6 +26,7 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'unimpaired.vim'
 Plugin 'vim-gitgutter'
 Plugin 'vim-multiple-cursors'
+Plugin 'ZoomWin'
 
 " style
 Plugin 'altercation/vim-colors-solarized'

@@ -9,6 +9,7 @@ source $OMF_PATH/init.fish
 
 alias fishy "source ~/.config/fish/config.fish"
 
+alias g "git"
 alias ga "gg a"
 alias gaa "git add ."
 alias gac "git commit -a"
@@ -31,5 +32,8 @@ alias vi "nvim -u ~/.vimrc"
 alias v "nvim -u ~/.vimrc"
 alias v. "nvim -u ~/.vimrc ."
 alias m "mvim -u ~/.vimrc"
+
+# list
+alias l "ll"
 
 

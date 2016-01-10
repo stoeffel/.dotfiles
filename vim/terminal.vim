@@ -1,5 +1,6 @@
 let g:neoterm_position = 'horizontal'
 let g:neoterm_automap_keys = ',T'
+let g:neoterm_size = '7'
 
 nnoremap <silent> <f10> :TREPLSendFile<cr>
 nnoremap <silent> <f9> :TREPLSend<cr>
@@ -31,6 +32,3 @@ tnoremap <C-w>t <C-\><C-n><C-w>w
 tnoremap ,n <C-\><C-n>:tabnext<CR>
 tnoremap ,p <C-\><C-n>:tabprevious<CR>
 tnoremap ,t <C-\><C-n>:tabnew<CR>
-
-" go into insert mode when entering the terminal
-au WinEnter term://* startinsert
