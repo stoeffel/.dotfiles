@@ -27,6 +27,9 @@ Plugin 'unimpaired.vim'
 Plugin 'vim-gitgutter'
 Plugin 'vim-multiple-cursors'
 Plugin 'ZoomWin'
+Plugin 'mhinz/vim-startify'
+Plugin 'justinmk/vim-sneak'
+Plugin 'AndrewRadev/splitjoin.vim'
 
 " style
 Plugin 'altercation/vim-colors-solarized'

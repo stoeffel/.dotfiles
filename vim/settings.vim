@@ -17,6 +17,7 @@ set wildignore+=**/coverage/**
 set wildignore+=**/.bundle/**
 set wildignore+=**/.sass-cache/**
 
+set timeoutlen=400 ttimeoutlen=0
 set ttyfast
 set number
 set ignorecase          " case insensitive searching
