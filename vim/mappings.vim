@@ -21,6 +21,7 @@ nnoremap gl :Gpull --rebase<cr>
 nnoremap <leader><leader> :CtrlP<cr>
 nnoremap <leader>l :CtrlPMRU<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
+nnoremap <leader>d :CtrlPDir<cr>
 nnoremap <leader>o :CtrlP optional<cr>
 nnoremap <leader>tr :ClearCtrlPCache<cr>
 

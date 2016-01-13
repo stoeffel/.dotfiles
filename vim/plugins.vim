@@ -27,6 +27,10 @@ Plugin 'unimpaired.vim'
 Plugin 'vim-gitgutter'
 Plugin 'vim-multiple-cursors'
 Plugin 'ZoomWin'
+<<<<<<< HEAD
+=======
+Plugin 'justinmk/vim-sneak'
+>>>>>>> add stuff from work
 Plugin 'AndrewRadev/splitjoin.vim'
 
 " style
