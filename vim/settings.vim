@@ -17,7 +17,11 @@ set wildignore+=**/coverage/**
 set wildignore+=**/.bundle/**
 set wildignore+=**/.sass-cache/**
 
-set timeoutlen=400 ttimeoutlen=0
+set timeout           " for mappings
+set timeoutlen=1000   " default value
+set ttimeout          " for key codes
+set ttimeoutlen=10    " unnoticeable small value
+
 set ttyfast
 set number
 set ignorecase          " case insensitive searching
