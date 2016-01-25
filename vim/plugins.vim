@@ -28,6 +28,7 @@ Plugin 'vim-gitgutter'
 Plugin 'vim-multiple-cursors'
 Plugin 'ZoomWin'
 Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'junegunn/goyo.vim'
 
 " style
 Plugin 'altercation/vim-colors-solarized'
