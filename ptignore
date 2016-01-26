@@ -22,3 +22,4 @@ vendor
 *.min.*
 __workspace
 __manifests
+elm-stuff

@@ -41,6 +41,8 @@ Plugin 'maksimr/vim-jsbeautify'
 Plugin 'mattn/emmet-vim'
 Plugin 'vim-scripts/jshint.vim'
 Plugin 'vim-stylus'
+Plugin 'elmcast/elm-vim'
+
 
 call vundle#end()
 filetype plugin indent on

@@ -16,12 +16,12 @@ brew install wget
 brew tap neovim/homebrew-neovim
 brew install neovim
 
-brew install fish
 
 brew cask install google-chrome
 
-curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
-omf help
+
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 
 # links
@@ -36,7 +36,6 @@ ln -sf ~/.dotfiles/vim/vimrc         ~/.vimrc
 ln -sf ~/.dotfiles/jshintrc          ~/.jshintrc
 
 ln -sf ~/.dotfiles/ptignore          ~/.ptignore
-ln -sf ~/.dotfiles/fish/config.fish          ~/.config/fish/config.fish
 
 ln -sf ~/.dotfiles/zsh/zprofile      ~/.zprofile
 ln -sf ~/.dotfiles/zsh/zshrc         ~/.zshrc
