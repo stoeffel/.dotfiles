@@ -1,7 +1,7 @@
 set t_Co=256
 set bg=dark
-let g:solarized_termtrans=1
-colorscheme solarized
+" let g:solarized_termtrans=1
+colorscheme gruvbox
 
 set mouse=a
 let &showbreak='↪ '
@@ -73,7 +73,7 @@ let g:syntastic_enable_signs=1
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_highlighting = 0
 
-let g:airline_theme='solarized'
+let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_left_sep=''

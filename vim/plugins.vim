@@ -32,6 +32,7 @@ Plugin 'junegunn/goyo.vim'
 
 " style
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'morhetz/gruvbox'
 Plugin 'bling/vim-airline'
 
 " lng supprt
