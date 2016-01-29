@@ -1,6 +1,7 @@
 set t_Co=256
 set bg=dark
 " let g:solarized_termtrans=1
+let g:gruvbox_contrast_dark='soft'
 colorscheme gruvbox
 
 set mouse=a
