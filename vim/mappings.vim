@@ -1,5 +1,9 @@
 let mapleader = "\<Space>"
 
+" formating
+let @i = 'ceimportf=cf(from f)x'
+nnoremap <leader>ri :g/require/normal @i<cr>
+
 " saving and closing
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
