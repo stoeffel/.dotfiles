@@ -29,6 +29,7 @@ Plugin 'vim-multiple-cursors'
 Plugin 'ZoomWin'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'junegunn/goyo.vim'
+Plugin 'Olical/vim-enmasse'
 
 " style
 Plugin 'altercation/vim-colors-solarized'
