@@ -1,5 +1,4 @@
 command! ReloadVIMRC execute "source ~/.vimrc"
-command! SudoWrite execute "w !sudo tee %"
 command! -nargs=* Only call CloseHiddenBuffers()
 function! CloseHiddenBuffers()
     " figure out which buffers are visible in any tab
