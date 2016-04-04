@@ -26,6 +26,11 @@
 	<true/>
 	<key>Control</key>
 	<integer>1</integer>
+	<key>Coprocess MRU</key>
+	<array>
+		<string>echo nvim /Users/stoeffel/oss/fantasy-birds/src/warbler.js</string>
+		<string>echo vim /Users/stoeffel/oss/fantasy-birds/src/thrush.js</string>
+	</array>
 	<key>CopyLastNewline</key>
 	<false/>
 	<key>CopySelection</key>
@@ -10744,7 +10749,7 @@
 	<key>HideScrollbar</key>
 	<true/>
 	<key>HideTab</key>
-	<false/>
+	<true/>
 	<key>HideTabCloseButton</key>
 	<false/>
 	<key>HighlightTabLabels</key>
@@ -10816,13 +10821,13 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>655 110 959 232 0 0 1680 1027 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>756 553 606 456 0 0 1680 1027 </string>
+	<string>996 721 606 456 0 0 1920 1177 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>530 494 620 392 0 0 1680 1050 </string>
+	<string>650 589 620 392 0 0 1920 1177 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1680 1050 0 0 1680 1027 </string>
+	<string>310 4 1610 1047 0 0 1920 1177 </string>
 	<key>NeverWarnAboutShortLivedSessions_5708CCEF-3AE4-47F6-AD7E-0B400418A9D6</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -11475,11 +11480,11 @@
 			<key>Semantic History</key>
 			<dict>
 				<key>action</key>
-				<string>best editor</string>
+				<string>coprocess</string>
 				<key>editor</key>
-				<string>com.sublimetext.2</string>
+				<string>com.sublimetext.3</string>
 				<key>text</key>
-				<string></string>
+				<string>echo nvim -u ~/.vimrc \1</string>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
@@ -11617,8 +11622,10 @@
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
 	<integer>0</integer>
 	<key>NoSyncLastTipTime</key>
-	<real>474843704.38124901</real>
+	<real>478260323.05002201</real>
 	<key>NoSyncPermissionToShowTip</key>
+	<true/>
+	<key>NoSyncSilenceAnnoyingBellAutomatically</key>
 	<true/>
 	<key>NoSyncSuppressBroadcastInputWarning</key>
 	<true/>
@@ -11630,6 +11637,11 @@
 	<array>
 		<string>000</string>
 		<string>0000</string>
+		<string>0001</string>
+		<string>0002</string>
+		<string>0003</string>
+		<string>0004</string>
+		<string>0005</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
@@ -11699,7 +11711,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-01-23T16:06:41Z</date>
+	<date>2016-02-24T21:02:54Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -11767,7 +11779,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20160103-nightly</string>
+	<string>2.9.20160224-nightly</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>1</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
