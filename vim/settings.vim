@@ -58,10 +58,10 @@ let g:ctrlp_max_depth = 80
 let g:ctrlp_max_files=0
 let g:ctrlp_max_height = 40
 let g:ctrlp_use_caching = 0
-if executable('pt')
-    set grepprg=pt\ --nogroup\ --nocolor
+if executable('ag')
+    set grepprg=ag\ --nogroup\ --nocolor
 
-    let g:ctrlp_user_command = 'pt -l --skip-vsc-ignores -g . %s'
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 else
   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
   let g:ctrlp_prompt_mappings = {
@@ -81,3 +81,4 @@ let g:airline_left_sep=''
 let g:airline_right_sep=''
 
 let g:netrw_liststyle=3
+

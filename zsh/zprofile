@@ -1,1 +1,6 @@
 export PATH=$PATH:bin:./node_modules/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/$USER/.gem/ruby/1.8/bin:/opt/nginx/sbin:/Users/stoeffel/android/android-sdk-macosx/tools:/Users/stoeffel/android/android-sdk-macosx/platform-tools:/Users/$USER/bin:/Users/$USER/.bash_it/plugins/available/todo
+
+# Setting PATH for Python 3.5
+# The orginal version is saved in .zprofile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
+export PATH
