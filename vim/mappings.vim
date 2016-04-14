@@ -79,3 +79,12 @@ nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
 
 " special chars
 nnoremap <leader>` iʹ<esc>
+
+nnoremap ,d "=strftime("%d.%m.%y")<CR>P
+
+" search in buffs
+command! -nargs=1 Search call setqflist([]) | silent bufdo grepadd! <args> %
+
+nnoremap <left>  :cprev<cr>zvzz
+nnoremap <right> :cnext<cr>zvzz
+

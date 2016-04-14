@@ -40,6 +40,8 @@ ln -sf ~/.dotfiles/ptignore          ~/.ptignore
 ln -sf ~/.dotfiles/zsh/zprofile      ~/.zprofile
 ln -sf ~/.dotfiles/zsh/zshrc         ~/.zshrc
 
+ln -sf ~/.dotfiles/slate.js         ~/.slate.js
+
 # vundle
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
