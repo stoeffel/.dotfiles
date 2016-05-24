@@ -32,9 +32,12 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'Olical/vim-enmasse'
 
 " style
+Plugin 'wolverian/minimal'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'morhetz/gruvbox'
-Plugin 'bling/vim-airline'
+Plugin 'ajh17/Spacegray.vim'
+Plugin 'tpope/vim-flagship'
 
 " lng supprt
 Plugin 'jade.vim'

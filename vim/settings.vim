@@ -1,9 +1,10 @@
 set t_Co=256
-set bg=dark
-" let g:solarized_termtrans=1
-let g:gruvbox_contrast_dark='soft'
-colorscheme gruvbox
+set bg=light
+colorscheme PaperColor
 
+set laststatus=2
+set showtabline=1
+set guioptions-=e
 set mouse=a
 let &showbreak='↪ '
 set hidden
@@ -74,11 +75,10 @@ let g:syntastic_enable_signs=1
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_highlighting = 0
 
-let g:airline_theme='gruvbox'
-let g:airline_powerline_fonts = 0
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_left_sep=''
-let g:airline_right_sep=''
+autocmd User Flags call Hoist("window", "SyntasticStatuslineFlag")
+let g:tabprefix = ''
+let g:tablabel =
+      \ "%N%{flagship#tabmodified()} %{flagship#tabcwds('shorten',',')}"
 
 let g:netrw_liststyle=3
 

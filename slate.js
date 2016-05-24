@@ -81,6 +81,11 @@ bindHyper('5', _5_5_1);
 bindHyper('f', maximize);
 bindHyper('c', center);
 
+var hide = slate.operation("hide", { "app" : "all" });
+var show = function(apps) {
+  return slate.operation("show", { "app" : apps });
+};
+bindHyper('h', hide);
 var dev = slate.layout('dev', {
   'Nylas N1' : {
     'operations' : [_1_5_1_TOP],
@@ -100,4 +105,15 @@ var dev = slate.layout('dev', {
   }
 });
 
-slate.bind(hyper('d'), slate.operation("layout", { "name" : dev }));
+var focus = slate.layout('focus', {
+  'iTerm2' : {
+    'operations' : [_2_2],
+    'soft-title' : true
+  },
+  'Google Chrome' : {
+    'operations' : [_1_2],
+    'soft-title' : true
+  }
+});
+slate.bind(hyper('9'), slate.operation("layout", { "name" : dev }));
+slate.bind(hyper('0'), slate.operation("layout", { "name" : focus }));
