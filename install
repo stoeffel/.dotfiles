@@ -15,6 +15,7 @@ brew install hub
 brew install wget
 brew tap neovim/homebrew-neovim
 brew install neovim
+brew install entr
 
 
 brew cask install google-chrome
@@ -61,3 +62,4 @@ npm install -g yo
 npm install --global dark-mode
 npm install -g gitgoodies
 npm install -g cut-release
+npm install -g elm-oracle

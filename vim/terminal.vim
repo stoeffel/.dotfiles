@@ -11,8 +11,7 @@ nnoremap <silent> <leader>rf :call neoterm#test#run('file')<cr>
 nnoremap <silent> <leader>rn :call neoterm#test#run('current')<cr>
 nnoremap <silent> <leader>rr :call neoterm#test#rerun()<cr>
 
-nnoremap <silent> <leader>T :tabnew<cr>:term<cr>
-nnoremap <silent> <leader>V :vsplit<cr>:term<cr>
+nnoremap <silent> <leader>T :term<cr>
 nnoremap <silent> <leader>tt :call neoterm#toggle()<cr>
 nnoremap <silent> <leader>tc :call neoterm#close()<cr>
 nnoremap <silent> <leader>to :call neoterm#open()<cr>

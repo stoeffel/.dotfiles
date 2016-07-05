@@ -1,9 +1,9 @@
 set t_Co=256
-set bg=light
-colorscheme PaperColor
+set bg=dark
+colorscheme pencil
 
 set laststatus=2
-set showtabline=1
+set showtabline=2
 set guioptions-=e
 set mouse=a
 let &showbreak='↪ '
@@ -48,7 +48,7 @@ autocmd WinLeave * setlocal nocursorline
 
 hi clear CursorLine
 hi CursorLine cterm=underline
-hi Visual guibg=blue guifg=white ctermbg=blue ctermfg=white
+" hi Visual guibg=blue guifg=white ctermbg=blue ctermfg=white
 
 " plugin settings
 
@@ -75,7 +75,7 @@ let g:syntastic_enable_signs=1
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_highlighting = 0
 
-autocmd User Flags call Hoist("window", "SyntasticStatuslineFlag")
+autocmd User Flags call Hoist("global", "SyntasticStatuslineFlag")
 let g:tabprefix = ''
 let g:tablabel =
       \ "%N%{flagship#tabmodified()} %{flagship#tabcwds('shorten',',')}"

@@ -6,12 +6,12 @@ Plugin 'Vundle.vim'
 
 
 Plugin 'Tabular'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'b4b4r07/vim-pt'
 Plugin 'bronson/vim-visual-star-search'
 Plugin 'ctrlp.vim'
 Plugin 'editorconfig-vim'
 Plugin 'kassio/neoterm'
+Plugin 'wincent/terminus'
 Plugin 'repeat.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'tommcdo/vim-exchange'
@@ -30,11 +30,13 @@ Plugin 'ZoomWin'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'Olical/vim-enmasse'
+Plugin 'tpope/vim-endwise'
 
 " style
 Plugin 'wolverian/minimal'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'reedes/vim-colors-pencil'
 Plugin 'morhetz/gruvbox'
 Plugin 'ajh17/Spacegray.vim'
 Plugin 'tpope/vim-flagship'
@@ -47,6 +49,10 @@ Plugin 'mattn/emmet-vim'
 Plugin 'vim-scripts/jshint.vim'
 Plugin 'vim-stylus'
 Plugin 'elmcast/elm-vim'
+" Plugin 'lambdatoast/elm.vim'
+Plugin 'Ioannis-Kapoulas/vim-autoprefixer'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'slashmili/alchemist.vim'
 
 
 call vundle#end()

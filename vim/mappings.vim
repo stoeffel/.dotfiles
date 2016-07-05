@@ -4,6 +4,9 @@ let mapleader = "\<Space>"
 let @i = 'ceimportf=cf(from f)x'
 nnoremap <leader>ri :g/require/normal @i<cr>
 
+vnoremap <leader>vc : <c-u>call PrefixVisualMyCSS()<cr>
+nnoremap <leader>vc : <c-u>call PrefixMyCSS()<cr>
+
 " saving and closing
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
@@ -88,3 +91,8 @@ command! -nargs=1 Search call setqflist([]) | silent bufdo grepadd! <args> %
 nnoremap <left>  :cprev<cr>zvzz
 nnoremap <right> :cnext<cr>zvzz
 
+
+" elm
+nnoremap <leader>el :ElmEvalLine<CR>
+vnoremap <leader>es :<C-u>ElmEvalSelection<CR>
+nnoremap <leader>em :ElmMakeCurrentFile<CR>
