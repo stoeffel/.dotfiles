@@ -1,6 +1,6 @@
 set t_Co=256
 set bg=dark
-colorscheme pencil
+colorscheme solarized
 
 set laststatus=2
 set showtabline=2

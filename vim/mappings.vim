@@ -28,7 +28,7 @@ nnoremap gl :Gpull --rebase<cr>
 nnoremap <leader><leader> :CtrlP<cr>
 nnoremap <leader>l :CtrlPMRU<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
-nnoremap <leader>d :CtrlPDir<cr>
+nnoremap <leader>d :CtrlPCurFile<cr>
 nnoremap <leader>o :CtrlP optional<cr>
 nnoremap <leader>tr :ClearCtrlPCache<cr>
 
@@ -54,7 +54,7 @@ nnoremap < V<<<Esc>
 " edit
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
 cnoremap $$ <C-R>=fnameescape(expand('%'))<cr>
-map <leader>e :e %%
+map <leader>E :e %%
 map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabe %%

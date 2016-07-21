@@ -42,6 +42,7 @@ Plugin 'ajh17/Spacegray.vim'
 Plugin 'tpope/vim-flagship'
 
 " lng supprt
+Plugin 'kchmck/vim-coffee-script'
 Plugin 'jade.vim'
 Plugin 'less-syntax'
 Plugin 'maksimr/vim-jsbeautify'
