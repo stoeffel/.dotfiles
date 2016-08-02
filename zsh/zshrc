@@ -24,12 +24,11 @@ alias soz="source ~/.zshrc"
 alias sov="source ~/.vimrc"
 
 # Git
-alias gg='noglob gg'
-alias ga="gg a"
+alias ga="git add"
 alias gaa="git add ."
 alias gac="git commit -a"
 alias gd="git difftool"
-alias gs="git status;gg s"
+alias gs="git status"
 alias gp="git push"
 alias gl="git pull --rebase"
 alias tl="git pull --rebase && ~/cloud/post-merge.sh"

@@ -1,6 +1,6 @@
 let g:neoterm_position = 'horizontal'
 let g:neoterm_automap_keys = ',T'
-let g:neoterm_size = '7'
+let g:neoterm_size = '25'
 
 nnoremap <silent> <f10> :TREPLSendFile<cr>
 nnoremap <silent> <f9> :TREPLSend<cr>

@@ -30,3 +30,5 @@ node_modules
 
 .tern-port
 elm-stuff
+
+elm.js

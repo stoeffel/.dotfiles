@@ -19,6 +19,7 @@ brew install entr
 
 
 brew cask install google-chrome
+brew cask install mojibar
 
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -63,3 +64,5 @@ npm install --global dark-mode
 npm install -g gitgoodies
 npm install -g cut-release
 npm install -g elm-oracle
+
+npm install -g hpm-cli
