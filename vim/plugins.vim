@@ -56,6 +56,8 @@ Plugin 'Ioannis-Kapoulas/vim-autoprefixer'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
 
+" ruby
+Plugin 'thoughtbot/vim-rspec'
 
 call vundle#end()
 filetype plugin indent on

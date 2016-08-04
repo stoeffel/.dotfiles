@@ -28,6 +28,9 @@
 	<integer>1</integer>
 	<key>Coprocess MRU</key>
 	<array>
+		<string>echo nvim -u ~/.vimrc /Users/stoeffel/nri/NoRedInk/spec/controllers/teach/writing_cycles_controller_spec.rb</string>
+		<string>echo nvim -u ~/.vimrc /Users/stoeffel/nri/NoRedInk/app/controllers/teach/writing_cycles_controller.rb</string>
+		<string>echo nvim -u ~/.vimrc /Users/stoeffel/nri/NoRedInk/lib/tasks_api/writing_progress/writing_cycle.rb</string>
 		<string>echo nvim -u ~/.vimrc /Users/stoeffel/prj/b2b/app/src/modules/Booking/Edit/GuestNames/Booking_Edit_GuestNamesModule.class.php</string>
 		<string>echo nvim /Users/stoeffel/oss/fantasy-birds/src/warbler.js</string>
 		<string>echo vim /Users/stoeffel/oss/fantasy-birds/src/thrush.js</string>
@@ -10991,13 +10994,13 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>996 721 606 456 0 0 1920 1177 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>410 364 620 392 0 0 1440 877 </string>
+	<string>650 589 620 392 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>154 369 918 381 0 0 1440 877 </string>
+	<string>154 402 796 473 0 0 1440 877 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1440 900 0 0 1440 877 </string>
+	<string>0 0 1920 1200 0 0 1920 1177 </string>
 	<key>NeverWarnAboutShortLivedSessions_5708CCEF-3AE4-47F6-AD7E-0B400418A9D6</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -11927,7 +11930,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-07-31T08:59:06Z</date>
+	<date>2016-08-04T08:37:59Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
