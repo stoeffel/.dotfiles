@@ -1,6 +1,6 @@
 set t_Co=256
 set bg=dark
-colorscheme solarized
+colorscheme gruvbox
 
 set laststatus=2
 set showtabline=2
@@ -46,6 +46,7 @@ set nocursorline
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 
+highlight Comment cterm=italic
 hi clear CursorLine
 hi CursorLine cterm=underline
 " hi Visual guibg=blue guifg=white ctermbg=blue ctermfg=white

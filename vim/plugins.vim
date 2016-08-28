@@ -43,6 +43,7 @@ Plugin 'ajh17/Spacegray.vim'
 Plugin 'tpope/vim-flagship'
 
 " lng supprt
+Plugin 'rizzatti/dash.vim'
 Plugin 'elmcast/elm-vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'jade.vim'

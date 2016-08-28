@@ -40,9 +40,6 @@ vnoremap af :<C-U>silent! :call TextObjectFunction()<CR>
 omap af :normal vaf<CR>
 
 " escaping
-inoremap jk <esc><esc>
-cnoremap jk <esc>
-vnoremap jk <esc>
 inoremap <esc> <esc><esc>
 
 " indentation
