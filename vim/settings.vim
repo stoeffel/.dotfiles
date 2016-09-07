@@ -1,6 +1,9 @@
 set t_Co=256
 set bg=dark
-colorscheme gruvbox
+let g:solarized_termcolors=256
+let g:solarized_contrast='high'
+let g:solarized_visibility='high'
+colorscheme solarized
 
 set laststatus=2
 set showtabline=2

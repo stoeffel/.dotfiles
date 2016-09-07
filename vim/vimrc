@@ -1,5 +1,4 @@
 set nocompatible
-
 source ~/.dotfiles/vim/plugins.vim
 source ~/.dotfiles/vim/functions.vim
 source ~/.dotfiles/vim/settings.vim
