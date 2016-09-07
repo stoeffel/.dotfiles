@@ -13,7 +13,7 @@ export PATH=/opt/local/bin:/usr/local/sbin:/opt/local/sbin:$PATH
 
 # EDITOR
 ########
-export EDITOR='vimr'
+export EDITOR='nvim'
 
 
 # ALIASES
@@ -88,12 +88,10 @@ alias sl="svn update"
 alias scl="svn checkout"
 
 # Vim
-alias mvim='open -a Neovim $*'
-alias neo='open -a Neovim $*'
 alias vo="nvim -u NONE -N"
 alias vi="nvim"
-alias v="vimr"
-alias m="mvim -u ~/.vimrc"
+alias v="nvim"
+alias m="neovim"
 
 # Compass
 alias cc="compass compile"

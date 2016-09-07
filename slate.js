@@ -44,11 +44,12 @@ var maximize = slate.operation('move', {
 })
 
 var center = slate.operation('move', {
-  x : 'screenSizeX/4',
+  x : 'screenSizeX/20',
   y : 'screenSizeY/20',
-  width : 'screenSizeX - (screenSizeX/4) * 2',
+  width : 'screenSizeX - (screenSizeX/20) * 2',
   height : 'screenSizeY - (screenSizeY/20) * 2'
 })
+
 
 var hyper = function(key) {
   return key + ':ctrl,alt,cmd,shift';
@@ -81,7 +82,7 @@ bindHyper('5', _5_5_1);
 bindHyper('f', maximize);
 bindHyper('c', center);
 
-var hide = slate.operation("hide", { "app" : "all" });
+var hide = slate.operation("hide", { "all-but" : "VimR" });
 var show = function(apps) {
   return slate.operation("show", { "app" : apps });
 };
