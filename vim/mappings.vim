@@ -15,7 +15,7 @@ nnoremap <leader>wq :wq<cr>
 
 " buffers
 nnoremap <leader>bd :bdel<cr>
-nnoremap <leader>ls :buffers<CR>:buffer<Space>
+" nnoremap <leader>ls :buffers<CR>:buffer<Space>
 
 nnoremap <leader>sh :set hlsearch!<cr>
 

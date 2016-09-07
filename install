@@ -33,7 +33,7 @@ ln -sf ~/.dotfiles/git/gitconfig     ~/.gitconfig
 ln -sf ~/.dotfiles/git/gitignore     ~/.gitignore
 
 ln -sf ~/.dotfiles/vim/gvimrc        ~/.gvimrc
-ln -sf ~/.dotfiles/vim/vimrc         ~/.vimrc
+ln -sf ~/.dotfiles/vim/vimrc         ~/.config/nvim/init.vim
 
 ln -sf ~/.dotfiles/jshintrc          ~/.jshintrc
 

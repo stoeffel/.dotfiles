@@ -31,8 +31,7 @@ alias gd="git difftool"
 alias gs="git status"
 alias gp="git push"
 alias gl="git pull --rebase"
-alias tl="git pull --rebase && ~/cloud/post-merge.sh"
-alias gerrit-hook="scp -p -P 29418 chermann@git.tocco.ch:hooks/commit-msg .git/hooks/"
+alias gcm="git checkout master"
 function vn () {
     vim `git status | grep new | awk '{print $3}'`
 }

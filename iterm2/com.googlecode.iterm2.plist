@@ -28,6 +28,9 @@
 	<integer>1</integer>
 	<key>Coprocess MRU</key>
 	<array>
+		<string>echo nvim -u ~/.vimrc /Users/stoeffel/nri/NoRedInk/app/assets/javascripts/StyleGuide/Component.js.elm</string>
+		<string>echo nvim -u ~/.vimrc /Users/stoeffel/nri/NoRedInk/app/assets/javascripts/Page/Teach/WritingCycles/Results/Rate/Model.elm</string>
+		<string>echo nvim -u ~/.vimrc /Users/stoeffel/nri/NoRedInk/app/controllers/learn/results_controller.rb</string>
 		<string>echo nvim -u ~/.vimrc /Users/stoeffel/nri/NoRedInk/spec/lib/tasks_api/repository/for_user_spec.rb</string>
 		<string>echo nvim -u ~/.vimrc /Users/stoeffel/nri/NoRedInk/spec/support/features/writing_student_revise_helpers.rb</string>
 		<string>echo nvim -u ~/.vimrc /Users/stoeffel/nri/NoRedInk/spec/lib/task/factory/writing_cycle_builder_spec.rb</string>
@@ -10986,7 +10989,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>322</string>
+		<string>307</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -10998,17 +11001,17 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>818 358 959 77 0 0 1920 1177 </string>
+	<string>818 125 964 176 0 0 1920 1177 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>996 721 606 456 0 0 1920 1177 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>650 589 620 392 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 534 796 473 0 0 1920 1200 </string>
+	<string>269 466 918 507 0 0 1920 1177 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
-	<string>127 443 592 584 0 0 1680 1027 </string>
+	<string>155 593 592 584 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1920 1200 0 0 1920 1177 </string>
+	<string>-4 8 1920 1169 0 0 1920 1177 </string>
 	<key>NeverWarnAboutShortLivedSessions_5708CCEF-3AE4-47F6-AD7E-0B400418A9D6</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -11611,11 +11614,11 @@
 			<key>Name</key>
 			<string>light</string>
 			<key>Non Ascii Font</key>
-			<string>Monoid-Retina 16</string>
+			<string>FixedsysExcelsiorIIIb 24</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>FiraCode-Regular 18</string>
+			<string>FiraCode-Retina 16</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -11962,7 +11965,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-08-24T18:45:31Z</date>
+	<date>2016-09-02T16:42:19Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -12002,7 +12005,7 @@
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
 	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1452336768</real>
+	<real>1472454656</real>
 	<key>URLHandlersByGuid</key>
 	<dict/>
 	<key>Use background pattern indicator</key>
