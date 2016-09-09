@@ -1,9 +1,7 @@
 set t_Co=256
-set bg=dark
-colorscheme pencil
+set bg=light
+colorscheme PaperColor
 
-set noerrorbells visualbell t_vb=
-autocmd GUIEnter * set visualbell t_vb=
 set laststatus=2
 set showtabline=2
 set guioptions-=e

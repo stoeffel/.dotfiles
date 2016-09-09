@@ -34,7 +34,9 @@ Plugin 'tpope/vim-endwise'
 
 " style
 Plugin 'wolverian/minimal'
+Plugin 'dracula/vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'owickstrom/vim-colors-paramount'
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'reedes/vim-colors-pencil'
 Plugin 'chriskempson/base16-vim'
