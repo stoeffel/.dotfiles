@@ -21,9 +21,9 @@ var column = function({x, ofX, spanX, y, ofY, spanY}) {
 
 var _1_2 = column({x: 1, ofX: 2});
 var _2_2 = column({x: 2, ofX: 2});
-var _1_3 = column({x: 1, ofX: 3});
-var _2_3 = column({x: 2, ofX: 3});
-var _3_3 = column({x: 3, ofX: 3});
+var _1_3_x = function (x) { return column({x: 1, ofX: 3, spanX: x}); }
+var _2_3_x = function (x) { return column({x: 2, ofX: 3, spanX: x}); }
+var _3_3_x = function (x) { return column({x: 3, ofX: 3, spanX: x}); }
 
 var _1_5_x = function (x) { return column({x: 1, ofX: 5, spanX: x}); }
 var _2_5_x = function (x) { return column({x: 2, ofX: 5, spanX: x}); }
@@ -68,9 +68,9 @@ function spanMore(op, max) {
   }
 }
 
-bindHyper('q', _1_3);
-bindHyper('w', _2_3);
-bindHyper('e', _3_3);
+slate.bind(hyper('q'), spanMore(_1_3_x, 3));
+slate.bind(hyper('w'), spanMore(_2_3_x, 2));
+slate.bind(hyper('e'), spanMore(_3_3_x, 1));
 bindHyper('a', _1_2);
 bindHyper('s', _2_2);
 slate.bind(hyper('1'), spanMore(_1_5_x, 5));

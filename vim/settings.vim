@@ -1,6 +1,7 @@
 set t_Co=256
-set bg=light
-colorscheme PaperColor
+set bg=dark
+set termguicolors
+colorscheme onedark
 
 set laststatus=2
 set showtabline=2
