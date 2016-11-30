@@ -1,6 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="pure"
+ZSH_THEME="robbyrussell"
 
 plugins=(git node npm bower gem gitfast vundle )
 
@@ -150,6 +150,8 @@ alias rsync='noglob rsync'
 alias scp='noglob scp'
 alias sftp='noglob sftp'
 alias z='zeus'
+alias be='bundle exec'
+alias ei='elm-package install'
 
 #########
 

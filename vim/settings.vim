@@ -1,7 +1,8 @@
 set t_Co=256
 set bg=dark
 set termguicolors
-colorscheme onedark
+" colorscheme focus-dark
+colorscheme gotham256
 
 set laststatus=2
 set showtabline=2
@@ -19,6 +20,8 @@ set wildignore+=**/dist/**
 set wildignore+=**/coverage/**
 set wildignore+=**/.bundle/**
 set wildignore+=**/.sass-cache/**
+set foldmethod=indent
+set nofen
 
 set timeout           " for mappings
 set timeoutlen=1000   " default value
@@ -75,10 +78,10 @@ endif
 " let g:syntastic_javascript_checkers = ['eslint', 'jshint']
 let g:syntastic_enable_signs=1
 let g:syntastic_check_on_open=1
-let g:syntastic_enable_highlighting = 0
+let g:syntastic_enable_highlighting = 1
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_wq = 0
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_wq = 1
 
 autocmd User Flags call Hoist("global", "SyntasticStatuslineFlag")
 let g:tabprefix = ''

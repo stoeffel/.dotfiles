@@ -32,3 +32,4 @@ node_modules
 elm-stuff
 
 elm.js
+.local.vim

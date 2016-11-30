@@ -6,6 +6,7 @@ nnoremap <leader>ri :g/require/normal @i<cr>
 
 vnoremap <leader>vc : <c-u>call PrefixVisualMyCSS()<cr>
 nnoremap <leader>vc : <c-u>call PrefixMyCSS()<cr>
+nnoremap <leader>z za
 
 " saving and closing
 nnoremap <leader>w :w<cr>

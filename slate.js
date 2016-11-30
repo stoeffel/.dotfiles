@@ -68,7 +68,7 @@ function spanMore(op, max) {
   }
 }
 
-slate.bind(hyper('q'), spanMore(_1_3_x, 3));
+slate.bind(hyper('q'), spanMore(_1_3_x, 2));
 slate.bind(hyper('w'), spanMore(_2_3_x, 2));
 slate.bind(hyper('e'), spanMore(_3_3_x, 1));
 bindHyper('a', _1_2);
