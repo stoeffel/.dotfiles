@@ -2,8 +2,12 @@ set t_Co=256
 set bg=dark
 set termguicolors
 " colorscheme focus-dark
-colorscheme gotham256
+" colorscheme gotham256
 
+let g:gruvbox_italic=1
+colorscheme gruvbox
+
+set inccommand=split
 set laststatus=2
 set showtabline=2
 set guioptions-=e
@@ -50,7 +54,7 @@ set nocursorline
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 
-highlight Comment cterm=italic
+hi Comment cterm=italic
 hi clear CursorLine
 hi CursorLine cterm=underline
 " hi Visual guibg=blue guifg=white ctermbg=blue ctermfg=white

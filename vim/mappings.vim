@@ -2,6 +2,7 @@ let mapleader = "\<Space>"
 
 " formating
 let @i = 'ceimportf=cf(from f)x'
+nnoremap <leader>s gg/^import<cr>vip:sort<cr>
 nnoremap <leader>ri :g/require/normal @i<cr>
 
 vnoremap <leader>vc : <c-u>call PrefixVisualMyCSS()<cr>

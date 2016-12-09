@@ -49,6 +49,7 @@ Plug 'sindresorhus/focus'
 Plug 'whatyouhide/vim-gotham'
 
 " lng supprt
+Plug 'alx741/vim-hindent'
 Plug 'tpope/vim-salve'
 Plug 'tpope/vim-fireplace'
 Plug 'rizzatti/dash.vim'

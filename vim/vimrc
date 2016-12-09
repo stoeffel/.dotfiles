@@ -8,6 +8,7 @@ source ~/.dotfiles/vim/abbreviations.vim
 source ~/.dotfiles/vim/terminal.vim
 source ~/.dotfiles/vim/work-git-ignored.vim
 source ~/.dotfiles/vim/elm.vim
+source ~/.dotfiles/vim/haskell.vim
 source ~/.dotfiles/vim/markdown.vim
 source ~/.dotfiles/vim/ruby.vim
 source ~/.dotfiles/vim/reason.vim
