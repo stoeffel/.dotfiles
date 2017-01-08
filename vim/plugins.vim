@@ -1,6 +1,7 @@
 filetype off
 call plug#begin('~/.vim/plugged')
 
+
 Plug 'Tabular'
 Plug 'b4b4r07/vim-pt'
 Plug 'bronson/vim-visual-star-search'

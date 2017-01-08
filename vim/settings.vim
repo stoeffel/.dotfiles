@@ -2,10 +2,10 @@ set t_Co=256
 set bg=dark
 set termguicolors
 " colorscheme focus-dark
-" colorscheme gotham256
+colorscheme gotham256
 
-let g:gruvbox_italic=1
-colorscheme gruvbox
+" let g:gruvbox_italic=1
+" colorscheme gruvbox
 
 set inccommand=split
 set laststatus=2
@@ -28,7 +28,7 @@ set foldmethod=indent
 set nofen
 
 set timeout           " for mappings
-set timeoutlen=1000   " default value
+set timeoutlen=500   " default value
 set ttimeout          " for key codes
 set ttimeoutlen=10    " unnoticeable small value
 
@@ -80,14 +80,16 @@ else
 endif
 
 " let g:syntastic_javascript_checkers = ['eslint', 'jshint']
+let g:syntastic_elm_checkers = ['elm-make']
 let g:syntastic_enable_signs=1
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_highlighting = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 1
+let g:elm_syntastic_show_warnings = 1
 
-autocmd User Flags call Hoist("global", "SyntasticStatuslineFlag")
+autocmd User Flags call Hoist("window", "SyntasticStatuslineFlag")
 let g:tabprefix = ''
 let g:tablabel =
       \ "%N%{flagship#tabmodified()} %{flagship#tabcwds('shorten',',')}"
