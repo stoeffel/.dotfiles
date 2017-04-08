@@ -2,6 +2,7 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 
+Plug 'vim-airline/vim-airline'
 Plug 'Tabular'
 Plug 'b4b4r07/vim-pt'
 Plug 'bronson/vim-visual-star-search'

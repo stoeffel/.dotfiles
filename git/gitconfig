@@ -23,12 +23,12 @@
 protocol = https
 [core]
 	excludesfile = /Users/stoeffel/.gitignore
-editor = nvim -u ~/.vimrc
+editor = nvim
 [diff]
 tool=vimdiff
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -47,5 +47,6 @@ tool=vimdiff
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
 [credential]
 	helper = osxkeychain

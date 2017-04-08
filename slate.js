@@ -52,7 +52,7 @@ var center = slate.operation('move', {
 
 
 var hyper = function(key) {
-  return key + ':ctrl,alt,cmd,shift';
+  return key + ':ctrl,cmd';
 };
 
 function bindHyper(key, op) {
@@ -68,53 +68,20 @@ function spanMore(op, max) {
   }
 }
 
-slate.bind(hyper('q'), spanMore(_1_3_x, 2));
-slate.bind(hyper('w'), spanMore(_2_3_x, 2));
-slate.bind(hyper('e'), spanMore(_3_3_x, 1));
-bindHyper('a', _1_2);
-bindHyper('s', _2_2);
-slate.bind(hyper('1'), spanMore(_1_5_x, 5));
-slate.bind(hyper('2'), spanMore(_2_5_x, 4));
-slate.bind(hyper('3'), spanMore(_3_5_x, 3));
-slate.bind(hyper('4'), spanMore(_4_5_x, 2));
-bindHyper('5', _5_5_1);
-
-bindHyper('f', maximize);
-bindHyper('c', center);
+bindHyper('1', _1_2);
+bindHyper('2', _2_2);
+bindHyper('3', maximize);
+// slate.bind(hyper('q'), spanMore(_1_3_x, 2));
+// slate.bind(hyper('w'), spanMore(_2_3_x, 2));
+// slate.bind(hyper('e'), spanMore(_3_3_x, 1));
+// slate.bind(hyper('1'), spanMore(_1_5_x, 5));
+// slate.bind(hyper('2'), spanMore(_2_5_x, 4));
+// slate.bind(hyper('3'), spanMore(_3_5_x, 3));
+// slate.bind(hyper('4'), spanMore(_4_5_x, 2));
+// bindHyper('5', _5_5_1);
+// bindHyper('c', center);
 
 var hide = slate.operation("hide", { "all-but" : "VimR" });
 var show = function(apps) {
   return slate.operation("show", { "app" : apps });
 };
-bindHyper('h', hide);
-var dev = slate.layout('dev', {
-  'Nylas N1' : {
-    'operations' : [_1_5_1_TOP],
-    'soft-title' : true
-  },
-  'iTerm2' : {
-    'operations' : [_2_5_2],
-    'soft-title' : true
-  },
-  'Google Chrome' : {
-    'operations' : [_4_5_2],
-    'soft-title' : true
-  },
-  'TogglDesktop' : {
-    'operations' : [_1_5_1_BOTTOM],
-    'soft-title' : true
-  }
-});
-
-var focus = slate.layout('focus', {
-  'iTerm2' : {
-    'operations' : [_2_2],
-    'soft-title' : true
-  },
-  'Google Chrome' : {
-    'operations' : [_1_2],
-    'soft-title' : true
-  }
-});
-slate.bind(hyper('9'), slate.operation("layout", { "name" : dev }));
-slate.bind(hyper('0'), slate.operation("layout", { "name" : focus }));

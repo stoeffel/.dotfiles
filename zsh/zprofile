@@ -9,3 +9,14 @@ if [ -d /usr/local/opt/chruby ]; then
  source /usr/local/opt/chruby/share/chruby/chruby.sh
  source /usr/local/share/chruby/auto.sh
 fi
+
+# Setting PATH for Python 3.6
+# The original version is saved in .zprofile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
+export PATH=/usr/local/bin:$PATH
+
+# Setting PATH for Python 2.7
+# The original version is saved in .zprofile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH
